@@ -1,9 +1,9 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
 // Import styled components ServerStyleSheet
 import { ServerStyleSheet } from 'styled-components';
 
 export default class MyDocument extends Document {
-  static async getInitialProps(ctx) {
+  static async getInitialProps(ctx: DocumentContext) {
     // Step 1: Create an instance of ServerStyleSheet
     const sheet = new ServerStyleSheet();
     const originalRenderpage = ctx.renderPage;
@@ -11,6 +11,7 @@ export default class MyDocument extends Document {
     try {
       // styled components SSR 하는 부분
       // Step 2: Retrieve styles from components in the page
+      // 출처 : https://velog.io/@gth1123/next-js%EC%99%80-styled-component
       ctx.renderPage = () =>
         originalRenderpage({
           enhanceApp: (App) => (props) => sheet.collectStyles(<App {...props} />),
