@@ -1,8 +1,8 @@
 import { useRouter } from "next/router";
 
-const projName = ()=> {
+const ProjectDetail = ()=> {
     const router = useRouter();
-    const projectName = router.query.projName;
+    const projectName = router.query.ProjectDetail;
 
     return(
         <div>
@@ -13,4 +13,4 @@ const projName = ()=> {
 
 }
 
-export default projName;
+export default ProjectDetail;

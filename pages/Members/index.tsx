@@ -1,12 +1,12 @@
 import Link from "next/link";
 
-const DesignPageIndex = () => {
+const MembersIndex = () => {
     return(
         <>
-          <h1>Here is Design Page</h1>
+          <h1>Here is Members Page</h1>
           <p><Link href="/">Home</Link></p>
         </>
     )
 }
 
-export default DesignPageIndex;
+export default MembersIndex;

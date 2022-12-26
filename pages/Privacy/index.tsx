@@ -1,12 +1,12 @@
 import Link from "next/link";
 
-const MembersPageIndex = () => {
+const PrivacyIndex = () => {
     return(
         <>
-          <h1>Here is Members Page</h1>
+          <h1>Here is Privacy Notice Page</h1>
           <p><Link href="/">Home</Link></p>
         </>
     )
 }
 
-export default MembersPageIndex;
+export default PrivacyIndex;

@@ -1,12 +1,12 @@
 import Link from "next/link";
 
-const PrivacyNoticeIndex = () => {
+const DesignIndex = () => {
     return(
         <>
-          <h1>Here is Privacy Notice Page</h1>
+          <h1>Here is Design Page</h1>
           <p><Link href="/">Home</Link></p>
         </>
     )
 }
 
-export default PrivacyNoticeIndex;
+export default DesignIndex;
