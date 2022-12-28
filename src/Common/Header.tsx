@@ -19,8 +19,6 @@ const HeaderDiv = styled.div`
   display: flex;
   justify-content: space-between;
 
-  margin: 0 auto;
-
   width: 100%;
   height: 5rem;
   position: fixed;
@@ -35,7 +33,7 @@ const HeaderDiv = styled.div`
 const ImageBox = styled.div`
   width: 10rem;
   height: 3rem;
-  margin-left: 1.2rem;
+  margin-left: 1rem;
   margin-top: 1.5rem;
   background-color: gray;
 `
@@ -45,7 +43,7 @@ const HeaderNavUl = styled.ul`
   flex-flow: row nowrap;
   
   margin-top: 2.5rem;
-  margin-right: 1.2rem;
+  margin-right: 2rem;
 `
 
 const HeaderNavLi = styled.li`
