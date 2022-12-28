@@ -1,26 +1,36 @@
-import Link from "next/link"
-import styled from "styled-components"
+import styled from "styled-components";
+import Crab from "../../src/Common/Crab";
 
 const Main = () => {
   return (
-    <HomeStyle>
-      <h1>Hello DEF:CON</h1>
+    <MainStyle>
+      <MainContentsStyle>
+        <Crab width={15} height={15} />
+        <MainContextStyle>
+          <h1>TEAM DEF:CON</h1>
+          <p>유용민 바보</p>
+        </MainContextStyle>
+      </MainContentsStyle>
+    </MainStyle>
+  );
+};
 
-      <ul>
-        <li><Link href="/Design">Design Page</Link></li>
-        <li><Link href="/Members">Members Page</Link></li>
-        <li><Link href="/Projects">Projects Page</Link></li>
-      </ul>
+const MainStyle = styled.div`
+  font-family: "Noto Sans KR";
+  height: 100vh;
+  padding: 18rem 25rem 0rem 25rem;
+  padding-top: 18rem;
+  padding-left: 25rem;
+`;
 
-      <p><Link href="/Privacy">Privacy Notice Page</Link></p>
+const MainContentsStyle = styled.div`
+    display: flex;
+    
+`;
 
-    </HomeStyle>
-  )
-}
-
-const HomeStyle = styled.div`
-  font-family: 'Noto Sans KR';
-  padding-top: 4rem;
+const MainContextStyle = styled.div`
+    margin-left: 10rem;
 `
+
 
 export default Main;

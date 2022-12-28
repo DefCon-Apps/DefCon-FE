@@ -5,7 +5,9 @@ import styled from "styled-components";
 const Header = () => {
   return (
     <HeaderDiv>
-      <ImageBox/>
+      <HeaderLogoDiv>
+        <Link href="/"><img src="/Images/mainLogo.svg"/></Link>
+      </HeaderLogoDiv>
       <HeaderNavUl>
         <HeaderNavLi><Link href="/Designs">Designs </Link></HeaderNavLi>
         <HeaderNavLi><Link href="/Projects">Projects</Link></HeaderNavLi>
@@ -19,9 +21,11 @@ const HeaderDiv = styled.div`
   display: flex;
   justify-content: space-between;
 
-  width: 100%;
+  width: 100vw;
   height: 5rem;
   position: fixed;
+  top : 0;
+  z-index: 3;
 
   font-family: 'Noto Sans KR';
   font-size: 20px;
@@ -30,12 +34,12 @@ const HeaderDiv = styled.div`
   background-color: #fff;
 `
 
-const ImageBox = styled.div`
+
+const HeaderLogoDiv = styled.div`
   width: 10rem;
-  height: 3rem;
-  margin-left: 1rem;
+  height: 2rem;
+  margin-left: 1.5rem;
   margin-top: 1.5rem;
-  background-color: gray;
 `
 
 const HeaderNavUl = styled.ul`

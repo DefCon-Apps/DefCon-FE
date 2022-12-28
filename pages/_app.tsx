@@ -1,4 +1,5 @@
 import type { AppProps } from "next/app";
+import "../styles/globals.css";
 import Header from "../src/Common/Header";
 import Footer from "../src/Common/Footer";
 
