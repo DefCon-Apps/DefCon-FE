@@ -1,10 +1,9 @@
-import Link from "next/link";
+import Members from "./Members";
 
 const MembersIndex = () => {
     return(
         <>
-          <h1>Here is Members Page</h1>
-          <p><Link href="/">Home</Link></p>
+          <Members/>
         </>
     )
 }

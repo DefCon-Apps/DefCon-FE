@@ -1,10 +1,9 @@
-import Link from "next/link";
+import Designs from "./Designs";
 
 const DesignIndex = () => {
     return(
         <>
-          <h1>Here is Design Page</h1>
-          <p><Link href="/">Home</Link></p>
+          <Designs/>
         </>
     )
 }

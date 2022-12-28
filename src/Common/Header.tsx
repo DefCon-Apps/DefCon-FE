@@ -19,12 +19,15 @@ const HeaderDiv = styled.div`
   display: flex;
   justify-content: space-between;
 
+  margin: 0 auto;
+
   width: 100%;
   height: 5rem;
+  position: fixed;
 
   font-size: 20px;
 
-  background-color: red;
+  background-color: #fff;
 `
 
 const ImageBox = styled.div`

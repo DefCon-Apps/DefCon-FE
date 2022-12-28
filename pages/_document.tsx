@@ -1,6 +1,13 @@
-import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
+import Document, {
+  Html,
+  Head,
+  Main,
+  NextScript,
+  DocumentContext,
+} from "next/document";
 // Import styled components ServerStyleSheet
-import { ServerStyleSheet } from 'styled-components';
+import { ServerStyleSheet } from "styled-components";
+import Link from "next/link";
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -14,9 +21,10 @@ export default class MyDocument extends Document {
       // 출처 : https://velog.io/@gth1123/next-js%EC%99%80-styled-component
       ctx.renderPage = () =>
         originalRenderpage({
-          enhanceApp: (App) => (props) => sheet.collectStyles(<App {...props} />),
+          enhanceApp: (App) => (props) =>
+            sheet.collectStyles(<App {...props} />),
         });
-      
+
       const initialProps = await Document.getInitialProps(ctx);
       return {
         ...initialProps,
@@ -38,6 +46,10 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          <Link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+            rel="stylesheet"
+          />
         </Head>
         <body>
           <Main />
