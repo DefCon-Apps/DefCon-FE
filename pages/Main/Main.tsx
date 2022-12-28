@@ -18,9 +18,8 @@ const Main = () => {
 const MainStyle = styled.div`
   font-family: "Noto Sans KR";
   height: 100vh;
-  padding: 18rem 25rem 0rem 25rem;
-  padding-top: 18rem;
-  padding-left: 25rem;
+  padding: 18rem 23rem 0rem 23rem;
+  text-align: right;
 `;
 
 const MainContentsStyle = styled.div`
@@ -29,7 +28,7 @@ const MainContentsStyle = styled.div`
 `;
 
 const MainContextStyle = styled.div`
-    margin-left: 10rem;
+    margin-left: 30rem;
 `
 
 
