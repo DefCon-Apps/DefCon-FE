@@ -20,17 +20,14 @@ const Header = () => {
 const HeaderDiv = styled.div`
   display: flex;
   justify-content: space-between;
-
   width: 100vw;
   height: 5rem;
   position: fixed;
   top : 0;
   z-index: 3;
-
   font-family: 'Noto Sans KR';
   font-size: 20px;
   font-weight: bold;
-
   background-color: #fff;
 `
 
@@ -53,7 +50,6 @@ const HeaderNavUl = styled.ul`
 const HeaderNavLi = styled.li`
   margin-left: 2rem;
   list-style: none;
-  
   a{text-decoration:none;}
   a:visited{color : #0e0e0e;}
 `

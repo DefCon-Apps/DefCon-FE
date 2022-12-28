@@ -29,13 +29,13 @@ const FooterDiv = styled.div`
   border-radius: 1rem 1rem 0 0;
   color: #fff;
   background-color: #001e2e;
+  font-family: 'Noto Sans KR';
 `;
 
 const FooterContents = styled.div`
   display: flex;
   flex-direction: column;
   padding:2rem 10rem 2rem 10rem;
-
   p{
     letter-spacing: 0.1rem;
     font-weight: lighter;
