@@ -25,7 +25,9 @@ const HeaderDiv = styled.div`
   height: 5rem;
   position: fixed;
 
+  font-family: 'Noto Sans KR';
   font-size: 20px;
+  font-weight: bold;
 
   background-color: #fff;
 `
