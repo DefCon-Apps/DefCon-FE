@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import MainTitle from "./MainTitle";
+import MainHistory from "./MainHistory";
 
 const Main = () => {
   return (
@@ -12,7 +13,6 @@ const Main = () => {
 const MainStyle = styled.div`
   font-family: "Noto Sans KR";
   height: 100vh;
-  /* padding: 18rem 23rem 0rem 23rem; */
   text-align: right;
 `;
 

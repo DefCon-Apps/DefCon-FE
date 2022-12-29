@@ -52,7 +52,6 @@ const FooterContexts = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
-  margin-top: 1rem;
 `;
 
 const FooterLogo = styled.img`
