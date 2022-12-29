@@ -1,4 +1,4 @@
-import Main from "./Main/Main"
+import Main from "./Main"
 
 const Home = () => {
   return (

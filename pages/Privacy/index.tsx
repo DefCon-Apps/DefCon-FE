@@ -1,8 +1,1 @@
-const PrivacyIndex = () => {
-    return(
-        <>
-        </>
-    )
-}
-
-export default PrivacyIndex;
+export {default} from "./Privacy";
