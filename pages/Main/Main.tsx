@@ -1,19 +1,21 @@
 import styled from "styled-components";
 import MainTitle from "./MainTitle";
 import MainHistory from "./MainHistory";
+import MainAwards from "./MainAwards";
 
 const Main = () => {
   return (
     <MainStyle>
-      <MainTitle />
+      <MainTitle/>
+      <MainHistory/>
+      <MainAwards/>
     </MainStyle>
   );
 };
 
 const MainStyle = styled.div`
   font-family: "Noto Sans KR";
-  height: 100vh;
-  text-align: right;
+  margin-bottom: 200px;
 `;
 
 
