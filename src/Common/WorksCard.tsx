@@ -7,8 +7,9 @@ interface Props {
 const WorksCard = (props : Props) => {
   return(
 		<WorksCardWrapper>
-			<ImageBoxStyle 
-				image={props.image}/>
+			<ImageBoxStyle>
+				<img src={props.image}/>
+			</ImageBoxStyle>
 			<h1>{props.text}</h1>
 		</WorksCardWrapper>
 	);
@@ -26,10 +27,9 @@ const WorksCardWrapper = styled.div`
 	}
 `
 
-const ImageBoxStyle = styled.div<Props>`
+const ImageBoxStyle = styled.div`
   width: 600px;
   height: 400px;
-  background-color: ${props => props.image};
 	border-radius: 20px;
 `;
 

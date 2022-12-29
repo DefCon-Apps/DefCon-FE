@@ -1,35 +1,37 @@
 import styled from "styled-components";
 import { ScrollMenu } from "react-horizontal-scrolling-menu";
 import WorksCard from "../../src/Common/WorksCard";
+import testImage from "../../public/Images/testImage.png";
 
 const dummyArray = [
   {
     id: "w1",
     text: "Android",
-    image: "red",
+    image: "/Users/harenkei/Documents/defcon/DefCon-FE/public/Images/testImage.png",
   },
   {
     id: "w2",
     text: "iOS",
-    image: "blue",
+    image: "../../public/Images/testImage.png",
   },
   {
     id: "w3",
     text: "Self-Repair",
-    image: "grey",
+    image: "../../public/Images/testImage.png",
   },
   {
     id: "w4",
     text: "Web",
-    image: "green",
+    image: "../../public/Images/testImage.png",
   },
   {
     id: "w5",
     text: "Chat Bot",
-    image: "yellow",
+    image: "../../public/Images/testImage.png",
   },
 ];
 
+console.log(typeof({testImage}));
 const MainWorks = () => {
   return (
     <MainWorksWrapper>
