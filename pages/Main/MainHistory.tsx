@@ -1,15 +1,15 @@
 import styled from "styled-components";
+import Dbutton from "../../src/Common/Dbutton";
 
 const MainHistory = () => {
     return(
         <MainHistoryStyle>
           <HistoryTitle>
             <h1>시작은 성보고 꼭대기<br/>컴퓨터실에서부터</h1>
-          </HistoryTitle>
-          
-          <HistoryContents>
             <HistoryImage>
             </HistoryImage>
+          </HistoryTitle>
+          <HistoryContents>  
               <HistoryContext>
                 <p>
                   DEF:CON은 성보고등학교 컴퓨터실에서 시작된 동아리로<br/>
@@ -18,7 +18,22 @@ const MainHistory = () => {
                   우리가 좋아하는 것들을 다른 학생들과 나눴죠.<br/>
                 </p>
                 <HistoryButton>
-                  <button>응애</button> <button>응애1</button>
+                  <Dbutton
+                    text={"성보고 App"}
+                    textColor={"#FFFFFF"}
+                    textSize={20}
+                    width={12}
+                    height={3}
+                    btnColor={"#001E2E"}
+                  />
+                  <Dbutton
+                    text={"성보고 알아보기"}
+                    textColor={"#FFFFFF"}
+                    textSize={20}
+                    width={12}
+                    height={3}
+                    btnColor={"#001E2E"}
+                  />
                 </HistoryButton>
               </HistoryContext>
           </HistoryContents>
@@ -28,41 +43,53 @@ const MainHistory = () => {
 
 const MainHistoryStyle = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-top: 15rem;
+  height: 100vh;
+  font-family: 'Noto Sans KR';
 `;
 
 const HistoryTitle = styled.div`
-
-  
+  display: flex;
+  flex-direction: column;
+  h1{
+    text-align:left;
+    font-size: 3em;
+  }
 `
 
 const HistoryImage = styled.div`
-  width: 20rem;
-  height: 10rem;
+  width: 36rem;
+  height: 24rem;
+  margin-top: 2rem;
+  border-radius: 1.5rem;
   background-color: grey;
   
 `;
 
-const HistoryContext = styled.div`
-  display: flex;
-  flex-direction: column;
-`
+
 
 const HistoryButton = styled.div`
   display: flex;
   flex-direction: row;
-`
+  justify-content: right;
+`;
 
 const HistoryContents = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-
+  margin-top: 7rem;
+  margin-left: 8rem;
+  
   p{
-    text-align: left;
+    text-align: right;
+    font-size: 1.5rem;
+    font-weight: 300;
   }
 `;
+
+const HistoryContext = styled.div`
+  
+
+
+`
 export default MainHistory;
