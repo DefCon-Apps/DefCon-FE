@@ -17,7 +17,6 @@ const Main = () => {
 
 const MainStyle = styled.div`
   font-family: "Noto Sans KR";
-  margin-bottom: 200px;
 `;
 
 
