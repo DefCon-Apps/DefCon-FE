@@ -6,7 +6,7 @@ const dummyArray = [
   {
     id: "w1",
     text: "Android",
-		image: "crab.svg"
+		image: "testImage.png"
   },
   {
     id: "w2",
@@ -16,12 +16,12 @@ const dummyArray = [
   {
     id: "w3",
     text: "Self-Repair",
-		image: "mainLogo.svg"
+		image: "testImage.png"
   },
   {
     id: "w4",
     text: "Web",
-		image: "subLogo.svg"
+		image: "testImage.png"
   },
   {
     id: "w5",
@@ -42,13 +42,11 @@ const MainWorks = () => {
           있습니다.<br />
         </p>
       </WorksTitle>
-      <ScrollWrapper>
         <ScrollMenu>
           {dummyArray.map((items) => (
             <WorksCard key={items.id} text={items.text} image={items.image} />
           ))}
         </ScrollMenu>
-      </ScrollWrapper>
     </MainWorksWrapper>
   );
 };
@@ -75,7 +73,5 @@ const WorksTitle = styled.div`
   }
 `;
 
-const ScrollWrapper = styled.div`
-`;
 
 export default MainWorks;
