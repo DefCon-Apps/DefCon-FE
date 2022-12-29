@@ -3,6 +3,7 @@ interface Props {
     text: string,
     textColor: string,
     btnColor: string,
+    direction: string,
     width: number,
     textSize: number,
     height: number
@@ -17,6 +18,7 @@ const Dbutton = (props : Props) => {
           btnColor={props.btnColor}
           width={props.width}
           height={props.height}
+          direction={props.direction}
         >
           {props.text}
         </DbuttonStyle>
@@ -27,7 +29,7 @@ const DbuttonStyle = styled.button<Props>`
   width: ${props => props.width + "rem" || "12rem"};
   height: ${props => props.height + "rem" || "3rem"};
 
-  margin: 0.5rem 0rem 0rem 1rem;
+  ${props => props.direction === "left" ? "margin-left: 5px;" : "margin-right: 5px;"}
   padding: 0;
 
   font-size: ${props => props.textSize + "px" || "1rem"};

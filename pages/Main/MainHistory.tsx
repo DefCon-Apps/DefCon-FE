@@ -26,6 +26,7 @@ const MainHistory = () => {
               width={12}
               height={3}
               btnColor={"#001E2E"}
+              direction={"left"}
             />
             <Dbutton
               text={"성보고 알아보기"}
@@ -34,6 +35,7 @@ const MainHistory = () => {
               width={12}
               height={3}
               btnColor={"#001E2E"}
+              direction={"left"}
             />
           </HistoryButton>
       </HistoryContents>
@@ -55,7 +57,7 @@ const HistoryTitle = styled.div`
   flex-direction: column;
   h1 {
     text-align: left;
-    font-size: 3em;
+    font-size: 3.5em;
   }
 `;
 
@@ -71,10 +73,11 @@ const HistoryButton = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: right;
+  margin: 0.5rem 0rem 0rem 0rem;
 `;
 
 const HistoryContents = styled.div`
-  margin-top: 7rem;
+  margin-top: 12rem;
   margin-left: 8rem;
 
   p {

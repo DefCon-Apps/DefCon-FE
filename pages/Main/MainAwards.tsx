@@ -4,39 +4,33 @@ import Dbutton from "../../src/Common/Dbutton";
 const MainAwards = () => {
   return (
     <MainHistoryStyle>
-      <HistoryTitle>
-        <h1>
-          시작은 성보고 꼭대기<br />
-          컴퓨터실에서부터
-        </h1>
-        <HistoryImage></HistoryImage>
-      </HistoryTitle>
       <HistoryContents>
           <p>
-            DEF:CON은 성보고등학교 컴퓨터실에서 시작된 동아리로<br />
-            소프트웨어를 좋아하는 학생들이 모여 재미있는 일을 하던<br />
-            데에서 시작되었습니다. 학교 행사에도 적극적으로 참여해<br />
-            우리가 좋아하는 것들을 다른 학생들과 나눴죠.<br />
+            DEF:CON은 매년 &apos;스마트 서울 모바일 앱 공모전&apos; 수상을<br />
+            목표로 꾸준히 참가해왔습니다.<br />
+            2019년, 마지막으로 열린 공모전에서 우리는 마침내 오랜<br />
+            염원을 이루고 219팀 중 11위를 달성하여 장려상을 수상<br />
+            하는 쾌거를 이뤘습니다.<br />
           </p>
           <HistoryButton>
             <Dbutton
-              text={"성보고 App"}
+              text={"SOUL REST GitHub"}
               textColor={"#FFFFFF"}
               textSize={20}
-              width={12}
+              width={15}
               height={3}
               btnColor={"#001E2E"}
-            />
-            <Dbutton
-              text={"성보고 알아보기"}
-              textColor={"#FFFFFF"}
-              textSize={20}
-              width={12}
-              height={3}
-              btnColor={"#001E2E"}
+              direction={"right"}
             />
           </HistoryButton>
       </HistoryContents>
+      <HistoryTitle>
+        <h1>
+          DEF:CON의 오랜 염원<br />
+          마침내 이루다
+        </h1>
+        <HistoryImage></HistoryImage>
+      </HistoryTitle>
     </MainHistoryStyle>
   );
 };
@@ -54,8 +48,8 @@ const HistoryTitle = styled.div`
   display: flex;
   flex-direction: column;
   h1 {
-    text-align: left;
-    font-size: 3em;
+    text-align: right;
+    font-size: 3.5rem;
   }
 `;
 
@@ -70,15 +64,16 @@ const HistoryImage = styled.div`
 const HistoryButton = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: right;
+  justify-content: left;
+  margin-top: 0.5rem;
 `;
 
 const HistoryContents = styled.div`
-  margin-top: 7rem;
-  margin-left: 8rem;
+  margin-top: 12rem;
+  margin-right: 8rem;
 
   p {
-    text-align: right;
+    text-align: left;
     font-size: 1.5rem;
     font-weight: 300;
   }
