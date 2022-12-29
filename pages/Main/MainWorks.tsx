@@ -62,13 +62,13 @@ const WorksTitle = styled.div`
 
 	h1 {
     text-align: left;
-    font-size: 4rem;
+    font-size: 4.5rem;
     letter-spacing: -5px;
   }
 
   p {
     margin-top: 10px;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 300;
   }
 `;
