@@ -39,26 +39,29 @@ const MainTitleStyle = styled.div`
 const TitleContentsStyle = styled.div`
   display: flex;
   flex-direction: row;
+  text-align: right;
   margin-top: 15rem;
 
   h1 {
-    font-size: 4em;
-    font-weight: 900;
+    font-size: 100px;
+    font-weight: bolder;
+    letter-spacing: -5px;
+    
   }
   p {
+    font-size: 30px;
     font-weight: bold;
-    font-size: 1rem;
   }
 `;
 
 const IntroStyle = styled.div`
   letter-spacing: 0.1rem;
-  margin-left: 8rem;
-  margin-top: 8rem;
+  margin: 5rem 0rem 0rem 8rem;
+  font-size: 25px;
 `;
 
 const ScrollIconStyle = styled.div`
-  margin-top: 15rem;
+  margin-top: 18rem;
   justify-content: center;
 `;
 
