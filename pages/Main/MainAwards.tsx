@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Link from "next/link";
 import Dbutton from "../../src/Common/Dbutton";
 
 const MainAwards = () => {
@@ -13,6 +14,7 @@ const MainAwards = () => {
             하는 쾌거를 이뤘습니다.<br />
           </p>
           <HistoryButton>
+            <Link href="https://github.com/yymin1022/SeoulHealing" target="_blank" rel="noreferrer">
             <Dbutton
               text={"SOUL REST GitHub"}
               textColor={"#FFFFFF"}
@@ -22,6 +24,7 @@ const MainAwards = () => {
               btnColor={"#001E2E"}
               direction={"right"}
             />
+            </Link>
           </HistoryButton>
       </HistoryContents>
       <HistoryTitle>
