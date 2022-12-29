@@ -20,7 +20,7 @@ const MainTitle = () => {
       </TitleContentsStyle>
 
       <ScrollIconStyle>
-        <FontAwesomeIcon icon={faAngleDoubleDown} color="#0e0e0e" size="3x" />
+        <FontAwesomeIcon icon={faAngleDoubleDown} color="#4C6170" size="3x" />
       </ScrollIconStyle>
     </MainTitleStyle>
   );
@@ -29,16 +29,18 @@ const MainTitle = () => {
 const MainTitleStyle = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   font-family: "Noto Sans KR";
-  margin: 15rem 23rem 0rem 24rem;
 `;
 
 const TitleContentsStyle = styled.div`
   display: flex;
   flex-direction: row ;
+  margin-top: 15rem;
   
   h1 {
-    font-size: 4rem;
+    font-size: 4em;
     font-weight: 900;
   }
   p {
@@ -48,15 +50,14 @@ const TitleContentsStyle = styled.div`
 `;
 
 const IntroStyle = styled.div`
-  margin-top: 1rem;
   letter-spacing: 0.1rem;
-  margin-left: 8.5rem;
-  margin-top: 5.3rem;
+  margin-left: 8rem;
+  margin-top: 8rem;
 `;
 
 const ScrollIconStyle = styled.div`
-  margin-top: 12rem;
-  margin-right: 30rem;
+  margin-top: 15rem;
+  justify-content: center;
 `;
 
 export default MainTitle;
