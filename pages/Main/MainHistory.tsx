@@ -20,6 +20,7 @@ const MainHistory = () => {
             우리가 좋아하는 것들을 다른 학생들과 나눴죠.<br />
           </p>
           <HistoryButton>
+            <Link href="https://play.google.com/store/apps/details?id=com.defcon.sungbo&hl=ko&gl=US" target="_blank" rel="noreferrer">
             <Dbutton
               text={"성보고 App"}
               textColor={"#FFFFFF"}
@@ -29,7 +30,8 @@ const MainHistory = () => {
               btnColor={"#001E2E"}
               direction={"left"}
             />
-            <Link href="https://sungbo.sen.hs.kr/">
+            </Link>
+            <Link href="https://sungbo.sen.hs.kr/" target="_blank" rel="noreferrer">
             <Dbutton
               text={"성보고 알아보기"}
               textColor={"#FFFFFF"}
