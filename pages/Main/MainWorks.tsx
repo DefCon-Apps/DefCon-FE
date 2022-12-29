@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { ScrollMenu } from "react-horizontal-scrolling-menu";
 import WorksCard from "../../src/Common/WorksCard";
-import testImage from "../../public/Images/testImage.png";
+import ImageTest from "../../src/Common/ImageTest";
 
 const dummyArray = [
   {
@@ -31,7 +31,7 @@ const dummyArray = [
   },
 ];
 
-console.log(typeof({testImage}));
+console.log(typeof({ImageTest}));
 const MainWorks = () => {
   return (
     <MainWorksWrapper>

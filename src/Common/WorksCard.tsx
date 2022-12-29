@@ -1,7 +1,7 @@
 import styled from "styled-components";
 interface Props {
 	text: string,
-	image: string
+	image: object
 };
 
 const WorksCard = (props : Props) => {
