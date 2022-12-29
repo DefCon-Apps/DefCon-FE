@@ -9,7 +9,8 @@ import Document, {
 import { ServerStyleSheet } from "styled-components";
 import Link from "next/link";
 
-export default class MyDocument extends Document {
+export default // @ts-ignore
+class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
     // Step 1: Create an instance of ServerStyleSheet
     const sheet = new ServerStyleSheet();

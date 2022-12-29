@@ -1,3 +1,4 @@
+// @ts-ignore
 import Main from "./Main"
 
 const Home = () => {
