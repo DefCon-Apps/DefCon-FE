@@ -2,6 +2,7 @@ import styled from "styled-components";
 import MainTitle from "./MainTitle";
 import MainHistory from "./MainHistory";
 import MainAwards from "./MainAwards";
+import MainWorks from "./MainWorks";
 
 const Main = () => {
   return (
@@ -9,6 +10,7 @@ const Main = () => {
       <MainTitle/>
       <MainHistory/>
       <MainAwards/>
+      <MainWorks/>
     </MainStyle>
   );
 };
