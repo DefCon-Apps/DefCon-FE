@@ -1,11 +1,14 @@
 import styled from "styled-components";
 interface Props {
-  text: string;
-}
+	text: string,
+	image: string
+};
+
 const WorksCard = (props : Props) => {
   return(
 		<WorksCardWrapper>
-			<ImageBoxStyle/>
+			<ImageBoxStyle 
+				image={props.image}/>
 			<h1>{props.text}</h1>
 		</WorksCardWrapper>
 	);
@@ -23,10 +26,10 @@ const WorksCardWrapper = styled.div`
 	}
 `
 
-const ImageBoxStyle = styled.div`
+const ImageBoxStyle = styled.div<Props>`
   width: 600px;
   height: 400px;
-  background-color: grey;
+  background-color: ${props => props.image};
 	border-radius: 20px;
 `;
 

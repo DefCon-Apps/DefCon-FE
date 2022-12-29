@@ -4,22 +4,30 @@ import WorksCard from "../../src/Common/WorksCard";
 
 const dummyArray = [
   {
-    id: 'w1',
-    title: 'Android',
+		id : 'w1',
+  	text: 'Android',
+		image: 'red'
   },
-  { id: 'e2', title: 'New TV', amount: 799.49, date: new Date(2021, 2, 12) },
-  {
-    id: 'e3',
-    title: 'Car Insurance',
-    amount: 294.67,
-    date: new Date(2021, 2, 28),
+	{
+		id : 'w2',
+  	text: 'iOS',
+		image: 'blue'
   },
-  {
-    id: 'e4',
-    title: 'New Desk (Wooden)',
-    amount: 450,
-    date: new Date(2021, 5, 12),
+	{
+		id : 'w3',
+  	text: 'Self-Repair',
+		image: 'grey'
   },
+	{
+		id : 'w4',
+  	text: 'Web',
+		image: 'green'
+  },
+	{
+		id : 'w5',
+  	text: 'Chat Bot',
+		image: 'yellow',
+  }
 ];
 
 const MainWorks = () => {
@@ -27,11 +35,7 @@ const MainWorks = () => {
         <MainWorksWrapper>
 					<h1>여기다가 가로스크롤 구현하기!!!</h1>
 					<ScrollMenu>
-						<WorksCard text={"Android"}/>
-						<WorksCard text={"iOS"}/>
-						<WorksCard text={"Self-Repair"}/>
-						<WorksCard text={"Web"}/>
-						<WorksCard text={"etc"}/>
+						{dummyArray.map((items) => (<WorksCard key={items.id} text={items.text} image={items.image} />))}
 					</ScrollMenu>
         </MainWorksWrapper>
     );
