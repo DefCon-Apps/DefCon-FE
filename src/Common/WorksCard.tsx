@@ -1,15 +1,15 @@
 import styled from "styled-components";
+
 interface Props {
 	text: string,
-	image: object
+	image: string
 };
 
 const WorksCard = (props : Props) => {
+
   return(
 		<WorksCardWrapper>
-			<ImageBoxStyle>
-				<img src={props.image}/>
-			</ImageBoxStyle>
+			<ImageBoxStyle src={`/Images/${props.image}`}/>
 			<h1>{props.text}</h1>
 		</WorksCardWrapper>
 	);
@@ -27,7 +27,7 @@ const WorksCardWrapper = styled.div`
 	}
 `
 
-const ImageBoxStyle = styled.div`
+const ImageBoxStyle = styled.img`
   width: 600px;
   height: 400px;
 	border-radius: 20px;
