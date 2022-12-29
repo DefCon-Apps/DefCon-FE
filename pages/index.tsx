@@ -1,5 +1,4 @@
-// @ts-ignore
-import Main from "./Main"
+import Main from "./Main/Main"
 
 const Home = () => {
   return (
