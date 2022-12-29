@@ -42,6 +42,7 @@ const MainHistoryStyle = styled.div`
   align-items: center;
   height: 100vh;
   font-family: "Noto Sans KR";
+  margin-bottom: 200px;
 `;
 
 const HistoryTitle = styled.div`

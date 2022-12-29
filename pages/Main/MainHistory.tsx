@@ -3,7 +3,7 @@ import Dbutton from "../../src/Common/Dbutton";
 
 const MainHistory = () => {
   return (
-    <MainHistoryStyle>
+    <MainHistoryWrapper>
       <HistoryTitle>
         <h1>
           시작은 성보고 꼭대기<br />
@@ -39,11 +39,11 @@ const MainHistory = () => {
             />
           </HistoryButton>
       </HistoryContents>
-    </MainHistoryStyle>
+    </MainHistoryWrapper>
   );
 };
 
-const MainHistoryStyle = styled.div`
+const MainHistoryWrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -69,6 +69,7 @@ const HistoryImage = styled.div`
   border-radius: 1.5rem;
   background-color: grey;
 `;
+//추후 삽입될 이미지 확정시 img에 대한 스타일로 변경 필요
 
 const HistoryButton = styled.div`
   display: flex;
