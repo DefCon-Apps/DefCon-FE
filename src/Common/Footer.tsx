@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import Link from "next/link";
 
-//자간 설정하세요
-//font-weight도 잘 생각하세요.
 
 const Footer = () => {
   return (
@@ -16,7 +14,7 @@ const Footer = () => {
             Designed By HarenKei From Seoul, Korea
           </p>
           <p>
-            이 페이지의 모든 소스코드는 <span><a href="https://github.com/DefCon-Apps/DefCon-FE" target="_blank" rel="noreferrer">DEF:CON GitHub</a></span>에서 확인하실 수 있습니다.
+            이 페이지의 모든 소스코드는 <span><Link href="https://github.com/DefCon-Apps/DefCon-FE" target="_blank" rel="noreferrer">DEF:CON GitHub</Link></span>에서 확인하실 수 있습니다.
           </p>
         </FooterContexts>
       </FooterContents>

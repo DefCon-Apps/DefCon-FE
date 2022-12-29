@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Link from "next/link";
 import Dbutton from "../../src/Common/Dbutton";
 
 const MainHistory = () => {
@@ -28,6 +29,7 @@ const MainHistory = () => {
               btnColor={"#001E2E"}
               direction={"left"}
             />
+            <Link href="https://sungbo.sen.hs.kr/">
             <Dbutton
               text={"성보고 알아보기"}
               textColor={"#FFFFFF"}
@@ -37,6 +39,7 @@ const MainHistory = () => {
               btnColor={"#001E2E"}
               direction={"left"}
             />
+            </Link>
           </HistoryButton>
       </HistoryContents>
     </MainHistoryWrapper>
