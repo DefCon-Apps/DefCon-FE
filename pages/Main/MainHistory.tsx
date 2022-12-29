@@ -57,7 +57,8 @@ const HistoryTitle = styled.div`
   flex-direction: column;
   h1 {
     text-align: left;
-    font-size: 3.5em;
+    font-size: 4rem;
+    letter-spacing: -5px;
   }
 `;
 
