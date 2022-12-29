@@ -1,16 +1,10 @@
 import styled from "styled-components";
-import Crab from "../../src/Common/Crab";
+import MainTitle from "./MainTitle";
 
 const Main = () => {
   return (
     <MainStyle>
-      <MainContentsStyle>
-        <Crab width={15} height={15} />
-        <MainContextStyle>
-          <h1>TEAM DEF:CON</h1>
-          <p>유용민 바보</p>
-        </MainContextStyle>
-      </MainContentsStyle>
+      <MainTitle />
     </MainStyle>
   );
 };
@@ -22,14 +16,7 @@ const MainStyle = styled.div`
   text-align: right;
 `;
 
-const MainContentsStyle = styled.div`
-    display: flex;
-    
-`;
 
-const MainContextStyle = styled.div`
-    margin-left: 30rem;
-`
 
 
 export default Main;
