@@ -54,7 +54,7 @@ const MainWorks = () => {
 };
 
 const MainWorksWrapper = styled.div`
-  height: 100vh;
+  height: 80vh;
 `;
 
 const WorksTitle = styled.div`
