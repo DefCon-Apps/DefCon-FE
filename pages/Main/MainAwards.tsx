@@ -53,8 +53,8 @@ const HistoryTitle = styled.div`
   flex-direction: column;
   h1 {
     text-align: right;
-    font-size: 4rem;
-    letter-spacing: -5px;
+    font-size: 55pt;
+    letter-spacing: -7px;
   }
 `;
 
@@ -79,7 +79,7 @@ const HistoryContents = styled.div`
 
   p {
     text-align: left;
-    font-size: 1.5rem;
+    font-size: 18pt;
     font-weight: 300;
   }
 `;

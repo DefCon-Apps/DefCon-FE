@@ -42,17 +42,19 @@ const MainWorks = () => {
           있습니다.<br />
         </p>
       </WorksTitle>
+			<ScrollMenuWrapper>
         <ScrollMenu>
           {dummyArray.map((items) => (
             <WorksCard key={items.id} text={items.text} image={items.image} />
           ))}
         </ScrollMenu>
+			</ScrollMenuWrapper>
     </MainWorksWrapper>
   );
 };
 
 const MainWorksWrapper = styled.div`
-  height: 100vh;
+  height: 80vh;
 `;
 
 const WorksTitle = styled.div`
@@ -62,16 +64,20 @@ const WorksTitle = styled.div`
 
 	h1 {
     text-align: left;
-    font-size: 4.5rem;
-    letter-spacing: -5px;
+    font-size: 55pt;
+    letter-spacing: -7px;
   }
 
   p {
     margin-top: 10px;
-    font-size: 1.8rem;
+    font-size: 18pt;
     font-weight: 300;
   }
 `;
+
+const ScrollMenuWrapper = styled.div`
+	margin: 0rem 22rem 0rem 22rem;
+`
 
 
 export default MainWorks;

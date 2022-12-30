@@ -19,17 +19,17 @@ const WorksCardWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-left: 100px;
+	margin-left: 50px;
 
 	h1{
 		margin-top : 1rem;
-		font-size: 3rem;
+		font-size: 2.5rem;
 	}
 `
 
 const ImageBoxStyle = styled.img`
-  width: 600px;
-  height: 400px;
+  width: 300px;
+  height: 200px;
 	border-radius: 20px;
 `;
 
