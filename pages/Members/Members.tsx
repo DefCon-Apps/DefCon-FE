@@ -5,15 +5,15 @@ import MembersDetail from "./MembersDetail";
 
 const Members = () => {
   return (
-    <MemberStyle>
+    <MembersStyle>
         <MembersTitle />
         <MembersList />
         <MembersDetail />
-    </MemberStyle>
+    </MembersStyle>
   );
 };
 
-const MemberStyle = styled.div`
+const MembersStyle = styled.div`
   font-family: "Noto Sans KR";
 `;
 
