@@ -6,15 +6,27 @@ import MembersDetail from "./MembersDetail";
 const Members = () => {
   return (
     <MembersStyle>
-        <MembersTitle />
-        <MembersList />
-        <MembersDetail />
+        <MembersContainer>
+            <MembersTitle />
+            <MembersViewContainer>
+                <MembersList />
+                <MembersDetail />
+            </MembersViewContainer>
+        </MembersContainer>
     </MembersStyle>
   );
 };
 
 const MembersStyle = styled.div`
-  font-family: "Noto Sans KR";
+    font-family: "Noto Sans KR";
+`;
+
+const MembersContainer = styled.div`
+    
+`;
+
+const MembersViewContainer = styled.div`
+    
 `;
 
 export default Members;
