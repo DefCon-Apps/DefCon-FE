@@ -1,10 +1,11 @@
 import Link from "next/link";
 import styled from "styled-components";
+import MembersTitle from "./MembersTitle";
 
 const Members = () => {
   return (
     <MemberStyle>
-        Member Page
+        <MembersTitle />
     </MemberStyle>
   );
 };
