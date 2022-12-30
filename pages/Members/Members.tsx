@@ -1,12 +1,16 @@
 import Link from "next/link";
+import styled from "styled-components";
 
 const Members = () => {
   return (
-    <>
-      <h1>Here is Members Page</h1>
-      <p><Link href="/">Home</Link></p>
-    </>
+    <MemberStyle>
+        Member Page
+    </MemberStyle>
   );
 };
+
+const MemberStyle = styled.div`
+  font-family: "Noto Sans KR";
+`;
 
 export default Members;
