@@ -1,4 +1,3 @@
-import Link from "next/link";
 import styled from "styled-components";
 import MembersTitle from "./MembersTitle";
 import MembersList from "./MembersList";
