@@ -14,7 +14,7 @@ const mainRectangle = [
     height: "22rem",
     tranX: "-78rem",
     tranY: "7rem",
-    type: "bordered"
+    typeR: "bordered",
   },
   {
     id: "r2",
@@ -22,7 +22,7 @@ const mainRectangle = [
     height: "22rem",
     tranX: "60rem",
     tranY: "27rem",
-    type: "filled"
+    typeR: "filled",
   },
   {
     id: "r3",
@@ -30,7 +30,7 @@ const mainRectangle = [
     height: "22rem",
     tranX: "61rem",
     tranY: "76rem",
-    type: "filled"
+    typeR: "filled",
   },
   {
     id: "r4",
@@ -38,7 +38,7 @@ const mainRectangle = [
     height: "22rem",
     tranX: "59rem",
     tranY: "71rem",
-    type: "filled"
+    typeR: "filled",
   },
   {
     id: "r5",
@@ -46,7 +46,7 @@ const mainRectangle = [
     height: "22rem",
     tranX: "-78rem",
     tranY: "105.6rem",
-    type: "bordered"
+    typeR: "bordered",
   },
   {
     id: "r6",
@@ -54,7 +54,7 @@ const mainRectangle = [
     height: "22rem",
     tranX: "-78rem",
     tranY: "143rem",
-    type: "bordered"
+    typeR: "bordered",
   },
   {
     id: "r7",
@@ -62,69 +62,23 @@ const mainRectangle = [
     height: "22rem",
     tranX: "59rem",
     tranY: "160rem",
-    type: "bordered"
+    typeR: "bordered",
   },
 ];
 
 const MainRectangle = () => {
   return (
     <>
-      {}
-      <BackgroundCard
-        color={"#35B6F7"}
-        height={"22rem"}
-        translateX={"-78rem"}
-        translateY={"7rem"}
-        type={"bordered"}
-      />
-
-      <BackgroundCard
-        color={"#C7E7FF"}
-        height={"22rem"}
-        translateX={"60rem"}
-        translateY={"27rem"}
-        type={"filled"}
-      />
-
-      <BackgroundCard
-        color={"#35B6F7"}
-        height={"22rem"}
-        translateX={"61rem"}
-        translateY={"76rem"}
-        type={"filled"}
-      />
-
-      <BackgroundCard
-        color={"#00658F"}
-        height={"22rem"}
-        translateX={"59rem"}
-        translateY={"71rem"}
-        type={"filled"}
-      />
-
-      <BackgroundCard
-        color={"#00658F"}
-        height={"22rem"}
-        translateX={"-78rem"}
-        translateY={"105.6rem"}
-        type={"bordered"}
-      />
-
-      <BackgroundCard
-        color={"#C7E7FF"}
-        height={"22rem"}
-        translateX={"-78rem"}
-        translateY={"143rem"}
-        type={"bordered"}
-      />
-
-      <BackgroundCard
-        color={"#35B6F7"}
-        height={"22rem"}
-        translateX={"59rem"}
-        translateY={"160rem"}
-        type={"bordered"}
-      />
+      {mainRectangle.map((items) => (
+        <BackgroundCard
+          key={items.id}
+          color={items.color}
+          height={items.height}
+          translateX={items.tranX}
+          translateY={items.tranY}
+          type={items.typeR}
+        />
+      ))}
     </>
   );
 };
