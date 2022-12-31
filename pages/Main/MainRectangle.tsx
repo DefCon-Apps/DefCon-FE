@@ -12,7 +12,7 @@ const MainRectangle = () => {
     <>
       <BackgroundCard
         color={"#35B6F7"}
-        height={"20rem"}
+        height={"22rem"}
         translateX={"-78rem"}
         translateY={"7rem"}
         type={"bordered"}
@@ -20,7 +20,7 @@ const MainRectangle = () => {
 
       <BackgroundCard
         color={"#C7E7FF"}
-        height={"20rem"}
+        height={"22rem"}
         translateX={"60rem"}
         translateY={"27rem"}
         type={"filled"}
@@ -28,18 +28,42 @@ const MainRectangle = () => {
 
       <BackgroundCard
         color={"#35B6F7"}
-        height={"20rem"}
-        translateX={"62rem"}
-        translateY={"73rem"}
+        height={"22rem"}
+        translateX={"61rem"}
+        translateY={"76rem"}
         type={"filled"}
       />
-      
+
       <BackgroundCard
         color={"#00658F"}
-        height={"20rem"}
-        translateX={"60rem"}
-        translateY={"70rem"}
+        height={"22rem"}
+        translateX={"59rem"}
+        translateY={"71rem"}
         type={"filled"}
+      />
+
+      <BackgroundCard
+        color={"#00658F"}
+        height={"22rem"}
+        translateX={"-78rem"}
+        translateY={"105.6rem"}
+        type={"bordered"}
+      />
+
+      <BackgroundCard
+        color={"#C7E7FF"}
+        height={"22rem"}
+        translateX={"-78rem"}
+        translateY={"143rem"}
+        type={"bordered"}
+      />
+
+      <BackgroundCard
+        color={"#35B6F7"}
+        height={"22rem"}
+        translateX={"59rem"}
+        translateY={"160rem"}
+        type={"bordered"}
       />
     </>
   );
