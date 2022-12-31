@@ -5,7 +5,7 @@ import BackgroundCard from "../../src/Common/BackgroundCard";
 //     height: string;
 //     translateX: string;
 //     translateY: string;
-//     type: 'bordered' | 'filled';
+//     type: 'bordered' | 'filled' -> string;
 
 const mainRectangle = [
   {
