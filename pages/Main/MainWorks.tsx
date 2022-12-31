@@ -54,13 +54,14 @@ const MainWorks = () => {
 };
 
 const MainWorksWrapper = styled.div`
-  height: 80vh;
+  height: 100vh;
+	margin-top : 100px;
 `;
 
 const WorksTitle = styled.div`
   display: flex;
   flex-direction: column;
-	margin: 0rem 0rem 5rem 22rem;
+	margin: 200px 0px 50px 350px;
 
 	h1 {
     text-align: left;
@@ -76,7 +77,7 @@ const WorksTitle = styled.div`
 `;
 
 const ScrollMenuWrapper = styled.div`
-	margin: 0rem 22rem 0rem 22rem;
+	margin: 0px 330px 0px 300px;
 `
 
 
