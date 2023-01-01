@@ -1,11 +1,23 @@
-import Link from "next/link";
+import ProjectSection from "./ProjectSection";
 
 const Projects = () => {
   return (
     <>
-      <h1>Here is Projects Page</h1>
-      <p><Link href="/">Home</Link></p>
-      <p><Link href="/Projects/[ProjectDetail]" as="/Projects/SoulRest">뷰</Link></p>
+      <ProjectSection 
+        name="Android Applications"
+        description="DEF:CON이 만든 안드로이드 애플리케이션 입니다.">
+          <h1>PROJECT_LIST</h1> {/* 여기에 프로젝트 리스트 컴포넌트 삽입 */} 
+      </ProjectSection>
+      <ProjectSection 
+        name="Web Page & Web Application"
+        description="DEF:CON이 만든 웹 페이지 & 웹 애플리케이션 입니다.">
+          <h1>PROJECT_LIST</h1> {/* 여기에 프로젝트 리스트 컴포넌트 삽입 */} 
+      </ProjectSection>
+      <ProjectSection 
+        name="LR's SELF-REPAIR"
+        description="용민아 이것도 고쳐줘">
+          <h1>PROJECT_LIST</h1> {/* 여기에 프로젝트 리스트 컴포넌트 삽입 */} 
+      </ProjectSection>
     </>
   );
 };
