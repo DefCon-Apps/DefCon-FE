@@ -5,7 +5,7 @@ interface Props {
     height: string;
     translateX: string;
     translateY: string;
-    type: 'bordered' | 'filled';
+    type: string;
 
 }
 
