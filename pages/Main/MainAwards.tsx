@@ -55,6 +55,7 @@ const HistoryTitle = styled.div`
     text-align: right;
     font-size: 55pt;
     letter-spacing: -7px;
+    color: #fff;
   }
 `;
 
