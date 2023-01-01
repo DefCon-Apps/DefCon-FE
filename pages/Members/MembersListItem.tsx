@@ -1,10 +1,12 @@
 interface Props{
-    comment: string,
-    company: string,
-    id: string,
-    image: string,
-    name: string
-    sns: Array<snsData>
+    data: {
+        comment: string,
+        company: string,
+        id: string,
+        image: string,
+        name: string,
+        sns: Array<snsData>
+    }
 }
 
 interface snsData{
