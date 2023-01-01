@@ -4,7 +4,7 @@ const MembersTitle = () => {
     return (
         <MembersTitleContainer>
             <MembersTitleMain>MEMBERS<br/>OF DEF:CON</MembersTitleMain>
-            <MembersTitleSub>DEF:CON은 성보고등학교 동창 네 명으로 구성된 팀입니다</MembersTitleSub>
+            <MembersTitleSub><br/>DEF:CON은 성보고등학교 동창 네 명으로 구성된 팀입니다</MembersTitleSub>
         </MembersTitleContainer>
     );
 };
@@ -25,7 +25,9 @@ const MembersTitleMain = styled.p`
 `;
 
 const MembersTitleSub = styled.p`
-
+    font-size: 17pt;
+    font-weight: 400;
+    line-height: 35px;
 `;
 
 
