@@ -22,8 +22,12 @@ const SectionWrapper = styled.div`
   width: 100vw;
   height: 100vh;
   display: flex;
+  justify-content: center;
   align-items: center;
-  margin-left: 5rem;
+
+  div {
+    width: 1400px;
+  }
   
   h1 {
     text-align: left;
