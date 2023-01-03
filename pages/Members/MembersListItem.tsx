@@ -19,10 +19,17 @@ interface snsData{
 const MembersListItem = (props: Props) => {
     return (
         <MemberItemContainer>
-            {props.data.id}
-            {props.data.name}
-            {props.data.company}
-            {props.data.comment}
+            <MemberItemImageContainer>
+                {props.data.image}
+            </MemberItemImageContainer>
+
+            <MemberItemDataContainer>
+                {props.data.id}
+                {props.data.name}
+                {props.data.company}
+                {props.data.comment}
+            </MemberItemDataContainer>
+
         </MemberItemContainer>
     );
 };
@@ -32,7 +39,17 @@ const MemberItemContainer = styled.div`
     width: 400px;
   
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+`;
+
+const MemberItemImageContainer = styled.div`
+    height: 150px;
+    width: 150px;
+`;
+
+const MemberItemDataContainer = styled.div`
+    height: 150px;
+    width: 250px;
 `;
 
 export default MembersListItem;
