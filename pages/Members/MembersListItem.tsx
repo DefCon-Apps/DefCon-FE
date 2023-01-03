@@ -95,7 +95,11 @@ const MemberItemDataSnsContainer = styled.div`
       flex-direction: row;
 `;
 
-const MemberItemDataComment = styled.p``;
+const MemberItemDataComment = styled.p`
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 23px;
+`;
 
 const MemberItemDataCompany = styled.p`
     font-size: 16px;
