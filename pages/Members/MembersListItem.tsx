@@ -19,7 +19,10 @@ interface snsData{
 const MembersListItem = (props: Props) => {
     return (
         <MemberItemContainer>
+            {props.data.id}
             {props.data.name}
+            {props.data.company}
+            {props.data.comment}
         </MemberItemContainer>
     );
 };
