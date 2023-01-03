@@ -28,7 +28,7 @@ const MembersListItem = (props: Props) => {
                     <MemberItemDataID>
                         {props.data.id}
                     </MemberItemDataID>
-                    
+
                     <MemberItemDataName>
                         {props.data.name}
                     </MemberItemDataName>
@@ -97,7 +97,11 @@ const MemberItemDataSnsContainer = styled.div`
 
 const MemberItemDataComment = styled.p``;
 
-const MemberItemDataCompany = styled.p``;
+const MemberItemDataCompany = styled.p`
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 23px;
+`;
 
 const MemberItemDataID = styled.p`
     font-size: 24px;
