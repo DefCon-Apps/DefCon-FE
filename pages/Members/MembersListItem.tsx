@@ -30,6 +30,9 @@ const MembersListItem = (props: Props) => {
 const MemberItemContainer = styled.div`
     height: 150px;
     width: 400px;
+  
+    display: flex;
+    flex-direction: column;
 `;
 
 export default MembersListItem;
