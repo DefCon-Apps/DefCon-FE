@@ -1,3 +1,5 @@
+import styled from "styled-components";
+
 interface Props{
     data: {
         comment: string,
@@ -16,10 +18,15 @@ interface snsData{
 
 const MembersListItem = (props: Props) => {
     return (
-        <div>
-            Member Item
-        </div>
+        <MemberItemContainer>
+            {props.data.name}
+        </MemberItemContainer>
     );
 };
+
+const MemberItemContainer = styled.div`
+    height: 150px;
+    width: 400px;
+`;
 
 export default MembersListItem;

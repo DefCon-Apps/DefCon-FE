@@ -19,12 +19,6 @@ const MembersList = () => {
         <MembersListContainer>
             <MembersListItem
                 data={tmpMemberData} />
-            <MembersListItem
-                data={tmpMemberData} />
-            <MembersListItem
-                data={tmpMemberData} />
-            <MembersListItem
-                data={tmpMemberData} />
         </MembersListContainer>
     );
 };
