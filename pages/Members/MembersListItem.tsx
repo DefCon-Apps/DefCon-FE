@@ -70,7 +70,7 @@ const MemberItemImageContainer = styled.div`
 
 const MemberItemDataContainer = styled.div`
     height: 150px;
-    width: 250px;
+    width: 100%;
   
     display: flex;
     flex-direction: column;
