@@ -72,6 +72,8 @@ const MemberItemDataContainer = styled.div`
     height: 150px;
     width: 100%;
   
+    padding-left: 15px;
+  
     display: flex;
     flex-direction: column;
     justify-content: center;
