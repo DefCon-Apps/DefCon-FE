@@ -25,15 +25,27 @@ const MembersListItem = (props: Props) => {
 
             <MemberItemDataContainer>
                 <MemberItemDataNameContainer>
-                    {props.data.id}
-                    {props.data.name}
+                    <MemberItemDataID>
+                        {props.data.id}
+                    </MemberItemDataID>
+
+                    <MemberItemDataName>
+                        {props.data.name}
+                    </MemberItemDataName>
                 </MemberItemDataNameContainer>
+
                 <MemberItemDataCompanyContainer>
-                    {props.data.company}
+                    <MemberItemDataCompany>
+                        {props.data.company}
+                    </MemberItemDataCompany>
                 </MemberItemDataCompanyContainer>
+
                 <MemberItemDataCommentContainer>
-                    {props.data.comment}
+                    <MemberItemDataComment>
+                        {props.data.comment}
+                    </MemberItemDataComment>
                 </MemberItemDataCommentContainer>
+
                 <MemberItemDataSnsContainer>
                     SNS_ITEMS
                 </MemberItemDataSnsContainer>
@@ -82,5 +94,13 @@ const MemberItemDataSnsContainer = styled.div`
       display: flex;
       flex-direction: row;
 `;
+
+const MemberItemDataComment = styled.p``;
+
+const MemberItemDataCompany = styled.p``;
+
+const MemberItemDataID = styled.p``;
+
+const MemberItemDataName = styled.p``;
 
 export default MembersListItem;
