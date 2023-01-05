@@ -104,7 +104,7 @@ const MemberItemDataComment = styled.p`
     font-weight: 300;
     line-height: 23px;
   
-    margin: 10px 0;
+    margin: 5px 0;
 `;
 
 const MemberItemDataCompany = styled.p`
