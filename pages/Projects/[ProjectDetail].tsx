@@ -63,6 +63,24 @@ const ProjectDetail = ()=> {
           <h3>Project description.</h3>
           <h2>Project description.</h2>
           <h1>Project description.</h1>
+          <br></br>
+
+          <h1>Tech Stack</h1>
+          <p>Adobe XD</p>
+          <p>Android (Java)</p>
+          <br></br>
+
+          <h1>Role</h1>
+          <p>PM & 개발 - LR</p>
+          <p>개발 - Caret</p>
+          <p>UI & UX 디자인 - HarenKei</p>
+          <br></br>
+
+          <h1>History</h1>
+          <p>2019.09 개발 시작</p>
+          <p>2019.10 개발 완료</p>
+          <p>2019.11 장려상 수상</p>
+          <br></br>
         </ProjectDetailContent>
       </div>
     </ProjectDetailWrapper>
