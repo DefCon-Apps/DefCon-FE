@@ -10,6 +10,7 @@ const LogoIntro = () => {
 
 const LogoIntroWrapper = styled.div`
     height: 100vh;
+    margin-top: 8vh;
     background-color: red;
 `;
 

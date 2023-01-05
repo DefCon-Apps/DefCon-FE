@@ -21,7 +21,7 @@ const HeaderDiv = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100vw;
-  height: 5rem;
+  height: 8vh;
   position: fixed;
   top : 0;
   z-index: 3;
@@ -29,7 +29,7 @@ const HeaderDiv = styled.div`
   font-size: 20px;
   font-weight: bold;
 
-`
+`;
 
 
 const HeaderLogoDiv = styled.div`
