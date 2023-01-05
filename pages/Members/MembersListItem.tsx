@@ -103,6 +103,8 @@ const MemberItemDataComment = styled.p`
     font-size: 16px;
     font-weight: 300;
     line-height: 23px;
+  
+    margin: 10px 0;
 `;
 
 const MemberItemDataCompany = styled.p`
