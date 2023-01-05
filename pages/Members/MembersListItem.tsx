@@ -29,6 +29,8 @@ const MembersListItem = (props: Props) => {
                         {props.data.id}
                     </MemberItemDataID>
 
+                    <MemberItemDataDivider>|</MemberItemDataDivider>
+
                     <MemberItemDataName>
                         {props.data.name}
                     </MemberItemDataName>
@@ -113,6 +115,13 @@ const MemberItemDataID = styled.p`
     font-size: 24px;
     font-weight: 800;
     line-height: 32px;
+`;
+
+const MemberItemDataDivider = styled.p`
+      font-size: 24px;
+      font-weight: 800;
+  
+      margin: 0 10px;
 `;
 
 const MemberItemDataName = styled.p`
