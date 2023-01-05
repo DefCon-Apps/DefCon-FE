@@ -21,7 +21,7 @@ const LogoIntro = () => {
           고등학교 짧은 점심시간을 충분히 활용한 결과라고 할 수 있죠.
           <br />
           <br />
-          로고의 전반적인 컬러와 &quot;:(&quot;는 Windows 10의 블루스크린에서
+          로고의 전반적인 컬러와 &quot;:(&quot;는 Windows 10의 블루스크린에서<br/>
           고안되었으며 게와 비슷한 실루엣을 활용하여
           <br />
           &quot;DEF:CON CRAB&quot;라는 이름을 붙여 DEF:CON의 마스코트로 활용하고
@@ -54,16 +54,21 @@ const LogoIntroContents = styled.div`
 
 const LogoIntroTitle = styled.h1`
   font-size: 50pt;
+	letter-spacing: -5px;
 `;
 
 const LogoIntroImg = styled.img`
   width: 30vw;
-	margin-top: 20vh;
+	margin-top: 10vh;
 `;
 
 const LogoIntroContext = styled.div`
+	margin-top: 25vh;
+	margin-left: 10vh;
   p {
-    font-size: 15pt;
+    font-size: 18pt;
+		font-weight: 100;
+		text-align: right;
   }
 `;
 
