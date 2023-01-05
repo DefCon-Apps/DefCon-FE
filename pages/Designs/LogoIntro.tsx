@@ -32,6 +32,7 @@ const LogoIntro = () => {
 
 const LogoIntroWrapper = styled.div`
   height: 100vh;
+	margin-bottom: 10vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
