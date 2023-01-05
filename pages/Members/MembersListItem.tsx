@@ -86,13 +86,9 @@ const MemberItemDataNameContainer = styled.div`
     flex-direction: row;
 `;
 
-const MemberItemDataCommentContainer = styled.div`
+const MemberItemDataCommentContainer = styled.div``;
 
-`;
-
-const MemberItemDataCompanyContainer = styled.div`
-
-`;
+const MemberItemDataCompanyContainer = styled.div``;
 
 const MemberItemDataSnsContainer = styled.div`
       display: flex;
