@@ -1,10 +1,10 @@
 import Link from "next/link";
+import LogoIntro from "./LogoIntro";
 
 const Designs = () => {
     return (
         <>
-        <h1>Here is Design Page</h1>
-          <p><Link href="/">Home</Link></p>
+        <LogoIntro/>
         </>
     )
 }
