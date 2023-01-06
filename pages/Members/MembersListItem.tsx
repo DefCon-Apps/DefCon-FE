@@ -8,6 +8,9 @@ interface Props{
         image: string,
         name: string,
         sns: Array<snsData>
+
+        // SNS 데이터의 경우, 부득이하게 Array 형태로 구현되었음
+        // 0번부터 순차적으로 Blog, BOJ(Solved.AC), Facebook, Github, Instagram, Twitter 속성을 가짐
     }
 }
 
