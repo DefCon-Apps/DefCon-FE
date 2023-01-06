@@ -1,3 +1,7 @@
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebook, faGithub, faInstagram, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faHome } from "@fortawesome/free-solid-svg-icons";
 import styled from "styled-components";
 
 interface Props{
@@ -77,9 +81,19 @@ const MemberItemDataSnsBtn = (props: { data: snsDataProps, type: string }) => {
 
 const MemberItemDataSnsIcon = (props: { type: string }) => {
     const type = props.type;
-    return(
-        <>{type}</>
-    );
+
+    switch(type){
+        case "blog":
+            return <FontAwesomeIcon icon={faHome} />
+        case "facebook":
+            return <FontAwesomeIcon icon={faFacebook} />
+        case "github":
+            return <FontAwesomeIcon icon={faGithub} />
+        case "instagram":
+            return <FontAwesomeIcon icon={faInstagram} />
+        case "twitter":
+            return <FontAwesomeIcon icon={faTwitter} />
+    }
 };
 
 const MemberItemContainer = styled.div`
