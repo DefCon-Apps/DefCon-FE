@@ -1,8 +1,9 @@
+import { useState } from "react";
 import styled from "styled-components";
+
 import MembersTitle from "./MembersTitle";
 import MembersList from "./MembersList";
 import MembersDetail from "./MembersDetail";
-import {useState} from "react";
 
 const tmpMemberData: MemberData = {
     comment: "집가고싶다",

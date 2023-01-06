@@ -1,7 +1,7 @@
+import styled from "styled-components";
+
 import { MemberData } from "./Members";
 import MembersListItem from "./MembersListItem";
-
-import styled from "styled-components";
 
 const MembersList = (props: {memberData: Array<MemberData>, onClick: (id: string) => void}) => {
     return (
