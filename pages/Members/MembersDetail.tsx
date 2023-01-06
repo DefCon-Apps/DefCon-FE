@@ -39,7 +39,6 @@ const MembersDetailContainer = styled.div`
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: flex-start;
     
       margin: 30px 0 100px 0;
 `;
@@ -48,7 +47,11 @@ const MembersDetailBojContainer = styled.div``;
 
 const MembersDetailCompanyContainer = styled.div``;
 
-const MembersDetailHistoryContainer = styled.div``;
+const MembersDetailHistoryContainer = styled.div`
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+`;
 
 const MembersDetailTitle = styled.p`
     font-size: 36px;
