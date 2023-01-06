@@ -2,21 +2,7 @@ import styled from "styled-components";
 import MembersTitle from "./MembersTitle";
 import MembersList from "./MembersList";
 import MembersDetail from "./MembersDetail";
-
-export type MemberData = {
-    comment: string,
-    company: string,
-    id: string,
-    image: string,
-    name: string,
-    history: Array<{content: string, date: string}>
-    blog: {isEnabled: boolean, url: string},
-    boj: {isEnabled: boolean, url: string, username: string},
-    facebook: {isEnabled: boolean, url: string},
-    github: {isEnabled: boolean, url: string},
-    instagram: {isEnabled: boolean, url: string},
-    twitter: {isEnabled: boolean, url: string}
-};
+import {useState} from "react";
 
 const tmpMemberData: MemberData = {
     comment: "집가고싶다",
@@ -42,14 +28,17 @@ tmpMemberList.push(tmpMemberData);
 tmpMemberList.push(tmpMemberData);
 tmpMemberList.push(tmpMemberData);
 
+const [memberData, setMemberData] = useState(tmpMemberData);
+const [memberList, setMemberList] = useState(tmpMemberList);
+
 const Members = () => {
     return (
         <MembersStyle>
             <MembersContainer>
                 <MembersTitle />
                 <MembersViewContainer>
-                    <MembersList memberData={tmpMemberList} onClick={onMemberClick}/>
-                    <MembersDetail memberData={tmpMemberData}/>
+                    <MembersList memberData={memberList} onClick={onMemberClick}/>
+                    <MembersDetail memberData={memberData}/>
                 </MembersViewContainer>
             </MembersContainer>
         </MembersStyle>
@@ -85,5 +74,20 @@ const MembersViewContainer = styled.div`
     align-items: flex-start;
     justify-content: space-between;
 `;
+
+export type MemberData = {
+    comment: string,
+    company: string,
+    id: string,
+    image: string,
+    name: string,
+    history: Array<{content: string, date: string}>
+    blog: {isEnabled: boolean, url: string},
+    boj: {isEnabled: boolean, url: string, username: string},
+    facebook: {isEnabled: boolean, url: string},
+    github: {isEnabled: boolean, url: string},
+    instagram: {isEnabled: boolean, url: string},
+    twitter: {isEnabled: boolean, url: string}
+};
 
 export default Members;
