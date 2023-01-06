@@ -4,22 +4,11 @@ import { faFacebook, faGithub, faInstagram, faTwitter } from "@fortawesome/free-
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 import styled from "styled-components";
 import Link from "next/link";
+import { MemberData } from "./Members";
 
-interface Props{
+type Props = {
     onClick: (id: string) => void,
-    data: {
-        comment: string,
-        company: string,
-        id: string,
-        image: string,
-        name: string,
-        blog: snsDataProps,
-        boj: snsDataProps,
-        facebook: snsDataProps,
-        github: snsDataProps,
-        instagram: snsDataProps,
-        twitter: snsDataProps
-    }
+    data: MemberData
 }
 
 type snsDataProps = {

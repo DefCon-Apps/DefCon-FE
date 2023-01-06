@@ -9,6 +9,7 @@ export type MemberData = {
     id: string,
     image: string,
     name: string,
+    history: Array<{content: string, date: string}>
     blog: {isEnabled: boolean, url: string},
     boj: {isEnabled: boolean, url: string},
     facebook: {isEnabled: boolean, url: string},
@@ -23,6 +24,10 @@ const tmpMemberData: MemberData = {
     id: "LR",
     image: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAIAQMAAAD+wSzIAAAABlBMVEX///+/v7+jQ3Y5AAAADklEQVQI12P4AIX8EAgALgAD/aNpbtEAAAAASUVORK5CYII",
     name: "유용민",
+    history: [
+        {content: "Wa!", date: "20221229"},
+        {content: "Sans!", date: "20230107"}
+    ],
     blog: {isEnabled: true, url: "https://dev-lr.com"},
     boj: {isEnabled: true, url: "https://solved.ac/profile/yymin1022"},
     facebook: {isEnabled: true, url: "https://facebook.com/profile.php?id=100007285635473"},
