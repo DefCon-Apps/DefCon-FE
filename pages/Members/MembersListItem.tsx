@@ -7,9 +7,12 @@ interface Props{
         id: string,
         image: string,
         name: string,
-        sns: Array<snsData>
-        // SNS 데이터의 경우, 부득이하게 Array 형태로 구현되었음
-        // 0번부터 순차적으로 Blog, BOJ(Solved.AC), Facebook, Github, Instagram, Twitter 속성을 가짐
+        blog: snsData,
+        boj: snsData,
+        facebook: snsData,
+        github: snsData,
+        instagram: snsData,
+        twitter: snsData
     }
 }
 
@@ -51,13 +54,26 @@ const MembersListItem = (props: Props) => {
                 </MemberItemDataCommentContainer>
 
                 <MemberItemDataSnsContainer>
-                    SNS_ITEMS
+                    <MemberItemDataSnsBtn data={props.data.boj} type="boj"/>
+                    <MemberItemDataSnsBtn data={props.data.blog} type="blog"/>
+                    <MemberItemDataSnsBtn data={props.data.facebook} type="facebook"/>
+                    <MemberItemDataSnsBtn data={props.data.github} type="github"/>
+                    <MemberItemDataSnsBtn data={props.data.instagram} type="instagram"/>
+                    <MemberItemDataSnsBtn data={props.data.twitter} type="twitter"/>
                 </MemberItemDataSnsContainer>
             </MemberItemDataContainer>
 
         </MemberItemContainer>
     );
 };
+
+const MemberItemDataSnsBtn = (props: any) => {
+    const data = props.data;
+    const type = props.type;
+    return(
+        <>{type}</>
+    );
+}
 
 const MemberItemContainer = styled.div`
     height: 150px;

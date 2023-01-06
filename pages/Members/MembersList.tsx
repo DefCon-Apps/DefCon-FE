@@ -8,14 +8,12 @@ const MembersList = () => {
         id: "LR",
         image: "BASE64_STRING",
         name: "유용민",
-        sns: [
-            {isEnabled: true, url: "https://dev-lr.com"},
-            {isEnabled: true, url: "https://solved.ac/profile/yymin1022"},
-            {isEnabled: true, url: "https://facebook.com/profile.php?id=100007285635473"},
-            {isEnabled: true, url: "https://github.com/yymin1022"},
-            {isEnabled: true, url: "https://instagram.com/useful_min"},
-            {isEnabled: false, url: ""}
-        ]
+        blog: {isEnabled: true, url: "https://dev-lr.com"},
+        boj: {isEnabled: true, url: "https://solved.ac/profile/yymin1022"},
+        facebook: {isEnabled: true, url: "https://facebook.com/profile.php?id=100007285635473"},
+        github: {isEnabled: true, url: "https://github.com/yymin1022"},
+        instagram: {isEnabled: true, url: "https://instagram.com/useful_min"},
+        twitter: {isEnabled: false, url: ""}
     }
 
     return (
