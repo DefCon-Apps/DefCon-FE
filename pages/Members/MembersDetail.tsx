@@ -13,7 +13,11 @@ const MembersDetail = (props: {memberData: MemberData}) => {
             </MembersDetailBojContainer>
             <MembersDetailHistodyContainer>
                 <MembersDetailTitle>History</MembersDetailTitle>
-                HISTORY_DATA
+                {
+                    props.memberData.history.map((item) => {
+                        return <>History Items</>
+                    })
+                }
             </MembersDetailHistodyContainer>
         </MembersDetailContainer>
     );
