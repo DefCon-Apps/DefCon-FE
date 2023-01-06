@@ -6,7 +6,7 @@ const MembersList = () => {
         comment: "집가고싶다",
         company: "중앙대학교 소프트웨어학부 19학번",
         id: "LR",
-        image: "BASE64_STRING",
+        image: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAIAQMAAAD+wSzIAAAABlBMVEX///+/v7+jQ3Y5AAAADklEQVQI12P4AIX8EAgALgAD/aNpbtEAAAAASUVORK5CYII",
         name: "유용민",
         blog: {isEnabled: true, url: "https://dev-lr.com"},
         boj: {isEnabled: true, url: "https://solved.ac/profile/yymin1022"},
