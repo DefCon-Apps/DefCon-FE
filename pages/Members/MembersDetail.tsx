@@ -24,7 +24,7 @@ const MembersDetailContainer = styled.div`
     
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
+      align-items: center;
       justify-content: flex-start;
     
       margin: 30px 0 100px 0;
