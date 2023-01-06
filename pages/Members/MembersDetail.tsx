@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 import { MemberData } from "./Members";
 
 const MembersDetail = (props: {memberData: MemberData}) => {
