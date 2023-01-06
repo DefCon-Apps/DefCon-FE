@@ -34,6 +34,8 @@ const MembersListContainer = styled.div`
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+  
+    margin-bottom: 100px;
 `;
 
 export default MembersList;
