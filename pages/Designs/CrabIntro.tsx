@@ -1,5 +1,12 @@
 import styled from "styled-components";
 import Crab from "../../src/Common/Crab";
+import BackgroundCard from "../../src/Common/BackgroundCard";
+
+// color: string;
+//   height: string;
+//   translateX: string;
+//   translateY: string;
+//   type: string;
 
 const CrabIntro = () => {
   return (
@@ -20,6 +27,7 @@ const CrabIntro = () => {
 				<CrabIntroTitle>
 					우리의 헤리티지<br/>
 					DEF:CON CRAB
+          <BackgroundCard color="#C7E7FF" height="22rem" translateX="1150px" translateY="-245px" type="filled"/>
 				</CrabIntroTitle>
 			</CrabIntroContents>
 
