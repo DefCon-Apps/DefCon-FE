@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faGithub, faInstagram, faTwitter } from "@fortawesome/free-brands-svg-icons";
-import { faHome } from "@fortawesome/free-solid-svg-icons";
+import {fa2, faHome} from "@fortawesome/free-solid-svg-icons";
 import styled from "styled-components";
 import Link from "next/link";
 
@@ -59,7 +59,6 @@ const MembersListItem = (props: Props) => {
                 </MemberItemDataCommentContainer>
 
                 <MemberItemDataSnsContainer>
-                    <MemberItemDataSnsBtn data={props.data.boj} type="boj"/>
                     <MemberItemDataSnsBtn data={props.data.blog} type="blog"/>
                     <MemberItemDataSnsBtn data={props.data.facebook} type="facebook"/>
                     <MemberItemDataSnsBtn data={props.data.github} type="github"/>
@@ -76,9 +75,12 @@ const MemberItemDataSnsBtn = (props: { data: snsDataProps, type: string }) => {
     const data = props.data;
     const type = props.type;
     return(
-        <Link href={data.url} target="_blank">
-            <MemberItemDataSnsIcon type={type} />
-        </Link>
+        <MemberItemDataSnsBtnContainer>
+            <Link href={data.url} target="_blank">
+                <MemberItemDataSnsIcon type={type} />
+            </Link>
+        </MemberItemDataSnsBtnContainer>
+
     );
 };
 
@@ -86,15 +88,15 @@ const MemberItemDataSnsIcon = (props: { type: string }) => {
     const type = props.type;
         switch (type) {
             case "blog":
-                return <FontAwesomeIcon icon={faHome}/>;
+                return <FontAwesomeIcon icon={faHome} size="lg"/>;
             case "facebook":
-                return <FontAwesomeIcon icon={faFacebook}/>;
+                return <FontAwesomeIcon icon={faFacebook} size="lg"/>;
             case "github":
-                return <FontAwesomeIcon icon={faGithub}/>;
+                return <FontAwesomeIcon icon={faGithub} size="lg"/>;
             case "instagram":
-                return <FontAwesomeIcon icon={faInstagram}/>;
+                return <FontAwesomeIcon icon={faInstagram} size="lg"/>;
             case "twitter":
-                return <FontAwesomeIcon icon={faTwitter}/>;
+                return <FontAwesomeIcon icon={faTwitter} size="lg"/>;
             default:
                 return null;
     }
@@ -134,8 +136,17 @@ const MemberItemDataCommentContainer = styled.div``;
 const MemberItemDataCompanyContainer = styled.div``;
 
 const MemberItemDataSnsContainer = styled.div`
-      display: flex;
-      flex-direction: row;
+    width: 100%;
+  
+    display: flex;
+    flex-direction: row;
+`;
+
+const MemberItemDataSnsBtnContainer = styled.div`
+    height: 40px;
+    width: 40px;
+  
+    margin: 0 5px;
 `;
 
 const MemberItemDataComment = styled.p`
@@ -143,7 +154,7 @@ const MemberItemDataComment = styled.p`
     font-weight: 300;
     line-height: 23px;
   
-    margin: 5px 0;
+    margin: 10px 0;
 `;
 
 const MemberItemDataCompany = styled.p`
