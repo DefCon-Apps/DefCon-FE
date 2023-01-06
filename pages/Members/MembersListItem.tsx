@@ -7,16 +7,16 @@ interface Props{
         id: string,
         image: string,
         name: string,
-        blog: snsData,
-        boj: snsData,
-        facebook: snsData,
-        github: snsData,
-        instagram: snsData,
-        twitter: snsData
+        blog: snsDataProps,
+        boj: snsDataProps,
+        facebook: snsDataProps,
+        github: snsDataProps,
+        instagram: snsDataProps,
+        twitter: snsDataProps
     }
 }
 
-interface snsData{
+type snsDataProps = {
     isEnabled: boolean,
     url: string
 }
@@ -67,13 +67,21 @@ const MembersListItem = (props: Props) => {
     );
 };
 
-const MemberItemDataSnsBtn = (props: any) => {
+const MemberItemDataSnsBtn = (props: { data: snsDataProps, type: string }) => {
     const data = props.data;
     const type = props.type;
     return(
         <>{type}</>
     );
-}
+};
+
+const MemberItemDataSnsIcon = (props: any) => {
+    const data = props.data;
+    const type = props.type;
+    return(
+        <>{type}</>
+    );
+};
 
 const MemberItemContainer = styled.div`
     height: 150px;
