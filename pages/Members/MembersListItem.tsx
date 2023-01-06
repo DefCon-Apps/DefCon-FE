@@ -159,15 +159,15 @@ const MemberItemDataSnsBtnContainer = styled.div`
 `;
 
 const MemberItemDataComment = styled.p`
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 300;
     line-height: 23px;
   
-    margin: 10px 0;
+    margin: 5px 0;
 `;
 
 const MemberItemDataCompany = styled.p`
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
     line-height: 23px;
 `;
