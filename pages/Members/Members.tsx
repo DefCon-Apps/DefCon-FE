@@ -4,17 +4,17 @@ import MembersList from "./MembersList";
 import MembersDetail from "./MembersDetail";
 
 const Members = () => {
-  return (
-    <MembersStyle>
-        <MembersContainer>
-            <MembersTitle />
-            <MembersViewContainer>
-                <MembersList onClick={onMemberClick}/>
-                <MembersDetail />
-            </MembersViewContainer>
-        </MembersContainer>
-    </MembersStyle>
-  );
+    return (
+        <MembersStyle>
+            <MembersContainer>
+                <MembersTitle />
+                <MembersViewContainer>
+                    <MembersList onClick={onMemberClick}/>
+                    <MembersDetail />
+                </MembersViewContainer>
+            </MembersContainer>
+        </MembersStyle>
+    );
 };
 
 const onMemberClick = (id: string) => {
