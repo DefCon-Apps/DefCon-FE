@@ -2,12 +2,6 @@ import styled from "styled-components";
 import Crab from "../../src/Common/Crab";
 import BackgroundCard from "../../src/Common/BackgroundCard";
 
-// color: string;
-//   height: string;
-//   translateX: string;
-//   translateY: string;
-//   type: string;
-
 const CrabIntro = () => {
   return (
     <CrabIntroWrapper>

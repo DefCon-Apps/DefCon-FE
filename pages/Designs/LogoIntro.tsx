@@ -1,4 +1,11 @@
 import styled from "styled-components";
+import BackgroundCard from "../../src/Common/BackgroundCard";
+
+// color: string;
+//   height: string;
+//   translateX: string;
+//   translateY: string;
+//   type: string;
 
 const LogoIntro = () => {
   return (
@@ -20,6 +27,13 @@ const LogoIntro = () => {
 					단조로울 수 있는 텍스트 중심의 로고에 포인트 요소가 되었습니다.
         </p>
       </LogoIntroContext>
+			<BackgroundCard
+				color="#00658F"
+				height="22rem"
+				translateX="-1000px"
+				translateY="140px"
+				type="bordered"
+			/>
     </LogoIntroWrapper>
   );
 };
@@ -48,11 +62,11 @@ const LogoIntroTitle = styled.h1`
 
 const LogoIntroImg = styled.img`
   width: 25vw;
-	margin-top: 10vh;
+	margin-top: 15vh;
 `;
 
 const LogoIntroContext = styled.div`
-	margin-top: 25vh;
+	margin-top: 30vh;
   p {
     font-size: 16pt;
 		font-weight: 100;
