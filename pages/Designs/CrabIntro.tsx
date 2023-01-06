@@ -24,10 +24,12 @@ const CrabIntro = () => {
 			</CrabIntroContents>
 
       <CrabIntroLogoWrapper>
+        <LogoHistoryWrapper>
         <Logo src="/Images/firstLogo.svg"/>
         <Logo src="/Images/preLogo.svg"/>
         <Logo src="/Images/mainLogo.svg"/>
-        <Crab width={15} height={15} marginTop={5} />
+        </LogoHistoryWrapper>
+        <Crab width={15} height={15} marginTop={8} />
 
       </CrabIntroLogoWrapper>
     </CrabIntroWrapper>
@@ -65,19 +67,24 @@ const CrabIntroDesc = styled.div`
 
 
 const CrabIntroLogoWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-top: 8vh;
   
 `;
 
-const CrabIntroLogo = styled.div`
-  
+const LogoHistoryWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-top: 5vh;
+  margin-right: 20vw;
 `;
+
 
 const Logo = styled.img`
-  width: 10vw;
-  
-`;
-
-const CrabWrapper = styled.div`
+  width: 20vw;
+  margin-bottom: 8vh;
+  filter : drop-shadow(1px 1px 3px grey);
   
 `;
 
