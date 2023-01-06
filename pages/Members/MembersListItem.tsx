@@ -30,7 +30,7 @@ const MembersListItem = (props: Props) => {
     return (
         <MemberItemContainer>
             <MemberItemImageContainer>
-                {props.data.image}
+                <MemberItemImage data={props.data.image} />
             </MemberItemImageContainer>
 
             <MemberItemDataContainer>
@@ -69,6 +69,10 @@ const MembersListItem = (props: Props) => {
 
         </MemberItemContainer>
     );
+};
+
+const MemberItemImage = (props: { data: string }) => {
+    return <img src={props.data} width="150px" height="150px"/>
 };
 
 const MemberItemDataSnsBtn = (props: { data: snsDataProps, type: string }) => {
