@@ -1,9 +1,10 @@
 import React from "react";
+import Link from "next/link";
+import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faGithub, faInstagram, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
-import styled from "styled-components";
-import Link from "next/link";
+
 import { MemberData } from "./Members";
 
 type Props = {
