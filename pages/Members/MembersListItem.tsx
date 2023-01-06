@@ -75,8 +75,7 @@ const MemberItemDataSnsBtn = (props: { data: snsDataProps, type: string }) => {
     );
 };
 
-const MemberItemDataSnsIcon = (props: any) => {
-    const data = props.data;
+const MemberItemDataSnsIcon = (props: { type: string }) => {
     const type = props.type;
     return(
         <>{type}</>
