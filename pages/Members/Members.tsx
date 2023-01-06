@@ -49,7 +49,7 @@ const Members = () => {
                 <MembersTitle />
                 <MembersViewContainer>
                     <MembersList memberData={tmpMemberList} onClick={onMemberClick}/>
-                    <MembersDetail />
+                    <MembersDetail memberData={tmpMemberData}/>
                 </MembersViewContainer>
             </MembersContainer>
         </MembersStyle>

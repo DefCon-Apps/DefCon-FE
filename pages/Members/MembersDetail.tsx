@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { MemberData } from "./Members";
 
-const MembersDetail = () => {
+const MembersDetail = (props: {memberData: MemberData}) => {
     return (
         <MembersDetailContainer>
             <MembersDetailCompanyContainer>
