@@ -11,7 +11,7 @@ const MembersDetail = () => {
                 BOJ_DATA
             </MembersDetailBojContainer>
             <MembersDetailHistodyContainer>
-                <MembersDetailTitle>Solved. ac</MembersDetailTitle>
+                <MembersDetailTitle>History</MembersDetailTitle>
                 HISTORY_DATA
             </MembersDetailHistodyContainer>
         </MembersDetailContainer>
@@ -36,6 +36,10 @@ const MembersDetailCompanyContainer = styled.div``;
 
 const MembersDetailHistodyContainer = styled.div``;
 
-const MembersDetailTitle = styled.p``;
+const MembersDetailTitle = styled.p`
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 50px;
+`;
 
 export default MembersDetail;
