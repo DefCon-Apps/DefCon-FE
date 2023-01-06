@@ -25,22 +25,22 @@ const MembersDetail = (props: {memberData: MemberData}) => {
 
 const MemberDetailHistoryItem = (props: {historyData: {content: string, date: string}}) => {
     return(
-        <>
-            <p>{props.historyData.date}</p>
-            <p>{props.historyData.content}</p>
-        </>
+        <MembersDetailHistoryItemContainer>
+            <MembersDetailHistoryDate>{props.historyData.date}</MembersDetailHistoryDate>
+            <MembersDetailHistoryContent>{props.historyData.content}</MembersDetailHistoryContent>
+        </MembersDetailHistoryItemContainer>
     )
 }
 
 const MembersDetailContainer = styled.div`
-      height: 100%;
-      width: 100%;
+    height: 100%;
+    width: 100%;
     
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     
-      margin: 30px 0 100px 0;
+    margin: 30px 0 100px 0;
 `;
 
 const MembersDetailBojContainer = styled.div``;
@@ -48,9 +48,27 @@ const MembersDetailBojContainer = styled.div``;
 const MembersDetailCompanyContainer = styled.div``;
 
 const MembersDetailHistoryContainer = styled.div`
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`;
+
+const MembersDetailHistoryItemContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    margin: 15px 0;
+`;
+
+const MembersDetailHistoryContent = styled.p`
+    font-size: 20px;
+    font-weight: 300;
+`;
+
+const MembersDetailHistoryDate = styled.p`
+    font-size: 24px;
+    font-weight: 700;
 `;
 
 const MembersDetailTitle = styled.p`
