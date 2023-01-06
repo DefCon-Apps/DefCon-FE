@@ -1,16 +1,15 @@
-import styled from "styled-components";
-import MembersListItem from "./MembersListItem";
 import { MemberData } from "./Members";
+import MembersListItem from "./MembersListItem";
+
+import styled from "styled-components";
 
 const MembersList = (props: {memberData: Array<MemberData>, onClick: (id: string) => void}) => {
     return (
-        <MembersListContainer>
-            {
-                props.memberData.map((item) => {
-                    return <MembersListItem data={item} onClick={props.onClick}/>
-                })
-            }
-        </MembersListContainer>
+        <MembersListContainer>{
+            props.memberData.map((item) => {
+                return <MembersListItem data={item} onClick={props.onClick}/>
+            })
+        }</MembersListContainer>
     );
 };
 
