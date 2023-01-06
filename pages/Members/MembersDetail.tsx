@@ -11,17 +11,26 @@ const MembersDetail = (props: {memberData: MemberData}) => {
                 <MembersDetailTitle>Solved. ac</MembersDetailTitle>
                 BOJ_DATA
             </MembersDetailBojContainer>
-            <MembersDetailHistodyContainer>
+            <MembersDetailHistoryContainer>
                 <MembersDetailTitle>History</MembersDetailTitle>
                 {
                     props.memberData.history.map((item) => {
-                        return <>History Items</>
+                        return <MemberDetailHistoryItem historyData={item} />
                     })
                 }
-            </MembersDetailHistodyContainer>
+            </MembersDetailHistoryContainer>
         </MembersDetailContainer>
     );
 };
+
+const MemberDetailHistoryItem = (props: {historyData: {content: string, date: string}}) => {
+    return(
+        <>
+            <p>{props.historyData.date}</p>
+            <p>{props.historyData.content}</p>
+        </>
+    )
+}
 
 const MembersDetailContainer = styled.div`
       height: 100%;
@@ -39,7 +48,7 @@ const MembersDetailBojContainer = styled.div``;
 
 const MembersDetailCompanyContainer = styled.div``;
 
-const MembersDetailHistodyContainer = styled.div``;
+const MembersDetailHistoryContainer = styled.div``;
 
 const MembersDetailTitle = styled.p`
     font-size: 36px;
