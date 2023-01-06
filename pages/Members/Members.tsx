@@ -11,7 +11,7 @@ export type MemberData = {
     name: string,
     history: Array<{content: string, date: string}>
     blog: {isEnabled: boolean, url: string},
-    boj: {isEnabled: boolean, url: string},
+    boj: {isEnabled: boolean, url: string, username: string},
     facebook: {isEnabled: boolean, url: string},
     github: {isEnabled: boolean, url: string},
     instagram: {isEnabled: boolean, url: string},
@@ -29,7 +29,7 @@ const tmpMemberData: MemberData = {
         {content: "Sans!", date: "20230107"}
     ],
     blog: {isEnabled: true, url: "https://dev-lr.com"},
-    boj: {isEnabled: true, url: "https://solved.ac/profile/yymin1022"},
+    boj: {isEnabled: true, url: "https://solved.ac/profile/yymin1022", username: "yymin1022"},
     facebook: {isEnabled: true, url: "https://facebook.com/profile.php?id=100007285635473"},
     github: {isEnabled: true, url: "https://github.com/yymin1022"},
     instagram: {isEnabled: true, url: "https://instagram.com/useful_min"},
