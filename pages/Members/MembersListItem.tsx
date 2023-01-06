@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faGithub, faInstagram, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 import styled from "styled-components";
+import Link from "next/link";
 
 interface Props{
     data: {
@@ -75,24 +76,27 @@ const MemberItemDataSnsBtn = (props: { data: snsDataProps, type: string }) => {
     const data = props.data;
     const type = props.type;
     return(
-        <>{type}</>
+        <Link href={data.url} target="_blank">
+            <MemberItemDataSnsIcon type={type} />
+        </Link>
     );
 };
 
 const MemberItemDataSnsIcon = (props: { type: string }) => {
     const type = props.type;
-
-    switch(type){
-        case "blog":
-            return <FontAwesomeIcon icon={faHome} />
-        case "facebook":
-            return <FontAwesomeIcon icon={faFacebook} />
-        case "github":
-            return <FontAwesomeIcon icon={faGithub} />
-        case "instagram":
-            return <FontAwesomeIcon icon={faInstagram} />
-        case "twitter":
-            return <FontAwesomeIcon icon={faTwitter} />
+        switch (type) {
+            case "blog":
+                return <FontAwesomeIcon icon={faHome}/>;
+            case "facebook":
+                return <FontAwesomeIcon icon={faFacebook}/>;
+            case "github":
+                return <FontAwesomeIcon icon={faGithub}/>;
+            case "instagram":
+                return <FontAwesomeIcon icon={faInstagram}/>;
+            case "twitter":
+                return <FontAwesomeIcon icon={faTwitter}/>;
+            default:
+                return null;
     }
 };
 
