@@ -58,14 +58,18 @@ const CrabIntroDesc = styled.div`
     font-size: 16pt;
     font-weight: 200;
   }
-	
 `;
+
 
 const CrabIntroLogoWrapper = styled.div`
   
 `;
 
 const CrabIntroLogo = styled.div`
+  
+`;
+
+const preLogo = styled.img`
   
 `;
 
