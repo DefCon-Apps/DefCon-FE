@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faGithub, faInstagram, faTwitter } from "@fortawesome/free-brands-svg-icons";
-import {fa2, faHome} from "@fortawesome/free-solid-svg-icons";
+import { faHome } from "@fortawesome/free-solid-svg-icons";
 import styled from "styled-components";
 import Link from "next/link";
 
@@ -74,7 +74,7 @@ const MembersListItem = (props: Props) => {
 const MemberItemDataSnsBtn = (props: { data: snsDataProps, type: string }) => {
     const data = props.data;
     const type = props.type;
-    
+
     if(!data.isEnabled){
         return null;
     }
