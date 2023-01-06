@@ -9,7 +9,7 @@ const MembersDetail = (props: {memberData: MemberData}) => {
             </MembersDetailCompanyContainer>
             <MembersDetailBojContainer>
                 <MembersDetailTitle>Solved. ac</MembersDetailTitle>
-                BOJ_DATA
+                <img src={`https://mazassumnida.wtf/api/v2/generate_badge?boj=${props.memberData.boj.username}`} />
             </MembersDetailBojContainer>
             <MembersDetailHistoryContainer>
                 <MembersDetailTitle>History</MembersDetailTitle>
@@ -43,14 +43,28 @@ const MembersDetailContainer = styled.div`
     margin: 30px 0 100px 0;
 `;
 
-const MembersDetailBojContainer = styled.div``;
+const MembersDetailBojContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-const MembersDetailCompanyContainer = styled.div``;
+    margin: 30px 0;
+`;
+
+const MembersDetailCompanyContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 30px 0;
+`;
 
 const MembersDetailHistoryContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    margin: 30px 0;
 `;
 
 const MembersDetailHistoryItemContainer = styled.div`
