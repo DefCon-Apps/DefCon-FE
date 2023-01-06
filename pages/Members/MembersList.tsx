@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import MembersListItem from "./MembersListItem";
 
-const MembersList = () => {
+const MembersList = (props: {onClick: (id: string) => void}) => {
     const tmpMemberData = {
         comment: "집가고싶다",
         company: "중앙대학교 소프트웨어학부 19학번",
@@ -18,10 +18,10 @@ const MembersList = () => {
 
     return (
         <MembersListContainer>
-            <MembersListItem data={tmpMemberData} />
-            <MembersListItem data={tmpMemberData} />
-            <MembersListItem data={tmpMemberData} />
-            <MembersListItem data={tmpMemberData} />
+            <MembersListItem data={tmpMemberData} onClick={props.onClick}/>
+            <MembersListItem data={tmpMemberData} onClick={props.onClick}/>
+            <MembersListItem data={tmpMemberData} onClick={props.onClick}/>
+            <MembersListItem data={tmpMemberData} onClick={props.onClick}/>
         </MembersListContainer>
     );
 };

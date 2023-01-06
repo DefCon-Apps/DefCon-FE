@@ -6,6 +6,7 @@ import styled from "styled-components";
 import Link from "next/link";
 
 interface Props{
+    onClick: (id: string) => void,
     data: {
         comment: string,
         company: string,
@@ -28,7 +29,7 @@ type snsDataProps = {
 
 const MembersListItem = (props: Props) => {
     return (
-        <MemberItemContainer>
+        <MemberItemContainer onClick={() => props.onClick(props.data.id)}>
             <MemberItemImageContainer>
                 <MemberItemImage data={props.data.image} />
             </MemberItemImageContainer>

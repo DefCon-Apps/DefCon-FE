@@ -9,13 +9,17 @@ const Members = () => {
         <MembersContainer>
             <MembersTitle />
             <MembersViewContainer>
-                <MembersList />
+                <MembersList onClick={onMemberClick}/>
                 <MembersDetail />
             </MembersViewContainer>
         </MembersContainer>
     </MembersStyle>
   );
 };
+
+const onMemberClick = (id: string) => {
+    console.log(`${id} Clicked!`);
+}
 
 const MembersStyle = styled.div`
     display: flex;
