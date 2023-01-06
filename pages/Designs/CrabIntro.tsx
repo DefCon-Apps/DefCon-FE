@@ -24,6 +24,9 @@ const CrabIntro = () => {
 			</CrabIntroContents>
 
       <CrabIntroLogoWrapper>
+        <Logo src="/Images/firstLogo.svg"/>
+        <Logo src="/Images/preLogo.svg"/>
+        <Logo src="/Images/mainLogo.svg"/>
         <Crab width={15} height={15} marginTop={5} />
 
       </CrabIntroLogoWrapper>
@@ -69,7 +72,8 @@ const CrabIntroLogo = styled.div`
   
 `;
 
-const preLogo = styled.img`
+const Logo = styled.img`
+  width: 10vw;
   
 `;
 
