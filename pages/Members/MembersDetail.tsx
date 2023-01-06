@@ -7,9 +7,11 @@ const MembersDetail = () => {
                 COMPANY_LOGO
             </MembersDetailCompanyContainer>
             <MembersDetailBojContainer>
+                <MembersDetailTitle>Solved. ac</MembersDetailTitle>
                 BOJ_DATA
             </MembersDetailBojContainer>
             <MembersDetailHistodyContainer>
+                <MembersDetailTitle>Solved. ac</MembersDetailTitle>
                 HISTORY_DATA
             </MembersDetailHistodyContainer>
         </MembersDetailContainer>
@@ -33,5 +35,7 @@ const MembersDetailBojContainer = styled.div``;
 const MembersDetailCompanyContainer = styled.div``;
 
 const MembersDetailHistodyContainer = styled.div``;
+
+const MembersDetailTitle = styled.p``;
 
 export default MembersDetail;
