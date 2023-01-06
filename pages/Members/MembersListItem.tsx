@@ -74,6 +74,11 @@ const MembersListItem = (props: Props) => {
 const MemberItemDataSnsBtn = (props: { data: snsDataProps, type: string }) => {
     const data = props.data;
     const type = props.type;
+    
+    if(!data.isEnabled){
+        return null;
+    }
+
     return(
         <MemberItemDataSnsBtnContainer>
             <Link href={data.url} target="_blank">
