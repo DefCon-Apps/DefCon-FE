@@ -3,7 +3,15 @@ import styled from "styled-components";
 const MembersDetail = () => {
     return (
         <MembersDetailContainer>
-            Members Detail
+            <MembersDetailCompanyContainer>
+
+            </MembersDetailCompanyContainer>
+            <MembersDetailBojContainer>
+
+            </MembersDetailBojContainer>
+            <MembersDetailHistodyContainer>
+                
+            </MembersDetailHistodyContainer>
         </MembersDetailContainer>
     );
 };
@@ -19,5 +27,11 @@ const MembersDetailContainer = styled.div`
     
       margin: 30px 0 100px 0;
 `;
+
+const MembersDetailBojContainer = styled.div``;
+
+const MembersDetailCompanyContainer = styled.div``;
+
+const MembersDetailHistodyContainer = styled.div``;
 
 export default MembersDetail;
