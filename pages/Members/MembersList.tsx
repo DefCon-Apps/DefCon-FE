@@ -1,27 +1,15 @@
 import styled from "styled-components";
 import MembersListItem from "./MembersListItem";
+import { MemberData } from "./Members";
 
-const MembersList = (props: {onClick: (id: string) => void}) => {
-    const tmpMemberData = {
-        comment: "집가고싶다",
-        company: "중앙대학교 소프트웨어학부 19학번",
-        id: "LR",
-        image: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAIAQMAAAD+wSzIAAAABlBMVEX///+/v7+jQ3Y5AAAADklEQVQI12P4AIX8EAgALgAD/aNpbtEAAAAASUVORK5CYII",
-        name: "유용민",
-        blog: {isEnabled: true, url: "https://dev-lr.com"},
-        boj: {isEnabled: true, url: "https://solved.ac/profile/yymin1022"},
-        facebook: {isEnabled: true, url: "https://facebook.com/profile.php?id=100007285635473"},
-        github: {isEnabled: true, url: "https://github.com/yymin1022"},
-        instagram: {isEnabled: true, url: "https://instagram.com/useful_min"},
-        twitter: {isEnabled: false, url: ""}
-    }
-
+const MembersList = (props: {memberData: Array<MemberData>, onClick: (id: string) => void}) => {
     return (
         <MembersListContainer>
-            <MembersListItem data={tmpMemberData} onClick={props.onClick}/>
-            <MembersListItem data={tmpMemberData} onClick={props.onClick}/>
-            <MembersListItem data={tmpMemberData} onClick={props.onClick}/>
-            <MembersListItem data={tmpMemberData} onClick={props.onClick}/>
+            {
+                props.memberData.map((item) => {
+                    return <MembersListItem data={item} onClick={props.onClick}/>
+                })
+            }
         </MembersListContainer>
     );
 };
