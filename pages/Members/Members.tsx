@@ -29,10 +29,10 @@ tmpMemberList.push(tmpMemberData);
 tmpMemberList.push(tmpMemberData);
 tmpMemberList.push(tmpMemberData);
 
-const [memberData, setMemberData] = useState(tmpMemberData);
-const [memberList, setMemberList] = useState(tmpMemberList);
-
 const Members = () => {
+    const [memberData, setMemberData] = useState(tmpMemberData);
+    const [memberList, setMemberList] = useState(tmpMemberList);
+
     return (
         <MembersStyle>
             <MembersContainer>
