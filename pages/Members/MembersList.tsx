@@ -18,8 +18,10 @@ const MembersList = () => {
 
     return (
         <MembersListContainer>
-            <MembersListItem
-                data={tmpMemberData} />
+            <MembersListItem data={tmpMemberData} />
+            <MembersListItem data={tmpMemberData} />
+            <MembersListItem data={tmpMemberData} />
+            <MembersListItem data={tmpMemberData} />
         </MembersListContainer>
     );
 };
