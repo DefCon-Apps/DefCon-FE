@@ -4,13 +4,13 @@ const MembersDetail = () => {
     return (
         <MembersDetailContainer>
             <MembersDetailCompanyContainer>
-
+                COMPANY_LOGO
             </MembersDetailCompanyContainer>
             <MembersDetailBojContainer>
-
+                BOJ_DATA
             </MembersDetailBojContainer>
             <MembersDetailHistodyContainer>
-                
+                HISTORY_DATA
             </MembersDetailHistodyContainer>
         </MembersDetailContainer>
     );
