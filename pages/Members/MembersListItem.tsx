@@ -7,16 +7,6 @@ import { faHome } from "@fortawesome/free-solid-svg-icons";
 
 import { MemberData } from "./Members";
 
-type Props = {
-    onClick: (id: string) => void,
-    data: MemberData
-}
-
-type snsDataProps = {
-    isEnabled: boolean,
-    url: string
-}
-
 const MembersListItem = (props: Props) => {
     return (
         <MemberItemContainer onClick={() => props.onClick(props.data.id)}>
@@ -77,14 +67,14 @@ const MemberItemDataSnsBtn = (props: { data: snsDataProps, type: string }) => {
     return(
         <MemberItemDataSnsBtnContainer>
             <Link href={data.url} target="_blank">
-                <MemberItemDataSnsIcon type={type} />
+                <MemberItemDataSnsBtnIcon type={type} />
             </Link>
         </MemberItemDataSnsBtnContainer>
 
     );
 };
 
-const MemberItemDataSnsIcon = (props: { type: string }) => {
+const MemberItemDataSnsBtnIcon = (props: { type: string }) => {
     const type = props.type;
         switch (type) {
             case "blog":
@@ -186,5 +176,15 @@ const MemberItemDataName = styled.p`
     font-weight: 300;
     line-height: 34px;
 `;
+
+type Props = {
+    onClick: (id: string) => void,
+    data: MemberData
+}
+
+type snsDataProps = {
+    isEnabled: boolean,
+    url: string
+}
 
 export default MembersListItem;
