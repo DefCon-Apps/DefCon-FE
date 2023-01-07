@@ -7,12 +7,12 @@ import MembersList from "./MembersList";
 import MembersDetail from "./MembersDetail";
 
 const tmpMemberData: MemberData = {
-    id: "닉네임",
+    id: "",
     data: {
-        comment: "한줄소개",
-        company: "소속",
-        profileImage: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAIAQMAAAD+wSzIAAAABlBMVEX///+/v7+jQ3Y5AAAADklEQVQI12P4AIX8EAgALgAD/aNpbtEAAAAASUVORK5CYII",
-        name: "이름",
+        comment: "",
+        company: "",
+        profileImage: "",
+        name: "",
         history: [],
         blog: {isEnabled: false, url: ""},
         boj: {isEnabled: false, url: "", username: ""},
