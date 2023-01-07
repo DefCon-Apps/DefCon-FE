@@ -38,7 +38,6 @@ const Members = () => {
 
     const onMemberClick = (id: string) => {
         API.getMemberData(id).then((apiResult : any) => {
-            console.log(apiResult);
             setMemberData({id: id, data: apiResult});
         });
     }
