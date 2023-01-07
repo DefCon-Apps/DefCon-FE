@@ -23,8 +23,7 @@ const tmpMemberData: MemberData = {
     }
 }
 
-const tmpMemberList: Array<MemberData> = [];
-tmpMemberList.push(tmpMemberData);
+const tmpMemberList: Array<MemberData> = [tmpMemberData];
 
 const Members = () => {
     const [isFirstClicked, setIsFirstClicked] = useState(false);
