@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styled from "styled-components";
 
 import { MemberData } from "./Members";
@@ -10,13 +11,13 @@ const MembersDetail = (props: {memberData: MemberData}) => {
             </MembersDetailCompanyContainer>
             <MembersDetailBojContainer>
                 <MembersDetailTitle>Solved. ac</MembersDetailTitle>
-                <img src={`https://mazassumnida.wtf/api/v2/generate_badge?boj=${props.memberData.boj.username}`} />
+                <Image alt={"BOJ Badge"} src={`https://mazassumnida.wtf/api/v2/generate_badge?boj=${props.memberData.boj.username}`} />
             </MembersDetailBojContainer>
             <MembersDetailHistoryContainer>
                 <MembersDetailTitle>History</MembersDetailTitle>
                 {
                     props.memberData.history.map((item) => {
-                        return <MemberDetailHistoryItem historyData={item} />
+                        return <MemberDetailHistoryItem key={item.content} historyData={item} />
                     })
                 }
             </MembersDetailHistoryContainer>

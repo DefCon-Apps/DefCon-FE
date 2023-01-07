@@ -7,7 +7,7 @@ const MembersList = (props: {memberData: Array<MemberData>, onClick: (id: string
     return (
         <MembersListContainer>{
             props.memberData.map((item) => {
-                return <MembersListItem data={item} onClick={props.onClick}/>
+                return <MembersListItem key={item.id} data={item} onClick={props.onClick}/>
             })
         }</MembersListContainer>
     );

@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faGithub, faInstagram, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
+import Image from "next/image";
 
 import { MemberData } from "./Members";
 
@@ -53,7 +54,7 @@ const MembersListItem = (props: Props) => {
 };
 
 const MemberItemImage = (props: { data: string }) => {
-    return <img src={props.data} width="150px" height="150px"/>
+    return <Image alt={"Profile Image"} src={props.data} width="150" height="150"/>
 };
 
 const MemberItemDataSnsBtn = (props: { data: snsDataProps, type: string }) => {
