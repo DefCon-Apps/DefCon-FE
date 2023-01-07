@@ -11,7 +11,7 @@ const MembersDetail = (props: {isFirstClicked: boolean, memberData: MemberData})
     return (
         <MembersDetailContainer>
             <MembersDetailCompanyContainer>
-                COMPANY_LOGO
+                <Image alt={"Company Logo"} src={props.memberData.data && props.memberData.data.company_img} width="200" height="200" unoptimized={true} />
             </MembersDetailCompanyContainer>
             {
                 props.memberData.data.boj.isEnabled ?
@@ -58,7 +58,7 @@ const MembersDetailBojContainer = styled.div`
     flex-direction: column;
     align-items: center;
 
-    margin: 30px 0;
+    margin: 15px 0;
 `;
 
 const MembersDetailCompanyContainer = styled.div`
@@ -66,7 +66,7 @@ const MembersDetailCompanyContainer = styled.div`
     flex-direction: column;
     align-items: center;
 
-    margin: 30px 0;
+    margin: 15px 0;
 `;
 
 const MembersDetailHistoryContainer = styled.div`
@@ -74,7 +74,7 @@ const MembersDetailHistoryContainer = styled.div`
     flex-direction: column;
     align-items: center;
 
-    margin: 30px 0;
+    margin: 15px 0;
 `;
 
 const MembersDetailHistoryItemContainer = styled.div`
