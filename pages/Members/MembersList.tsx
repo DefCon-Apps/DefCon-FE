@@ -6,7 +6,7 @@ import MembersListItem from "./MembersListItem";
 const MembersList = (props: {memberData: Array<MemberData>, onClick: (id: string) => void}) => {
     return (
         <MembersListContainer>{
-            props.memberData.map((item) => {
+            props.memberData && props.memberData.map((item) => {
                 return <MembersListItem key={item.id} data={item} onClick={props.onClick}/>
             })
         }</MembersListContainer>

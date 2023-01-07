@@ -11,12 +11,12 @@ const MembersDetail = (props: {memberData: MemberData}) => {
             </MembersDetailCompanyContainer>
             <MembersDetailBojContainer>
                 <MembersDetailTitle>Solved. ac</MembersDetailTitle>
-                <Image alt={"BOJ Badge"} src={`https://mazassumnida.wtf/api/v2/generate_badge?boj=${props.memberData.boj.username}`} width="400" height="175" unoptimized={true} />
+                <Image alt={"BOJ Badge"} src={`https://mazassumnida.wtf/api/v2/generate_badge?boj=${props.memberData && props.memberData.boj.username}`} width="400" height="175" unoptimized={true} />
             </MembersDetailBojContainer>
             <MembersDetailHistoryContainer>
                 <MembersDetailTitle>History</MembersDetailTitle>
                 {
-                    props.memberData.history.map((item) => {
+                    props.memberData && props.memberData.history.map((item) => {
                         return <MemberDetailHistoryItem key={item.content} historyData={item} />
                     })
                 }
