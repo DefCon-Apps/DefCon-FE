@@ -31,7 +31,7 @@ const Members = () => {
     useEffect(() => {
         API.getMemberList().then((apiResult : any) => {
             setMemberList(apiResult["data"]);
-            console.log(apiResult);
+            setMemberData(apiResult["data"][0]);
         });
     }, []);
 
