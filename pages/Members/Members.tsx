@@ -34,10 +34,6 @@ const Members = () => {
         API.getMemberList().then((apiResult : any) => {
             setMemberList(apiResult["data"]);
         });
-
-        API.getMemberData("LR").then((apiResult : any) => {
-            setMemberData(apiResult);
-        });
     }, []);
 
     const onMemberClick = (id: string) => {
