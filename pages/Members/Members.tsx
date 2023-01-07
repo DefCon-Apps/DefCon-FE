@@ -1,4 +1,4 @@
-import { useState } from "react";
+import {useEffect, useState} from "react";
 import styled from "styled-components";
 
 import MembersTitle from "./MembersTitle";
@@ -29,6 +29,11 @@ tmpMemberList.push(tmpMemberData);
 const Members = () => {
     const [memberData, setMemberData] = useState(tmpMemberData);
     const [memberList, setMemberList] = useState(tmpMemberList);
+
+    useEffect(() => {
+        setMemberData(tmpMemberData);
+        setMemberList(tmpMemberList);
+    }, []);
 
     return (
         <MembersStyle>
