@@ -4,6 +4,10 @@ import styled from "styled-components";
 import { MemberData } from "./Members";
 
 const MembersDetail = (props: {isFirstClicked: boolean, memberData: MemberData}) => {
+    if(!props.isFirstClicked){
+        return null;
+    }
+
     return (
         <MembersDetailContainer>
             <MembersDetailCompanyContainer>
