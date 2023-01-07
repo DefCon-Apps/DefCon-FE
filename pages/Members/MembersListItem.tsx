@@ -14,7 +14,7 @@ const MembersListItem = (props: Props) => {
     return (
         <MemberItemContainer onClick={() => props.onClick(props.data.id)}>
             <MemberItemImageContainer>
-                <MemberItemImage data={props.data.image} />
+                <MemberItemImage data={props.data.profileImage} />
             </MemberItemImageContainer>
 
             <MemberItemDataContainer>

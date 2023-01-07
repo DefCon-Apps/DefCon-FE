@@ -10,7 +10,7 @@ const tmpMemberData: MemberData = {
     comment: "한줄소개",
     company: "소속",
     id: "닉네임",
-    image: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAIAQMAAAD+wSzIAAAABlBMVEX///+/v7+jQ3Y5AAAADklEQVQI12P4AIX8EAgALgAD/aNpbtEAAAAASUVORK5CYII",
+    profileImage: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAIAQMAAAD+wSzIAAAABlBMVEX///+/v7+jQ3Y5AAAADklEQVQI12P4AIX8EAgALgAD/aNpbtEAAAAASUVORK5CYII",
     name: "이름",
     history: [],
     blog: {isEnabled: false, url: ""},
@@ -31,6 +31,7 @@ const Members = () => {
     useEffect(() => {
         API.getMemberList().then((apiResult : any) => {
             setMemberList(apiResult["data"]);
+            console.log(apiResult);
         });
     }, []);
 
@@ -81,7 +82,7 @@ export type MemberData = {
     comment: string,
     company: string,
     id: string,
-    image: string,
+    profileImage: string,
     name: string,
     history: Array<{content: string, date: string}>
     blog: {isEnabled: boolean, url: string},
