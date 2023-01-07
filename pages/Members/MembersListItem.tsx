@@ -14,7 +14,7 @@ const MembersListItem = (props: Props) => {
     return (
         <MemberItemContainer onClick={() => props.onClick(props.data.id)}>
             <MemberItemImageContainer>
-                <MemberItemImage data={props.data.profileImage} />
+                <MemberItemImage data={props.data.data.profileImage} />
             </MemberItemImageContainer>
 
             <MemberItemDataContainer>
@@ -26,28 +26,28 @@ const MembersListItem = (props: Props) => {
                     <MemberItemDataDivider>|</MemberItemDataDivider>
 
                     <MemberItemDataName>
-                        {props.data.name}
+                        {props.data.data.name}
                     </MemberItemDataName>
                 </MemberItemDataNameContainer>
 
                 <MemberItemDataCompanyContainer>
                     <MemberItemDataCompany>
-                        {props.data.company}
+                        {props.data.data.company}
                     </MemberItemDataCompany>
                 </MemberItemDataCompanyContainer>
 
                 <MemberItemDataCommentContainer>
                     <MemberItemDataComment>
-                        {props.data.comment}
+                        {props.data.data.comment}
                     </MemberItemDataComment>
                 </MemberItemDataCommentContainer>
 
                 <MemberItemDataSnsContainer>
-                    <MemberItemDataSnsBtn data={props.data.blog} type="blog"/>
-                    <MemberItemDataSnsBtn data={props.data.facebook} type="facebook"/>
-                    <MemberItemDataSnsBtn data={props.data.github} type="github"/>
-                    <MemberItemDataSnsBtn data={props.data.instagram} type="instagram"/>
-                    <MemberItemDataSnsBtn data={props.data.twitter} type="twitter"/>
+                    <MemberItemDataSnsBtn data={props.data.data.blog} type="blog"/>
+                    <MemberItemDataSnsBtn data={props.data.data.facebook} type="facebook"/>
+                    <MemberItemDataSnsBtn data={props.data.data.github} type="github"/>
+                    <MemberItemDataSnsBtn data={props.data.data.instagram} type="instagram"/>
+                    <MemberItemDataSnsBtn data={props.data.data.twitter} type="twitter"/>
                 </MemberItemDataSnsContainer>
             </MemberItemDataContainer>
 

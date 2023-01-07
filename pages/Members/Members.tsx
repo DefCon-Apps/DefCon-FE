@@ -7,18 +7,20 @@ import MembersList from "./MembersList";
 import MembersDetail from "./MembersDetail";
 
 const tmpMemberData: MemberData = {
-    comment: "한줄소개",
-    company: "소속",
     id: "닉네임",
-    profileImage: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAIAQMAAAD+wSzIAAAABlBMVEX///+/v7+jQ3Y5AAAADklEQVQI12P4AIX8EAgALgAD/aNpbtEAAAAASUVORK5CYII",
-    name: "이름",
-    history: [],
-    blog: {isEnabled: false, url: ""},
-    boj: {isEnabled: false, url: "", username: ""},
-    facebook: {isEnabled: false, url: ""},
-    github: {isEnabled: false, url: ""},
-    instagram: {isEnabled: false, url: ""},
-    twitter: {isEnabled: false, url: ""}
+    data: {
+        comment: "한줄소개",
+        company: "소속",
+        profileImage: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAIAQMAAAD+wSzIAAAABlBMVEX///+/v7+jQ3Y5AAAADklEQVQI12P4AIX8EAgALgAD/aNpbtEAAAAASUVORK5CYII",
+        name: "이름",
+        history: [],
+        blog: {isEnabled: false, url: ""},
+        boj: {isEnabled: false, url: "", username: ""},
+        facebook: {isEnabled: false, url: ""},
+        github: {isEnabled: false, url: ""},
+        instagram: {isEnabled: false, url: ""},
+        twitter: {isEnabled: false, url: ""}
+    }
 }
 
 const tmpMemberList: Array<MemberData> = [];
@@ -31,6 +33,7 @@ const Members = () => {
     useEffect(() => {
         API.getMemberList().then((apiResult : any) => {
             setMemberList(apiResult["data"]);
+            console.log(apiResult);
         });
 
         API.getMemberData("LR").then((apiResult : any) => {
@@ -84,18 +87,21 @@ const MembersViewContainer = styled.div`
 `;
 
 export type MemberData = {
-    comment: string,
-    company: string,
     id: string,
-    profileImage: string,
-    name: string,
-    history: Array<{content: string, date: string}>
-    blog: {isEnabled: boolean, url: string},
-    boj: {isEnabled: boolean, url: string, username: string},
-    facebook: {isEnabled: boolean, url: string},
-    github: {isEnabled: boolean, url: string},
-    instagram: {isEnabled: boolean, url: string},
-    twitter: {isEnabled: boolean, url: string}
+    data: {
+        comment: string,
+        company: string,
+        profileImage: string,
+        name: string,
+        history: Array<{content: string, date: string}>
+        blog: {isEnabled: boolean, url: string},
+        boj: {isEnabled: boolean, url: string, username: string},
+        facebook: {isEnabled: boolean, url: string},
+        github: {isEnabled: boolean, url: string},
+        instagram: {isEnabled: boolean, url: string},
+        twitter: {isEnabled: boolean, url: string}
+    }
+
 };
 
 export default Members;
