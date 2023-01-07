@@ -6,20 +6,17 @@ import MembersList from "./MembersList";
 import MembersDetail from "./MembersDetail";
 
 const tmpMemberData: MemberData = {
-    comment: "집가고싶다",
-    company: "중앙대학교 소프트웨어학부 19학번",
-    id: "LR",
+    comment: "한줄소개",
+    company: "소속",
+    id: "닉네임",
     image: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAIAQMAAAD+wSzIAAAABlBMVEX///+/v7+jQ3Y5AAAADklEQVQI12P4AIX8EAgALgAD/aNpbtEAAAAASUVORK5CYII",
-    name: "유용민",
-    history: [
-        {content: "Wa!", date: "20221229"},
-        {content: "Sans!", date: "20230107"}
-    ],
-    blog: {isEnabled: true, url: "https://dev-lr.com"},
-    boj: {isEnabled: true, url: "https://solved.ac/profile/yymin1022", username: "yymin1022"},
-    facebook: {isEnabled: true, url: "https://facebook.com/profile.php?id=100007285635473"},
-    github: {isEnabled: true, url: "https://github.com/yymin1022"},
-    instagram: {isEnabled: true, url: "https://instagram.com/useful_min"},
+    name: "이름",
+    history: [],
+    blog: {isEnabled: false, url: ""},
+    boj: {isEnabled: false, url: "", username: ""},
+    facebook: {isEnabled: false, url: ""},
+    github: {isEnabled: false, url: ""},
+    instagram: {isEnabled: false, url: ""},
     twitter: {isEnabled: false, url: ""}
 }
 
