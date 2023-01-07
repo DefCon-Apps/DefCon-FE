@@ -17,7 +17,7 @@ const MembersDetail = (props: {memberData: MemberData}) => {
                 <MembersDetailTitle>History</MembersDetailTitle>
                 {
                     props.memberData.history.map((item) => {
-                        return <MemberDetailHistoryItem historyData={item} />
+                        return <MemberDetailHistoryItem key={item.content} historyData={item} />
                     })
                 }
             </MembersDetailHistoryContainer>
