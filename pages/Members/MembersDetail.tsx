@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import { MemberData } from "./Members";
 
-const MembersDetail = (props: {memberData: MemberData}) => {
+const MembersDetail = (props: {isFirstClicked: boolean, memberData: MemberData}) => {
     return (
         <MembersDetailContainer>
             <MembersDetailCompanyContainer>

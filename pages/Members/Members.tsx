@@ -27,6 +27,7 @@ const tmpMemberList: Array<MemberData> = [];
 tmpMemberList.push(tmpMemberData);
 
 const Members = () => {
+    const [isFirstClicked, setIsFirstClicked] = useState(false);
     const [memberData, setMemberData] = useState(tmpMemberData);
     const [memberList, setMemberList] = useState(tmpMemberList);
 
@@ -37,6 +38,7 @@ const Members = () => {
     }, []);
 
     const onMemberClick = (id: string) => {
+        setIsFirstClicked(true);
         API.getMemberData(id).then((apiResult : any) => {
             setMemberData({id: id, data: apiResult});
         });
@@ -48,7 +50,7 @@ const Members = () => {
                 <MembersTitle />
                 <MembersViewContainer>
                     <MembersList memberData={memberList} onClick={onMemberClick}/>
-                    <MembersDetail memberData={memberData}/>
+                    <MembersDetail isFirstClicked={isFirstClicked} memberData={memberData}/>
                 </MembersViewContainer>
             </MembersContainer>
         </MembersStyle>
