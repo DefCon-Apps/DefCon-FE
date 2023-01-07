@@ -5,7 +5,6 @@ import * as API from "../../src/Common/API";
 import MembersTitle from "./MembersTitle";
 import MembersList from "./MembersList";
 import MembersDetail from "./MembersDetail";
-import {getMemberList} from "../../src/Common/API";
 
 const tmpMemberData: MemberData = {
     comment: "한줄소개",
