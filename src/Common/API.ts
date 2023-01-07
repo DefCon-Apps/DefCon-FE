@@ -34,6 +34,15 @@ const sendRequest = (url : string, data : object) => {
     });
 }
 
+export const getMemberData = (id: string) => {
+    let apiURL : string = `${API_URL_BASE}/member/getData`;
+    let apiRequestData = {
+        "MEMBER_ID": id
+    };
+
+    return apiRequest(apiURL, apiRequestData);
+};
+
 export const getMemberList = () => {
     let apiURL : string = `${API_URL_BASE}/member/getList`;
 

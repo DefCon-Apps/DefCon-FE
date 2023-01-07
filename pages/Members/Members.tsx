@@ -31,12 +31,17 @@ const Members = () => {
     useEffect(() => {
         API.getMemberList().then((apiResult : any) => {
             setMemberList(apiResult["data"]);
-            setMemberData(apiResult["data"][0]);
+        });
+
+        API.getMemberData("LR").then((apiResult : any) => {
+            setMemberData(apiResult);
         });
     }, []);
 
     const onMemberClick = (id: string) => {
-        console.log(`${id} Clicked!`);
+        API.getMemberData(id).then((apiResult : any) => {
+            setMemberData(apiResult);
+        });
     }
 
     return (
