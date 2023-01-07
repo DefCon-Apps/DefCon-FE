@@ -54,7 +54,7 @@ const MembersListItem = (props: Props) => {
 };
 
 const MemberItemImage = (props: { data: string }) => {
-    return <Image alt={""} src={props.data} width="150" height="150"/>
+    return <Image alt={"Profile Image"} src={props.data} width="150" height="150"/>
 };
 
 const MemberItemDataSnsBtn = (props: { data: snsDataProps, type: string }) => {
