@@ -11,7 +11,7 @@ const MembersDetail = (props: {memberData: MemberData}) => {
             </MembersDetailCompanyContainer>
             <MembersDetailBojContainer>
                 <MembersDetailTitle>Solved. ac</MembersDetailTitle>
-                <Image alt={"BOJ Badge"} src={`https://mazassumnida.wtf/api/v2/generate_badge?boj=${props.memberData.boj.username}`} />
+                <Image alt={"BOJ Badge"} src={`https://mazassumnida.wtf/api/v2/generate_badge?boj=${props.memberData.boj.username}`} width="400" height="175" unoptimized={true} />
             </MembersDetailBojContainer>
             <MembersDetailHistoryContainer>
                 <MembersDetailTitle>History</MembersDetailTitle>
