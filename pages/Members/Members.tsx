@@ -5,6 +5,7 @@ import * as API from "../../src/Common/API";
 import MembersTitle from "./MembersTitle";
 import MembersList from "./MembersList";
 import MembersDetail from "./MembersDetail";
+import MembersRectangle from "./MembersRectangle";
 
 const tmpMemberData: MemberData = {
     id: "",
@@ -46,6 +47,7 @@ const Members = () => {
     return (
         <MembersStyle>
             <MembersContainer>
+                <MembersRectangle/>
                 <MembersTitle />
                 <MembersViewContainer>
                     <MembersList memberData={memberList} onClick={onMemberClick}/>
