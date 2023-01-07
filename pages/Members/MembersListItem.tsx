@@ -9,6 +9,8 @@ import Image from "next/image";
 import { MemberData } from "./Members";
 
 const MembersListItem = (props: Props) => {
+    if(!props.data) return null;
+    
     return (
         <MemberItemContainer onClick={() => props.onClick(props.data.id)}>
             <MemberItemImageContainer>
