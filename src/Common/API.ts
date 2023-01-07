@@ -34,11 +34,8 @@ const sendRequest = (url : string, data : object) => {
     });
 }
 
-export const getMemberList = (postType : string) => {
-    let apiURL : string = `${API_URL_BASE}/members/getList`;
-    let apiReqData : object = {
-        postType: postType
-    };
+export const getMemberList = () => {
+    let apiURL : string = `${API_URL_BASE}/member/getList`;
 
-    return apiRequest(apiURL, apiReqData);
+    return apiRequest(apiURL, {});
 };

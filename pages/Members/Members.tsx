@@ -1,9 +1,11 @@
 import {useEffect, useState} from "react";
 import styled from "styled-components";
 
+import * as API from "../../src/Common/API";
 import MembersTitle from "./MembersTitle";
 import MembersList from "./MembersList";
 import MembersDetail from "./MembersDetail";
+import {getMemberList} from "../../src/Common/API";
 
 const tmpMemberData: MemberData = {
     comment: "한줄소개",
@@ -22,17 +24,15 @@ const tmpMemberData: MemberData = {
 
 const tmpMemberList: Array<MemberData> = [];
 tmpMemberList.push(tmpMemberData);
-tmpMemberList.push(tmpMemberData);
-tmpMemberList.push(tmpMemberData);
-tmpMemberList.push(tmpMemberData);
 
 const Members = () => {
     const [memberData, setMemberData] = useState(tmpMemberData);
     const [memberList, setMemberList] = useState(tmpMemberList);
 
     useEffect(() => {
-        setMemberData(tmpMemberData);
-        setMemberList(tmpMemberList);
+        API.getMemberList().then((apiResult : any) => {
+            setMemberList(apiResult["data"]);
+        });
     }, []);
 
     return (
