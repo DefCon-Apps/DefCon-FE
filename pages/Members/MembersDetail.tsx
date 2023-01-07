@@ -13,10 +13,14 @@ const MembersDetail = (props: {isFirstClicked: boolean, memberData: MemberData})
             <MembersDetailCompanyContainer>
                 COMPANY_LOGO
             </MembersDetailCompanyContainer>
-            <MembersDetailBojContainer>
-                <MembersDetailTitle>Solved. ac</MembersDetailTitle>
-                <Image alt={"BOJ Badge"} src={`https://mazassumnida.wtf/api/v2/generate_badge?boj=${props.memberData.data && props.memberData.data.boj.username}`} width="350" height="175" unoptimized={true} />
-            </MembersDetailBojContainer>
+            {
+                props.memberData.data.boj.isEnabled ?
+                    <MembersDetailBojContainer>
+                        <MembersDetailTitle>Solved. ac</MembersDetailTitle>
+                        <Image alt={"BOJ Badge"} src={`https://mazassumnida.wtf/api/v2/generate_badge?boj=${props.memberData.data && props.memberData.data.boj.username}`} width="350" height="175" unoptimized={true} />
+                    </MembersDetailBojContainer>
+                : null
+            }
             <MembersDetailHistoryContainer>
                 <MembersDetailTitle>History</MembersDetailTitle>
                 {
