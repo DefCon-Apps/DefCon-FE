@@ -33,7 +33,6 @@ const Members = () => {
     useEffect(() => {
         API.getMemberList().then((apiResult : any) => {
             setMemberList(apiResult["data"]);
-            console.log(apiResult);
         });
 
         API.getMemberData("LR").then((apiResult : any) => {
