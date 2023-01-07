@@ -35,6 +35,10 @@ const Members = () => {
         });
     }, []);
 
+    const onMemberClick = (id: string) => {
+        console.log(`${id} Clicked!`);
+    }
+
     return (
         <MembersStyle>
             <MembersContainer>
@@ -47,10 +51,6 @@ const Members = () => {
         </MembersStyle>
     );
 };
-
-const onMemberClick = (id: string) => {
-    console.log(`${id} Clicked!`);
-}
 
 const MembersStyle = styled.div`
     display: flex;
