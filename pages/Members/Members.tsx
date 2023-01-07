@@ -12,6 +12,7 @@ const tmpMemberData: MemberData = {
     data: {
         comment: "",
         company: "",
+        companyImage: "",
         profileImage: "",
         name: "",
         history: [],
@@ -89,6 +90,7 @@ export type MemberData = {
     data: {
         comment: string,
         company: string,
+        companyImage: string,
         profileImage: string,
         name: string,
         history: Array<{content: string, date: string}>
