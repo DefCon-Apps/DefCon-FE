@@ -3,20 +3,28 @@ import styled from "styled-components";
 
 import { MemberData } from "./Members";
 
-const MembersDetail = (props: {memberData: MemberData}) => {
+const MembersDetail = (props: {isFirstClicked: boolean, memberData: MemberData}) => {
+    if(!props.isFirstClicked){
+        return null;
+    }
+
     return (
         <MembersDetailContainer>
             <MembersDetailCompanyContainer>
-                COMPANY_LOGO
+                <Image alt={"Company Logo"} src={props.memberData.data && props.memberData.data.company_img} width="200" height="200" unoptimized={true} />
             </MembersDetailCompanyContainer>
-            <MembersDetailBojContainer>
-                <MembersDetailTitle>Solved. ac</MembersDetailTitle>
-                <Image alt={"BOJ Badge"} src={`https://mazassumnida.wtf/api/v2/generate_badge?boj=${props.memberData && props.memberData.boj.username}`} width="400" height="175" unoptimized={true} />
-            </MembersDetailBojContainer>
+            {
+                props.memberData.data.boj.isEnabled ?
+                    <MembersDetailBojContainer>
+                        <MembersDetailTitle>Solved. ac</MembersDetailTitle>
+                        <Image alt={"BOJ Badge"} src={`https://mazassumnida.wtf/api/v2/generate_badge?boj=${props.memberData.data && props.memberData.data.boj.username}`} width="350" height="175" unoptimized={true} />
+                    </MembersDetailBojContainer>
+                : null
+            }
             <MembersDetailHistoryContainer>
                 <MembersDetailTitle>History</MembersDetailTitle>
                 {
-                    props.memberData && props.memberData.history.map((item) => {
+                    props.memberData.data && props.memberData.data.history.map((item) => {
                         return <MemberDetailHistoryItem key={item.content} historyData={item} />
                     })
                 }
@@ -50,7 +58,7 @@ const MembersDetailBojContainer = styled.div`
     flex-direction: column;
     align-items: center;
 
-    margin: 30px 0;
+    margin: 15px 0;
 `;
 
 const MembersDetailCompanyContainer = styled.div`
@@ -58,7 +66,7 @@ const MembersDetailCompanyContainer = styled.div`
     flex-direction: column;
     align-items: center;
 
-    margin: 30px 0;
+    margin: 15px 0;
 `;
 
 const MembersDetailHistoryContainer = styled.div`
@@ -66,7 +74,7 @@ const MembersDetailHistoryContainer = styled.div`
     flex-direction: column;
     align-items: center;
 
-    margin: 30px 0;
+    margin: 15px 0;
 `;
 
 const MembersDetailHistoryItemContainer = styled.div`
@@ -74,7 +82,7 @@ const MembersDetailHistoryItemContainer = styled.div`
     flex-direction: column;
     align-items: center;
   
-    margin: 15px 0;
+    margin: 0 0 30px 0;
 `;
 
 const MembersDetailHistoryContent = styled.p`
@@ -91,6 +99,8 @@ const MembersDetailTitle = styled.p`
     font-size: 36px;
     font-weight: 700;
     line-height: 50px;
+  
+    margin: 0 0 15px 0;
 `;
 
 export default MembersDetail;

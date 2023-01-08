@@ -1,54 +1,63 @@
-import { useState } from "react";
+import {useEffect, useState} from "react";
 import styled from "styled-components";
 
+import * as API from "../../src/Common/API";
 import MembersTitle from "./MembersTitle";
 import MembersList from "./MembersList";
 import MembersDetail from "./MembersDetail";
+import MembersRectangle from "./MembersRectangle";
 
 const tmpMemberData: MemberData = {
-    comment: "집가고싶다",
-    company: "중앙대학교 소프트웨어학부 19학번",
-    id: "LR",
-    image: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAIAQMAAAD+wSzIAAAABlBMVEX///+/v7+jQ3Y5AAAADklEQVQI12P4AIX8EAgALgAD/aNpbtEAAAAASUVORK5CYII",
-    name: "유용민",
-    history: [
-        {content: "Wa!", date: "20221229"},
-        {content: "Sans!", date: "20230107"}
-    ],
-    blog: {isEnabled: true, url: "https://dev-lr.com"},
-    boj: {isEnabled: true, url: "https://solved.ac/profile/yymin1022", username: "yymin1022"},
-    facebook: {isEnabled: true, url: "https://facebook.com/profile.php?id=100007285635473"},
-    github: {isEnabled: true, url: "https://github.com/yymin1022"},
-    instagram: {isEnabled: true, url: "https://instagram.com/useful_min"},
-    twitter: {isEnabled: false, url: ""}
+    id: "",
+    data: {
+        comment: "",
+        company: "",
+        company_img: "",
+        profileImage: "",
+        name: "",
+        history: [],
+        blog: {isEnabled: false, url: ""},
+        boj: {isEnabled: false, url: "", username: ""},
+        facebook: {isEnabled: false, url: ""},
+        github: {isEnabled: false, url: ""},
+        instagram: {isEnabled: false, url: ""},
+        twitter: {isEnabled: false, url: ""}
+    }
 }
 
-const tmpMemberList: Array<MemberData> = [];
-tmpMemberList.push(tmpMemberData);
-tmpMemberList.push(tmpMemberData);
-tmpMemberList.push(tmpMemberData);
-tmpMemberList.push(tmpMemberData);
+const tmpMemberList: Array<MemberData> = [tmpMemberData];
 
 const Members = () => {
+    const [isFirstClicked, setIsFirstClicked] = useState(false);
     const [memberData, setMemberData] = useState(tmpMemberData);
     const [memberList, setMemberList] = useState(tmpMemberList);
+
+    useEffect(() => {
+        API.getMemberList().then((apiResult : any) => {
+            setMemberList(apiResult["data"]);
+        });
+    }, []);
+
+    const onMemberClick = (id: string) => {
+        setIsFirstClicked(true);
+        API.getMemberData(id).then((apiResult : any) => {
+            setMemberData({id: id, data: apiResult});
+        });
+    }
 
     return (
         <MembersStyle>
             <MembersContainer>
+                <MembersRectangle/>
                 <MembersTitle />
                 <MembersViewContainer>
                     <MembersList memberData={memberList} onClick={onMemberClick}/>
-                    <MembersDetail memberData={memberData}/>
+                    <MembersDetail isFirstClicked={isFirstClicked} memberData={memberData}/>
                 </MembersViewContainer>
             </MembersContainer>
         </MembersStyle>
     );
 };
-
-const onMemberClick = (id: string) => {
-    console.log(`${id} Clicked!`);
-}
 
 const MembersStyle = styled.div`
     display: flex;
@@ -77,18 +86,22 @@ const MembersViewContainer = styled.div`
 `;
 
 export type MemberData = {
-    comment: string,
-    company: string,
     id: string,
-    image: string,
-    name: string,
-    history: Array<{content: string, date: string}>
-    blog: {isEnabled: boolean, url: string},
-    boj: {isEnabled: boolean, url: string, username: string},
-    facebook: {isEnabled: boolean, url: string},
-    github: {isEnabled: boolean, url: string},
-    instagram: {isEnabled: boolean, url: string},
-    twitter: {isEnabled: boolean, url: string}
+    data: {
+        comment: string,
+        company: string,
+        company_img: string,
+        profileImage: string,
+        name: string,
+        history: Array<{content: string, date: string}>
+        blog: {isEnabled: boolean, url: string},
+        boj: {isEnabled: boolean, url: string, username: string},
+        facebook: {isEnabled: boolean, url: string},
+        github: {isEnabled: boolean, url: string},
+        instagram: {isEnabled: boolean, url: string},
+        twitter: {isEnabled: boolean, url: string}
+    }
+
 };
 
 export default Members;
