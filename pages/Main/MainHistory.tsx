@@ -13,7 +13,7 @@ const MainHistory = () => {
           시작은 성보고 꼭대기<br />
           컴퓨터실에서부터
         </h1>
-        <HistoryImage></HistoryImage>
+        <HistoryImage src={"/Images/testImage.png"}/>
       </HistoryTitle>
       <HistoryContents>
           <p>
@@ -71,14 +71,12 @@ const HistoryTitle = styled.div`
   }
 `;
 
-const HistoryImage = styled.div`
-  width: 36rem;
-  height: 24rem;
-  margin-top: 2rem;
-  border-radius: 1.5rem;
-  background-color: grey;
+const HistoryImage = styled.img`
+  width: 600px;
+  height: 400px;
+  margin-top: 2vh;
+  border-radius: 20px;
 `;
-//추후 삽입될 이미지 확정시 img에 대한 스타일로 변경 필요
 
 const HistoryButton = styled.div`
   display: flex;
@@ -95,6 +93,8 @@ const HistoryContents = styled.div`
     text-align: right;
     font-size: 18pt;
     font-weight: 300;
+    color: rbg(--foreground-rgb);
   }
 `;
+
 export default MainHistory;
