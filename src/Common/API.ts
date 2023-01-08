@@ -48,3 +48,9 @@ export const getMemberList = () => {
 
     return apiRequest(apiURL, {});
 };
+
+export const getMainEventData = () => {
+    let apiURL : string = `${API_URL_BASE}/common/getMainEvent`;
+    
+    return apiRequest(apiURL, {});
+}

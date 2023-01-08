@@ -1,17 +1,30 @@
 import styled from "styled-components";
 import Link from "next/link";
 import Dbutton from "../../src/Common/Dbutton";
+import * as API from "../../src/Common/API";
+import { useState, useEffect } from "react";
+
+const tmpEventData: MainEventData = {
+  title: "집에 가고 싶지 않으십니까?",
+  content: "저는 지금 API 연동을 하고 있는데요 먼가 하기 싫습니다. 아뇨 그렇다구요",
+  image: "asdfasdf"
+}
 
 const MainAwards = () => {
+  const [mainEvent, setMainEvent] = useState(tmpEventData);
+
+  useEffect(() => {
+    API.getMainEventData().then((apiResult : any) => {
+      console.log(apiResult);
+      setMainEvent(apiResult);
+    });
+  }, []);
+
   return (
     <MainHistoryStyle>
       <HistoryContents>
           <p>
-            DEF:CON은 매년 &apos;스마트 서울 모바일 앱 공모전&apos; 수상을<br />
-            목표로 꾸준히 참가해왔습니다.<br />
-            2019년, 마지막으로 열린 공모전에서 우리는 마침내 오랜<br />
-            염원을 이루고 219팀 중 11위를 달성하여 장려상을 수상<br />
-            하는 쾌거를 이뤘습니다.<br />
+            {mainEvent.content}
           </p>
           <HistoryButton>
             <Link href="https://github.com/yymin1022/SeoulHealing" target="_blank" rel="noreferrer">
@@ -29,10 +42,9 @@ const MainAwards = () => {
       </HistoryContents>
       <HistoryTitle>
         <h1>
-          DEF:CON의 오랜 염원<br />
-          마침내 이루다
+          {mainEvent.title} 
         </h1>
-        <HistoryImage></HistoryImage>
+        <HistoryImage src={mainEvent.image}></HistoryImage>
       </HistoryTitle>
     </MainHistoryStyle>
   );
@@ -55,16 +67,15 @@ const HistoryTitle = styled.div`
     text-align: right;
     font-size: 55pt;
     letter-spacing: -7px;
-    color: #fff;
+    color: #000;
   }
 `;
 
-const HistoryImage = styled.div`
+const HistoryImage = styled.img`
   width: 36rem;
   height: 24rem;
-  margin-top: 2rem;
-  border-radius: 1.5rem;
-  background-color: grey;
+  margin-top: 20px;
+  border-radius: 20px;
 `;
 
 const HistoryButton = styled.div`
@@ -84,4 +95,11 @@ const HistoryContents = styled.div`
     font-weight: 300;
   }
 `;
+
+type MainEventData = {
+  title: string,
+  content: string,
+  image: string
+};
+
 export default MainAwards;
