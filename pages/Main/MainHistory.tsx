@@ -91,10 +91,21 @@ const HistoryContents = styled.div`
   margin-top: 12rem;
   margin-left: 8rem;
 
+  
+
   p {
+
+    @media (prefers-color-scheme:dark) {
+      :root {
+        --tile-start-rgb: 239, 245, 249;
+        --foreground-rgb: 255, 255, 255;
+      }
+    }
+    
     text-align: right;
     font-size: 18pt;
     font-weight: 300;
+    color: rbg(--foreground-rgb);
   }
 `;
 export default MainHistory;
