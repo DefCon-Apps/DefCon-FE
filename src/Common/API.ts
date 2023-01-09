@@ -7,9 +7,9 @@ export interface API_DATA{
 }
 
 export interface MainEvent{
-    content: String,
-    image: String,
-    title: String
+    content: string,
+    image: string,
+    title: string
 }
 
 export interface MemberData{
@@ -20,18 +20,18 @@ export interface MemberData{
     instagram: Object,
     twitter: Object,
 
-    comment: String,
-    company: String,
-    companyImage: String,
-    name: String,
-    profileImage: String,
+    comment: string,
+    company: string,
+    companyImage: string,
+    name: string,
+    profileImage: string,
 
     history: Array<MemberHistoryData>
 }
 
 export interface MemberHistoryData{
-    date: String,
-    content: String
+    date: string,
+    content: string
 }
 
 export interface MemberList{
@@ -40,24 +40,24 @@ export interface MemberList{
 }
 
 export interface MemberListItem{
-    id: String,
+    id: string,
     data: MemberData
 }
 
 export interface ProjectData{
-    title: String,
-    category: "android" | "web" | "repair" | String,
-    content: String,
-    date: String,
-    description: String,
-    image: Array<String>,
-    tech: Array<String>,
+    title: string,
+    category: "android" | "web" | "repair" | string,
+    content: string,
+    date: string,
+    description: string,
+    image: Array<string>,
+    tech: Array<string>,
     user: Array<ProjectMemberData>
 }
 
 export interface ProjectMemberData{
-    user: String,
-    role: String
+    user: string,
+    role: string
 }
 
 export interface ProjectList{
