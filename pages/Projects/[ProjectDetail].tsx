@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import ReactMarkdown from "react-markdown"
+import ReactMarkdown from "react-markdown";
 import styled from "styled-components";
 import * as API from "../../src/Common/API";
 import ImageSlider from "../../src/Common/ImageSlider";
@@ -47,7 +47,7 @@ const ProjectDetail = ()=> {
 
           <h1>Role</h1>
           {projectData.user.map((item, i) => {
-            return <p key={i}>{item.user} - {item.role}</p>
+            return <p key={i}><b>{item.user}</b> - {item.role}</p>
           })}
           <br></br>
 
