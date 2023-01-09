@@ -1,85 +1,58 @@
 import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
+import ReactMarkdown from "react-markdown"
 import styled from "styled-components";
+import * as API from "../../src/Common/API";
 import ImageSlider from "../../src/Common/ImageSlider";
 
 const ProjectDetail = ()=> {
   const router = useRouter();
   const projectId = router.query.ProjectDetail;
+  const [projectData, setProjectData] = useState<API.ProjectData>();
+
+  useEffect(() => {
+    API.getProjectData(projectId as string).then((apiResult: any) => {
+      setProjectData(apiResult);
+    });
+  }, [projectData]);
+
+  if (!projectData) return (
+    <ProjectDetailWrapper>
+      <ProjectDetailTitle>
+        <h1>Page Not Found</h1>
+      </ProjectDetailTitle>
+    </ProjectDetailWrapper>
+  );
 
   return(
     <ProjectDetailWrapper>
       <div>
         <ProjectDetailTitle>
-          <h1>PROJECT_ID : {projectId}</h1>
-          <p>This is description about project id {projectId}.</p>
+          <h1>{projectData.title}</h1>
+          <p>{projectData.description}</p>
         </ProjectDetailTitle>
         <ProjectDetailContent>
           <ImageSlider width="600px" height="450px"
-            images={[
-              "https://github.com/yymin1022/SeoulHealing/raw/master/Images/app_1.jpg",
-              "https://github.com/yymin1022/SeoulHealing/raw/master/Images/app_2.jpg",
-              "https://github.com/yymin1022/SeoulHealing/raw/master/Images/app_3.jpg",
-              "https://camo.githubusercontent.com/119f7acf538de712dafd8c7f50c562eff424432a569e7e847716fa701c406b6d/687474703a2f2f6d617a617373756d6e6964612e7774662f6170692f76322f67656e65726174655f62616467653f626f6a3d79796d696e31303232",
-              "https://camo.githubusercontent.com/501dce49fd773c15a1a59e8bd14109a465a175ffd39df3ff3136881398b479ba/687474703a2f2f6d617a617373756d6e6964612e7774662f6170692f76322f67656e65726174655f62616467653f626f6a3d63656f756e6a63",
-            ]} />
-          <h1>Project description.</h1>
-          <h2>Project description.</h2>
-          <h3>Project description.</h3>
-          <h4>Project description.</h4>
-          <h5>Project description.</h5>
-          <h6>Project description.</h6>
-          <h5>Project description.</h5>
-          <h4>Project description.</h4>
-          <h3>Project description.</h3>
-          <h2>Project description.</h2>
-          <h1>Project description.</h1>
-          <h2>Project description.</h2>
-          <h3>Project description.</h3>
-          <h4>Project description.</h4>
-          <h5>Project description.</h5>
-          <h6>Project description.</h6>
-          <h5>Project description.</h5>
-          <h4>Project description.</h4>
-          <h3>Project description.</h3>
-          <h2>Project description.</h2>
-          <h1>Project description.</h1>
-          <h2>Project description.</h2>
-          <h3>Project description.</h3>
-          <h4>Project description.</h4>
-          <h5>Project description.</h5>
-          <h6>Project description.</h6>
-          <h5>Project description.</h5>
-          <h4>Project description.</h4>
-          <h3>Project description.</h3>
-          <h2>Project description.</h2>
-          <h1>Project description.</h1>
-          <h2>Project description.</h2>
-          <h3>Project description.</h3>
-          <h4>Project description.</h4>
-          <h5>Project description.</h5>
-          <h6>Project description.</h6>
-          <h5>Project description.</h5>
-          <h4>Project description.</h4>
-          <h3>Project description.</h3>
-          <h2>Project description.</h2>
-          <h1>Project description.</h1>
+            images={projectData.image} />
+          <br></br>
+          
+          <ReactMarkdown>{projectData.content}</ReactMarkdown>
           <br></br>
 
           <h1>Tech Stack</h1>
-          <p>Adobe XD</p>
-          <p>Android (Java)</p>
+          {projectData.tech.map((item, i) => {
+            return <p key={i}>{item}</p>
+          })}
           <br></br>
 
           <h1>Role</h1>
-          <p>PM & 개발 - LR</p>
-          <p>개발 - Caret</p>
-          <p>UI & UX 디자인 - HarenKei</p>
+          {projectData.user.map((item, i) => {
+            return <p key={i}>{item.user} - {item.role}</p>
+          })}
           <br></br>
 
-          <h1>History</h1>
-          <p>2019.09 개발 시작</p>
-          <p>2019.10 개발 완료</p>
-          <p>2019.11 장려상 수상</p>
+          <h1>Date</h1>
+          <p>{projectData.date}</p>
           <br></br>
         </ProjectDetailContent>
       </div>
@@ -96,12 +69,10 @@ const ProjectDetailWrapper = styled.div`
 const ProjectDetailTitle = styled.div`
   margin-top: 128px;
   width: 1280px;
-
   h1 {
     text-align: left;
     font-size: 55pt;
   }
-
   p {
     margin: 1.5rem 0 1.5rem 0;
     font-size: 18pt;
@@ -114,13 +85,6 @@ const ProjectDetailContent = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-`;
-
-const ProjectDetailImages = styled.div`
-  width: 600px;
-  height: 450px;
-  background-color: gray;
-  border-radius: 20px;
 `;
 
 export default ProjectDetail;
