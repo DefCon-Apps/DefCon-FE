@@ -123,4 +123,19 @@ export const getMainEventData = () => {
     let apiURL : string = `${API_URL_BASE}/common/getMainEvent`;
     
     return apiRequest(apiURL, {});
-}
+};
+
+export const getProjectData = (id: string) => {
+    let apiURL : string = `${API_URL_BASE}/project/getData`;
+    let apiRequestData = {
+        "PROJECT_ID": id
+    }
+
+    return apiRequest(apiURL, apiRequestData);
+};
+
+export const getProjectList = () => {
+    let apiURL : string = `${API_URL_BASE}/project/getList`;
+
+    return apiRequest(apiURL, {});
+};
