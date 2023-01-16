@@ -34,6 +34,7 @@ const dummyArray = [
 const MainWorks = () => {
   return (
     <MainWorksWrapper>
+      <MainWorksContents>
       <WorksTitle>
         <h1>우리가 즐겨온 일들</h1>
         <p>
@@ -49,19 +50,30 @@ const MainWorks = () => {
           ))}
         </ScrollMenu>
 			</ScrollMenuWrapper>
+      </MainWorksContents>
     </MainWorksWrapper>
   );
 };
 
 const MainWorksWrapper = styled.div`
+  width: 70vw;
   height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 	margin-top : 100px;
+`;
+
+const MainWorksContents = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 `;
 
 const WorksTitle = styled.div`
   display: flex;
   flex-direction: column;
-	margin: 200px 0px 50px 350px;
 
 	h1 {
     text-align: left;
@@ -77,8 +89,8 @@ const WorksTitle = styled.div`
 `;
 
 const ScrollMenuWrapper = styled.div`
-	margin: 0px 330px 0px 300px;
-`
+  width: 80%;
+`;
 
 
 export default MainWorks;
