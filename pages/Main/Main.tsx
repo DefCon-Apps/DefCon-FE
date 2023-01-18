@@ -17,6 +17,10 @@ const Main = () => {
 
 const MainStyle = styled.div`
   font-family: "Noto Sans KR";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 
