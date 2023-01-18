@@ -56,24 +56,23 @@ const MainWorks = () => {
 };
 
 const MainWorksWrapper = styled.div`
-  width: 70vw;
-  height: 100vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-	margin-top : 100px;
+  height: 100vh;
 `;
 
 const MainWorksContents = styled.div`
-  width: 100%;
   display: flex;
   flex-direction: column;
+  margin-left: 30rem;
 `;
 
 const WorksTitle = styled.div`
   display: flex;
   flex-direction: column;
+  
 
 	h1 {
     text-align: left;
@@ -89,7 +88,8 @@ const WorksTitle = styled.div`
 `;
 
 const ScrollMenuWrapper = styled.div`
-  width: 80%;
+  width: 65%;
+  margin-top: 5vh;
 `;
 
 

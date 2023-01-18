@@ -62,6 +62,7 @@ const MainHistoryStyle = styled.div`
 const HistoryTitle = styled.div`
   display: flex;
   flex-direction: column;
+  padding-left: 15vw;
   h1 {
     text-align: right;
     font-size: 55pt;
