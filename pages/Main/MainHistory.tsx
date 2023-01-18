@@ -1,12 +1,10 @@
 import styled from "styled-components";
 import Link from "next/link";
 import Dbutton from "../../src/Common/Dbutton";
-import MainRectangle from "./MainRectangle";
 
 const MainHistory = () => {
   return (
     <>
-    <MainRectangle/>
     <MainHistoryWrapper>
       <HistoryTitle>
         <h1>
