@@ -3,15 +3,6 @@ import Link from "next/link";
 import Dbutton from "../../src/Common/Dbutton";
 import BackgroundCard from "../../src/Common/BackgroundCard";
 
-interface Props {
-  color: string;
-  height: string;
-  translateX: string;
-  translateY: string;
-  type: string;
-
-}
-
 const MainHistory = () => {
   return (
     <>
