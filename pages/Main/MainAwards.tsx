@@ -3,6 +3,9 @@ import Link from "next/link";
 import Dbutton from "../../src/Common/Dbutton";
 import * as API from "../../src/Common/API";
 import { useState, useEffect } from "react";
+import BackgroundCard from "../../src/Common/BackgroundCard";
+
+
 
 const tmpEventData: MainEventData = {
   title: "집에 가고 싶지 않으십니까?",
@@ -45,6 +48,29 @@ const MainAwards = () => {
         </h1>
         <HistoryImage src={mainEvent.image}></HistoryImage>
       </HistoryTitle>
+      
+      <BackgroundCard
+        color={"#35B6F7"}
+        height={"35vh"}
+        translateX={"52vw"}
+        translateY={"-13vh"}
+        type={"filled"}
+      />
+      <BackgroundCard
+        color={"#00658F"}
+        height={"35vh"}
+        translateX={"50vw"}
+        translateY={"-20vh"}
+        type={"filled"}
+      />
+
+      <BackgroundCard
+        color={"#00658F"}
+        height={"35vh"}
+        translateX={"-60vw"}
+        translateY={"30.6vh"}
+        type={"bordered"}
+      />
     </MainHistoryStyle>
   );
 };
@@ -62,11 +88,12 @@ const MainHistoryStyle = styled.div`
 const HistoryTitle = styled.div`
   display: flex;
   flex-direction: column;
+  margin-left: 10vw;
   h1 {
     text-align: right;
     font-size: 55pt;
     letter-spacing: -7px;
-    color: #000;
+    color: #fff;
   }
 `;
 

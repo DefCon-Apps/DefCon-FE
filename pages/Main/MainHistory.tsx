@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Link from "next/link";
 import Dbutton from "../../src/Common/Dbutton";
+import BackgroundCard from "../../src/Common/BackgroundCard";
 
 const MainHistory = () => {
   return (
@@ -13,6 +14,20 @@ const MainHistory = () => {
         </h1>
         <HistoryImage src={"/Images/testImage.png"}/>
       </HistoryTitle>
+      <BackgroundCard
+        color={"#35B6F7"}
+        height={"35vh"}
+        translateX={"-65.5vw"}
+        translateY={"-20vh"}
+        type={"bordered"}
+      />
+      <BackgroundCard
+        color={"#C7E7FF"}
+        height={"35vh"}
+        translateX={"50vw"}
+        translateY={"11vh"}
+        type={"filled"}
+      />
       <HistoryContents>
           <p>
             DEF:CON은 성보고등학교 컴퓨터실에서 시작된 동아리로<br />
