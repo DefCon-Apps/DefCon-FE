@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { ScrollMenu } from "react-horizontal-scrolling-menu";
 import WorksCard from "../../src/Common/WorksCard";
+import BackgroundCard from "../../src/Common/BackgroundCard";
 
 const dummyArray = [
   {
@@ -43,6 +44,20 @@ const MainWorks = () => {
           있습니다.<br />
         </p>
       </WorksTitle>
+      <BackgroundCard
+        color={"#C7E7FF"}
+        height={"35vh"}
+        translateX={"-60vw"}
+        translateY={"8vh"}
+        type={"bordered"}
+      />
+      <BackgroundCard
+        color={"#35B6F7"}
+        height={"35vh"}
+        translateX={"50vw"}
+        translateY={"35vh"}
+        type={"bordered"}
+      />
 			<ScrollMenuWrapper>
         <ScrollMenu>
           {dummyArray.map((items) => (
@@ -61,6 +76,7 @@ const MainWorksWrapper = styled.div`
   justify-content: center;
   align-items: center;
   height: 100vh;
+  margin-bottom: 200px;
 `;
 
 const MainWorksContents = styled.div`
