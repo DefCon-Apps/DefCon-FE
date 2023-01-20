@@ -30,7 +30,7 @@ const Projects = () => {
         }
       })
     });
-  }, [androidProjectList, webProjectList, selfRepairList, etcProjectList]);
+  }, []);
 
   return (
     <>
