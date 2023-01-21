@@ -25,7 +25,7 @@ const SectionWrapper = styled.div`
   justify-content: center;
   align-items: center;
 
-  div {
+  & > div {
     width: 1400px;
   }
   
