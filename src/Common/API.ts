@@ -66,7 +66,7 @@ export interface ProjectList{
 }
 
 export interface ProjectListItem{
-    id: String,
+    id: string,
     data: ProjectData
 }
 
