@@ -11,7 +11,6 @@ const Projects = () => {
 
   useEffect(() => {
     API.getProjectList().then((apiResult: any) => {
-      console.log(apiResult);
       if (!apiResult) return;
       apiResult.data.map((projectData: API.ProjectListItem) => {
         switch(projectData.data.category) {
