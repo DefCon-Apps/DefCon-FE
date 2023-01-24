@@ -7,6 +7,10 @@ import MembersList from "./MembersList";
 import MembersDetail from "./MembersDetail";
 import MembersRectangle from "./MembersRectangle";
 
+interface Props{
+    marginBotton: boolean;
+};
+
 const tmpMemberData: MemberData = {
     id: "",
     data: {
@@ -46,7 +50,7 @@ const Members = () => {
     }
 
     return (
-        <MembersStyle>
+        <MembersStyle marginBotton={isFirstClicked}>
             <MembersContainer>
                 {isFirstClicked && <MembersRectangle/> }
                 <MembersTitle />
@@ -59,13 +63,15 @@ const Members = () => {
     );
 };
 
-const MembersStyle = styled.div`
+const MembersStyle = styled.div<Props>`
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   
     font-family: "Noto Sans KR";
+
+    margin-bottom: ${props => props.marginBotton && '50vh'};
 `;
 
 const MembersContainer = styled.div`
