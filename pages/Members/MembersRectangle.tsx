@@ -1,10 +1,6 @@
 import BackgroundCard from "../../src/Common/BackgroundCard";
 
-interface Props{
-    width: string;
-}
-
-const MainRectangle = (props : Props) => {
+const MainRectangle = () => {
     return (
         <BackgroundCard
             key="MembersRectangle"
