@@ -103,6 +103,12 @@ const MemberItemContainer = styled.div`
   
     display: flex;
     flex-direction: row;
+
+    border-radius: 0px 20px 20px 0px;
+
+    :hover{
+        box-shadow: 0px 5px 5px #00658F;
+    }
 `;
 
 const MemberItemImageContainer = styled.div`
