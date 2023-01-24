@@ -48,7 +48,7 @@ const Members = () => {
     return (
         <MembersStyle>
             <MembersContainer>
-                <MembersRectangle/>
+                {isFirstClicked && <MembersRectangle/> }
                 <MembersTitle />
                 <MembersViewContainer>
                     <MembersList memberData={memberList} onClick={onMemberClick}/>

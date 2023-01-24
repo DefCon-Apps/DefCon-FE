@@ -5,8 +5,8 @@ const MainRectangle = () => {
         <BackgroundCard
             key="MembersRectangle"
             color="#35B6F7"
-            height="430px"
-            translateX="1300px"
+            height="50rem"
+            translateX="300px"
             translateY="250px"
             type="bordered"
         />

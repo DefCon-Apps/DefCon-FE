@@ -2,6 +2,7 @@ import styled, { css } from "styled-components";
 
 interface Props {
   color: string;
+  width: string;
   height: string;
   translateX: string;
   translateY: string;
@@ -12,7 +13,7 @@ interface Props {
 const BackgroundCard = styled.div<Props>`
   position: absolute;
   left: 0;
-  width: 100vw;
+  width: ${props => props.width};
   height: ${props => props.height};
   border-radius: 2rem;
   z-index: -3;
@@ -31,5 +32,10 @@ const BackgroundCard = styled.div<Props>`
     }
   }}
 `;
+
+BackgroundCard.defaultProps = {
+  width: '100vw'
+};
+
 
 export default BackgroundCard;
