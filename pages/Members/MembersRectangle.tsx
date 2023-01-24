@@ -1,16 +1,22 @@
 import BackgroundCard from "../../src/Common/BackgroundCard";
 
-const MainRectangle = () => {
+interface Props{
+    width: string;
+}
+
+const MainRectangle = (props : Props) => {
     return (
         <BackgroundCard
             key="MembersRectangle"
             color="#35B6F7"
-            height="50rem"
-            translateX="300px"
+            width="50rem"
+            height="80rem"
+            translateX="900px"
             translateY="250px"
             type="bordered"
         />
     );
 };
+
 
 export default MainRectangle;
