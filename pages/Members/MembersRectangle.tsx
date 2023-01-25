@@ -8,7 +8,7 @@ const MainRectangle = () => {
             width="50rem"
             height="80rem"
             translateX="48vw"
-            translateY="20vh"
+            translateY="30vh"
             type="bordered"
         />
     );
