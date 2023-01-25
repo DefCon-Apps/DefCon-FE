@@ -19,15 +19,20 @@ const MembersTitleContainer = styled.div`
 `;
 
 const MembersTitleMain = styled.p`
-    font-size: 45pt;
-    font-weight: 800;
-    line-height: 90px;
+    font-size: 55pt;
+    font-weight: 900;
+    line-height: 60px;
+    letter-spacing: -5px;
+
+    margin-bottom: -20px;
 `;
 
 const MembersTitleSub = styled.p`
-    font-size: 17pt;
-    font-weight: 400;
+    font-size: 20pt;
+    font-weight: 300;
     line-height: 35px;
+
+    margin-bottom: 100px;
 `;
 
 
