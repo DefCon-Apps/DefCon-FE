@@ -108,6 +108,7 @@ const MemberItemContainer = styled.div`
 
     :hover{
         box-shadow: 0px 5px 5px #00658F;
+        transition: box-shadow 0.5s ease-in-out;
     }
 `;
 
