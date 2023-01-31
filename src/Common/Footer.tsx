@@ -24,10 +24,23 @@ const Footer = () => {
 
 const FooterDiv = styled.div`
   width: 100vw;
-  border-radius: 1rem 1rem 0 0;
   color: #fff;
   background-color: #001e2e;
   font-family: 'Noto Sans KR';
+
+  @media all and (min-width:1024px) {
+    background-color: pink;
+  } 
+
+/* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/ 
+  @media all and (min-width:768px) and (max-width:1023px) {
+    background-color: blue;
+  } 
+
+/* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/ 
+  @media all and (max-width:767px) {
+    background-color: red;
+  } 
 `;
 
 const FooterContents = styled.div`
