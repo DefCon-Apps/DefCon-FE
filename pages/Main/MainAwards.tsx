@@ -4,51 +4,95 @@ import Dbutton from "../../src/Common/Dbutton";
 import * as API from "../../src/Common/API";
 import { useState, useEffect } from "react";
 import BackgroundCard from "../../src/Common/BackgroundCard";
+import { useMediaQuery } from "react-responsive";
 
+type MainEventData = {
+  title: string;
+  content: string;
+  image: string;
+};
 
+interface Props {
+  isDesktop: boolean;
+}
 
 const tmpEventData: MainEventData = {
   title: "집에 가고 싶지 않으십니까?",
-  content: "저는 지금 API 연동을 하고 있는데요 먼가 하기 싫습니다. 아뇨 그렇다구요",
-  image: "asdfasdf"
-}
+  content:
+    "저는 지금 API 연동을 하고 있는데요 먼가 하기 싫습니다. 아뇨 그렇다구요",
+  image: "asdfasdf",
+};
 
 const MainAwards = () => {
+  const isDesktop = useMediaQuery({
+    query: "(min-width:768px)",
+  });
   const [mainEvent, setMainEvent] = useState(tmpEventData);
 
   useEffect(() => {
-    API.getMainEventData().then((apiResult : any) => {
+    API.getMainEventData().then((apiResult: any) => {
       setMainEvent(apiResult);
     });
   }, []);
 
   return (
-    <MainHistoryStyle>
-      <HistoryContents>
-          <p>
-            {mainEvent.content}
-          </p>
-          <HistoryButton>
-            <Link href="https://github.com/yymin1022/SeoulHealing" target="_blank" rel="noreferrer">
-            <Dbutton
-              text={"SOUL REST GitHub"}
-              textColor={"#FFFFFF"}
-              textSize={20}
-              width={15}
-              height={3}
-              btnColor={"#001E2E"}
-              direction={"right"}
-            />
-            </Link>
-          </HistoryButton>
-      </HistoryContents>
-      <HistoryTitle>
-        <h1>
-          {mainEvent.title} 
-        </h1>
-        <HistoryImage src={mainEvent.image}></HistoryImage>
-      </HistoryTitle>
-      
+    <MainAwardsStyle isDesktop={isDesktop}>
+      {isDesktop ? (
+        <>
+          <AwardsContents>
+            <p>{mainEvent.content}</p>
+            <AwardsButton>
+              <Link
+                href="https://github.com/yymin1022/SeoulHealing"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Dbutton
+                  text={"SOUL REST GitHub"}
+                  textColor={"#FFFFFF"}
+                  textSize={20}
+                  width={15}
+                  height={3}
+                  btnColor={"#001E2E"}
+                  direction={"right"}
+                />
+              </Link>
+            </AwardsButton>
+          </AwardsContents>
+          <AwardsTitle isDesktop={isDesktop}>
+            <h1>{mainEvent.title}</h1>
+            <AwardsImage src={mainEvent.image} isDesktop={isDesktop}></AwardsImage>
+          </AwardsTitle>
+        </>
+      ) : (
+        <>
+          <AwardsTitle isDesktop={isDesktop}>
+            <h1>{mainEvent.title}</h1>
+            <AwardsImage src={mainEvent.image} isDesktop={isDesktop}></AwardsImage>
+          </AwardsTitle>
+          <AwardsContents>
+            <p>{mainEvent.content}</p>
+            <AwardsButton>
+              <Link
+                href="https://github.com/yymin1022/SeoulHealing"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Dbutton
+                  text={"SOUL REST GitHub"}
+                  textColor={"#FFFFFF"}
+                  textSize={20}
+                  width={15}
+                  height={3}
+                  btnColor={"#001E2E"}
+                  direction={"right"}
+                />
+              </Link>
+            </AwardsButton>
+          </AwardsContents>
+        </>
+      )}
+
       <BackgroundCard
         color={"#35B6F7"}
         height={"35vh"}
@@ -71,13 +115,13 @@ const MainAwards = () => {
         translateY={"30.6vh"}
         type={"bordered"}
       />
-    </MainHistoryStyle>
+    </MainAwardsStyle>
   );
 };
 
-const MainHistoryStyle = styled.div`
+const MainAwardsStyle = styled.div<Props>`
   display: flex;
-  flex-direction: row;
+  flex-direction: ${(props) => (props.isDesktop ? "row" : "column")};
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -85,33 +129,34 @@ const MainHistoryStyle = styled.div`
   margin-bottom: 200px;
 `;
 
-const HistoryTitle = styled.div`
+const AwardsTitle = styled.div<Props>`
   display: flex;
   flex-direction: column;
   margin-left: 10vw;
+  
   h1 {
-    text-align: right;
-    font-size: 55pt;
+    text-align: ${(props) => (props.isDesktop ? "right" : "center")};
+    font-size: ${(props) => (props.isDesktop ? "55pt" : "40pt")};
     letter-spacing: -7px;
-    color: #fff;
+    color: ${(props) => (props.isDesktop ? "#fff" : "#000")};
   }
 `;
 
-const HistoryImage = styled.img`
-  width: 36rem;
-  height: 24rem;
+const AwardsImage = styled.img<Props>`
+  width: ${props => props.isDesktop ? "600px" : "400px"};
+  height: ${props => props.isDesktop ? "400px" : "300px"};
   margin-top: 20px;
   border-radius: 20px;
 `;
 
-const HistoryButton = styled.div`
+const AwardsButton = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: left;
   margin-top: 0.5rem;
 `;
 
-const HistoryContents = styled.div`
+const AwardsContents = styled.div`
   margin-top: 12rem;
   margin-right: 8rem;
 
@@ -121,11 +166,5 @@ const HistoryContents = styled.div`
     font-weight: 300;
   }
 `;
-
-type MainEventData = {
-  title: string,
-  content: string,
-  image: string
-};
 
 export default MainAwards;

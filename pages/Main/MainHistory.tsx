@@ -45,7 +45,7 @@ const MainHistory = () => {
             데에서 시작되었습니다. 학교 행사에도 적극적으로 참여해
             우리가 좋아하는 것들을 다른 학생들과 나눴죠.
           </p>
-          <HistoryButton>
+          <HistoryButton isDekstop={isDesktop}>
             <Link
               href="https://play.google.com/store/apps/details?id=com.defcon.sungbo&hl=ko&gl=US"
               target="_blank"
