@@ -19,7 +19,7 @@ interface Props {
 const tmpEventData: MainEventData = {
   title: "집에 가고 싶지 않으십니까?",
   content:
-    "저는 지금 API 연동을 하고 있는데요 먼가 하기 싫습니다. 아뇨 그렇다구요",
+    "저는 지금 API 연동을 하고 있는데요 먼가 하기 싫습니다. 아뇨 그렇P다구요",
   image: "asdfasdf",
 };
 
@@ -123,7 +123,6 @@ const MainAwardsStyle = styled.div<Props>`
   display: flex;
   flex-direction: ${(props) => (props.isDesktop ? "row" : "column")};
   justify-content: center;
-  align-items: center;
   height: 100vh;
   font-family: "Noto Sans KR";
   margin-bottom: 200px;
@@ -132,12 +131,12 @@ const MainAwardsStyle = styled.div<Props>`
 const AwardsTitle = styled.div<Props>`
   display: flex;
   flex-direction: column;
-  margin-left: 10vw;
-  
+  margin-left: ${props => props.isDesktop ? "10vw" : "0"};
+
   h1 {
     text-align: ${(props) => (props.isDesktop ? "right" : "center")};
     font-size: ${(props) => (props.isDesktop ? "55pt" : "40pt")};
-    letter-spacing: -7px;
+    letter-spacing: ${(props) => (props.isDesktop ? "-7px" : "-5px")};
     color: ${(props) => (props.isDesktop ? "#fff" : "#000")};
   }
 `;
@@ -152,16 +151,19 @@ const AwardsImage = styled.img<Props>`
 const AwardsButton = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: left;
+  justify-content: center;
   margin-top: 0.5rem;
 `;
 
 const AwardsContents = styled.div`
-  margin-top: 12rem;
-  margin-right: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 2vh;
 
   p {
-    text-align: left;
+    text-align: center;
     font-size: 18pt;
     font-weight: 300;
   }
