@@ -52,7 +52,6 @@ const Members = () => {
     return (
         <MembersStyle marginBotton={isFirstClicked}>
             <MembersContainer>
-                {isFirstClicked && <MembersRectangle/> }
                 <MembersTitle />
                 <MembersViewContainer>
                     <MembersList memberData={memberList} onClick={onMemberClick}/>
@@ -76,9 +75,30 @@ const MembersStyle = styled.div<Props>`
 
 const MembersContainer = styled.div`
     height: 100%;
-    width: 1400px;
-  
     margin-top: 150px;
+    @media all and (min-width: 1280px) {
+        width: 1400px;
+    }
+    
+    /* 노트북 & 테블릿 가로 (해상도 1024px ~ 1279px)*/ 
+    @media all and (min-width:1024px) and (max-width:1279px) {
+        width: 1024px;
+    }   
+    
+    /* 테블릿 가로 (해상도 768px ~ 1023px)*/ 
+    @media all and (min-width:768px) and (max-width:1023px) {
+        width: 768px;
+    } 
+    
+    /* 모바일 가로 & 테블릿 세로 (해상도 480px ~ 767px)*/ 
+    @media all and (min-width:480px) and (max-width:767px) {
+        width: 480px;
+    } 
+    
+    /* 모바일 세로 (해상도 ~ 479px)*/ 
+    @media all and (max-width:479px) {
+        width: 360px;
+    }
 `;
 
 const MembersViewContainer = styled.div`
@@ -86,9 +106,13 @@ const MembersViewContainer = styled.div`
     width: 100%;
   
     display: flex;
-    flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
+
+    @media all and (min-width: 1280px) {
+        flex-direction: row;
+    }
+    flex-direction: column;
 `;
 
 export type MemberData = {
