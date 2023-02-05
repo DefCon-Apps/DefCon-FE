@@ -51,6 +51,10 @@ const MembersDetailContainer = styled.div`
     align-items: center;
     
     margin: 30px 0 100px 0;
+
+    border: 1rem solid;
+    border-color: #35B6F7;
+    border-radius: 2rem;
 `;
 
 const MembersDetailBojContainer = styled.div`
