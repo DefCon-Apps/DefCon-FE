@@ -16,7 +16,7 @@ const MainTitle = () => {
   return (
     <MainTitleStyle>
       <TitleContentsStyle isDesktop={isDesktop}>
-      <Crab width={isDesktop ? 18 : 10} height={isDesktop ? 18 : 10} marginTop={2} />
+      <Crab width={isDesktop ? 18 : 12} height={isDesktop ? 18 : 12} marginTop={2} />
       <IntroStyle isDesktop={isDesktop}>
         <p>&quot;이거 님이 만드신 거였군요!&quot;</p>
         <h1>TEAM DEF:CON</h1>
@@ -54,17 +54,18 @@ const TitleContentsStyle = styled.div<Props>`
     margin-top: 15rem;
 
     h1 {
-      font-size: ${props=>props.isDesktop ? "100px" : "50px"};
+      font-size: ${props=>props.isDesktop ? "100px" : "70px"};
       font-weight: bolder;
       letter-spacing: -5px;
     }
     p {
-      font-size: ${props=>props.isDesktop ? "30px" : "15px"};
+      font-size: ${props=>props.isDesktop ? "30pt" : "18pt"};
       font-weight: bold;
+      letter-spacing: -1px;
     }
 
     #intro {
-      font-size: ${props=>props.isDesktop ? "25px" : "15px"};
+      font-size: ${props=>props.isDesktop ? "25pt" : "15pt"};
       font-weight: 300;
     }
 `;

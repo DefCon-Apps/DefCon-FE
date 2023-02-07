@@ -2,6 +2,11 @@ import styled from "styled-components";
 import { ScrollMenu } from "react-horizontal-scrolling-menu";
 import WorksCard from "../../src/Common/WorksCard";
 import BackgroundCard from "../../src/Common/BackgroundCard";
+import { useMediaQuery } from "react-responsive";
+
+interface Props{
+  isDesktop: boolean;
+};
 
 const dummyArray = [
   {
@@ -33,15 +38,19 @@ const dummyArray = [
 
 
 const MainWorks = () => {
+  const isDesktop = useMediaQuery({
+    query: "(min-width:768px)",
+  });
+
   return (
     <MainWorksWrapper>
-      <MainWorksContents>
-      <WorksTitle>
+      <MainWorksContents isDesktop={isDesktop}>
+      <WorksTitle isDesktop={isDesktop}>
         <h1>우리가 즐겨온 일들</h1>
         <p>
-          우리 DEF:CON이 관심을 갖고 즐겨온 일들의 카테고리입니다.<br />
-          소프트웨어가 사용될 수 있다면 우리는 뭐든 재미있게 갖고 놀 수
-          있습니다.<br />
+          우리 DEF:CON이 관심을 갖고 즐겨온 일들의 카테고리입니다.<br/>
+          소프트웨어가 사용될 수 있다면 우리는 뭐든 재미있게 갖고 놀 수<br/>
+          있습니다.
         </p>
       </WorksTitle>
       <BackgroundCard
@@ -58,7 +67,7 @@ const MainWorks = () => {
         translateY={"35vh"}
         type={"bordered"}
       />
-			<ScrollMenuWrapper>
+			<ScrollMenuWrapper isDesktop={isDesktop}>
         <ScrollMenu>
           {dummyArray.map((items) => (
             <WorksCard key={items.id} text={items.text} image={items.image} />
@@ -79,32 +88,35 @@ const MainWorksWrapper = styled.div`
   margin-bottom: 200px;
 `;
 
-const MainWorksContents = styled.div`
+const MainWorksContents = styled.div<Props>`
   display: flex;
   flex-direction: column;
-  margin-left: 30rem;
+  align-items: ${props=>props.isDesktop ? "" : "center"};
+  margin-left: ${props=>props.isDesktop ? "400px" : "0px"};
 `;
 
-const WorksTitle = styled.div`
+const WorksTitle = styled.div<Props>`
   display: flex;
   flex-direction: column;
+  align-items:${props=>props.isDesktop ? "" : "center"};
   
 
 	h1 {
-    text-align: left;
-    font-size: 55pt;
-    letter-spacing: -7px;
+    text-align: ${props=>props.isDesktop ? "left" : "center"};
+    font-size: ${props=>props.isDesktop ? "55pt" : "40pt"};
+    letter-spacing: ${props=>props.isDesktop ? "-7px" : "-5px"};
   }
 
   p {
     margin-top: 10px;
-    font-size: 18pt;
+    font-size: ${props=>props.isDesktop ? "18pt" : "15pt"};
+    text-align: ${props=>props.isDesktop ? "18pt" : "center"};
     font-weight: 300;
   }
 `;
 
-const ScrollMenuWrapper = styled.div`
-  width: 65%;
+const ScrollMenuWrapper = styled.div<Props>`
+  width: ${props => props.isDesktop ? "70%" : "100%"};
   margin-top: 5vh;
 `;
 
