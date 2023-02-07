@@ -4,12 +4,7 @@ import styled from "styled-components";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-interface Size {
-  width: string;
-  height: string;
-}
-
-interface Props extends Size {
+interface Props {
   images: Array<string>;
 }
 
@@ -23,7 +18,7 @@ const ImageSlider = (props: Props) => {
     slidesToScroll: 1,
   }
   return (
-    <SliderStyle width={props.width} height={props.height}>
+    <SliderStyle>
       <Slider {...settings} >
         {props.images.map((url, i) => (
           <img src={url} key={i}/>
@@ -33,16 +28,42 @@ const ImageSlider = (props: Props) => {
   );
 }
 
-const SliderStyle = styled.div<Size>`
+const SliderStyle = styled.div`
   ${props => {
     return `
-      width: ${props.width};
-      height: ${props.height};
-      margin-bottom: 64px;
-      img {
-        width: ${props.width};
-        height: ${props.height};
-        object-fit: contain;
+      @media all and (min-width:768px) {
+        width: 600px;
+        height: 450px;
+        margin-bottom: 64px;
+        img {
+          width: 600px;
+          height: 450px;
+          object-fit: contain;
+        }
+      }
+    
+      /* 모바일 가로 & 테블릿 세로 (해상도 480px ~ 767px)*/ 
+      @media all and (min-width:480px) and (max-width:767px) {
+        width: 440px;
+        height: 330px;
+        margin-bottom: 64px;
+        img {
+          width: 440px;
+          height: 330px;
+          object-fit: contain;
+        }
+      } 
+    
+      /* 모바일 세로 (해상도 ~ 479px)*/ 
+      @media all and (max-width:479px) {
+        width: 360px;
+        height: 270px;
+        margin-bottom: 64px;
+        img {
+          width: 360px;
+          height: 270px;
+          object-fit: contain;
+        }
       }
     `;
   }}

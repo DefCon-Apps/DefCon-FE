@@ -56,7 +56,7 @@ const MembersListItem = (props: Props) => {
 };
 
 const MemberItemImage = (props: { data: string }) => {
-    return <Image alt={"Profile Image"} src={props.data} width="150" height="150"/>
+    return <MemberImage alt={"Profile Image"} src={props.data} width="150" height="150"/>
 };
 
 const MemberItemDataSnsBtn = (props: { data: snsDataProps, type: string }) => {
@@ -95,7 +95,12 @@ const MemberItemDataSnsBtnIcon = (props: { type: string }) => {
     }
 };
 
-const MemberItemContainer = styled.div`
+const MemberItemContainer = styled.div` 
+    @media all and (max-width:479px) {
+        height: 120px;
+        width: 320px;
+    }
+
     height: 150px;
     width: 400px;
   
@@ -112,12 +117,28 @@ const MemberItemContainer = styled.div`
     }
 `;
 
+const MemberImage = styled(Image)`
+    @media all and (max-width:479px) {
+        height: 120px;
+        width: 120px;
+    }
+    height: 150px;
+    width: 150px;
+`;
+
 const MemberItemImageContainer = styled.div`
+    @media all and (max-width:479px) {
+        height: 120px;
+        width: 120px;
+    }
     height: 150px;
     width: 150px;
 `;
 
 const MemberItemDataContainer = styled.div`
+    @media all and (max-width:479px) {
+        height: 120px;
+    }
     height: 150px;
     width: 100%;
   
@@ -145,6 +166,10 @@ const MemberItemDataSnsContainer = styled.div`
 `;
 
 const MemberItemDataSnsBtnContainer = styled.div`
+    @media all and (max-width:479px) {
+        height: 25px;
+        width: 25px;
+    }
     height: 30px;
     width: 30px;
   
@@ -155,6 +180,9 @@ const MemberItemDataSnsBtnContainer = styled.div`
 `;
 
 const MemberItemDataComment = styled.p`
+    @media all and (max-width:479px) {
+        font-size: 12px;
+    }
     font-size: 14px;
     font-weight: 300;
     line-height: 23px;
@@ -163,12 +191,18 @@ const MemberItemDataComment = styled.p`
 `;
 
 const MemberItemDataCompany = styled.p`
+    @media all and (max-width:479px) {
+        font-size: 12px;
+    }
     font-size: 14px;
     font-weight: 700;
     line-height: 23px;
 `;
 
 const MemberItemDataID = styled.p`
+    @media all and (max-width:479px) {
+        font-size: 20px;
+    }
     font-size: 24px;
     font-weight: 800;
     line-height: 32px;
@@ -182,6 +216,9 @@ const MemberItemDataDivider = styled.p`
 `;
 
 const MemberItemDataName = styled.p`
+    @media all and (max-width:479px) {
+        font-size: 18px;    
+    }
     font-size: 20px;
     font-weight: 300;
     line-height: 34px;
