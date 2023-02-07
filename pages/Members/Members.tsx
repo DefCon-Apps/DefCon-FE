@@ -1,11 +1,10 @@
-import {useEffect, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import styled from "styled-components";
 
 import * as API from "../../src/Common/API";
 import MembersTitle from "./MembersTitle";
 import MembersList from "./MembersList";
 import MembersDetail from "./MembersDetail";
-import MembersRectangle from "./MembersRectangle";
 
 interface Props{
     marginBotton: boolean;
@@ -35,6 +34,7 @@ const Members = () => {
     const [isFirstClicked, setIsFirstClicked] = useState(false);
     const [memberData, setMemberData] = useState(tmpMemberData);
     const [memberList, setMemberList] = useState(tmpMemberList);
+    const membersDetailRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         API.getMemberList().then((apiResult : any) => {
@@ -46,6 +46,7 @@ const Members = () => {
         setIsFirstClicked(true);
         API.getMemberData(id).then((apiResult : any) => {
             setMemberData({id: id, data: apiResult});
+            membersDetailRef.current?.scrollIntoView({behavior: "smooth"});
         });
     }
 
@@ -55,7 +56,7 @@ const Members = () => {
                 <MembersTitle />
                 <MembersViewContainer>
                     <MembersList memberData={memberList} onClick={onMemberClick}/>
-                    <MembersDetail isFirstClicked={isFirstClicked} memberData={memberData}/>
+                    <MembersDetail ref={membersDetailRef} isFirstClicked={isFirstClicked} memberData={memberData}/>
                 </MembersViewContainer>
             </MembersContainer>
         </MembersStyle>
