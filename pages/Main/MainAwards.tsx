@@ -12,10 +12,6 @@ type MainEventData = {
   image: string;
 };
 
-interface Props {
-  isDesktop: boolean;
-}
-
 const tmpEventData: MainEventData = {
   title: "집에 가고 싶지 않으십니까?",
   content:
@@ -25,7 +21,7 @@ const tmpEventData: MainEventData = {
 
 const MainAwards = () => {
   const isDesktop = useMediaQuery({
-    query: "(min-width:768px)",
+    query: "(min-width:1208px)",
   });
   const [mainEvent, setMainEvent] = useState(tmpEventData);
 
@@ -36,7 +32,7 @@ const MainAwards = () => {
   }, []);
 
   return (
-    <MainAwardsStyle isDesktop={isDesktop}>
+    <MainAwardsStyle>
       {isDesktop ? (
         <>
           <AwardsContents>
@@ -59,16 +55,16 @@ const MainAwards = () => {
               </Link>
             </AwardsButton>
           </AwardsContents>
-          <AwardsTitle isDesktop={isDesktop}>
+          <AwardsTitle>
             <h1>{mainEvent.title}</h1>
-            <AwardsImage src={mainEvent.image} isDesktop={isDesktop}></AwardsImage>
+            <AwardsImage src={mainEvent.image}></AwardsImage>
           </AwardsTitle>
         </>
       ) : (
         <>
-          <AwardsTitle isDesktop={isDesktop}>
+          <AwardsTitle>
             <h1>{mainEvent.title}</h1>
-            <AwardsImage src={mainEvent.image} isDesktop={isDesktop}></AwardsImage>
+            <AwardsImage src={mainEvent.image}></AwardsImage>
           </AwardsTitle>
           <AwardsContents>
             <p>{mainEvent.content}</p>
@@ -118,32 +114,72 @@ const MainAwards = () => {
     </MainAwardsStyle>
   );
 };
+const MainAwardsContainer = styled.div`
+  @media all and (min-width: 1280px) {
+    width: 1400px;
+  }
 
-const MainAwardsStyle = styled.div<Props>`
+  /* 노트북 & 테블릿 가로 (해상도 1024px ~ 1279px)*/
+  @media all and (min-width: 1024px) and (max-width: 1279px) {
+    width: 1024px;
+  }
+
+  /* 테블릿 가로 (해상도 768px ~ 1023px)*/
+  @media all and (min-width: 768px) and (max-width: 1023px) {
+    width: 768px;
+  }
+
+  /* 모바일 가로 & 테블릿 세로 (해상도 480px ~ 767px)*/
+  @media all and (min-width: 480px) and (max-width: 767px) {
+    width: 480px;
+  }
+
+  /* 모바일 세로 (해상도 ~ 479px)*/
+  @media all and (max-width: 479px) {
+    width: 360px;
+  }
+`;
+
+const MainAwardsStyle = styled.div`
   display: flex;
-  flex-direction: ${(props) => (props.isDesktop ? "row" : "column")};
+  @media all and (min-width: 1280px) {
+    flex-direction: row;
+  }
+  flex-direction: column;
   justify-content: center;
   height: 100vh;
   font-family: "Noto Sans KR";
   margin-bottom: 200px;
 `;
 
-const AwardsTitle = styled.div<Props>`
+const AwardsTitle = styled.div`
   display: flex;
   flex-direction: column;
-  margin-left: ${props => props.isDesktop ? "10vw" : "0"};
+  @media all and (min-width: 1280px) {
+    margin-left: 10vw;
+  }
 
   h1 {
-    text-align: ${(props) => (props.isDesktop ? "right" : "center")};
-    font-size: ${(props) => (props.isDesktop ? "55pt" : "40pt")};
-    letter-spacing: ${(props) => (props.isDesktop ? "-7px" : "-5px")};
-    color: ${(props) => (props.isDesktop ? "#fff" : "#000")};
+    @media all and (min-width: 1280px) {
+      text-align: right;
+      font-size: 55pt;
+      letter-spacing: -7px;
+      color: #fff;
+    }
+    text-align: center;
+    font-size: 40pt;
+    letter-spacing: -5px;
+    color: #000;
   }
 `;
 
-const AwardsImage = styled.img<Props>`
-  width: ${props => props.isDesktop ? "600px" : "400px"};
-  height: ${props => props.isDesktop ? "400px" : "300px"};
+const AwardsImage = styled.img`
+  @media all and (min-width: 1280px) {
+    width: 600px;
+    height: 400px;
+  }
+  width: 400px;
+  height: 300px;
   margin-top: 20px;
   border-radius: 20px;
 `;
