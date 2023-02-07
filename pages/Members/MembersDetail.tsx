@@ -18,7 +18,7 @@ const MembersDetail = React.forwardRef((props: {isFirstClicked: boolean, memberD
                 props.memberData.data.boj.isEnabled ?
                     <MembersDetailBojContainer>
                         <MembersDetailTitle>Solved. ac</MembersDetailTitle>
-                        <Image alt={"BOJ Badge"} src={`https://mazassumnida.wtf/api/v2/generate_badge?boj=${props.memberData.data && props.memberData.data.boj.username}`} width="350" height="175" unoptimized={true} />
+                        <MembersDetailBojImage alt={"BOJ Badge"} src={`https://mazassumnida.wtf/api/v2/generate_badge?boj=${props.memberData.data && props.memberData.data.boj.username}`} width="350" height="175" unoptimized={true} />
                     </MembersDetailBojContainer>
                 : null
             }
@@ -64,6 +64,15 @@ const MembersDetailBojContainer = styled.div`
     align-items: center;
 
     margin: 15px 0;
+`;
+
+const MembersDetailBojImage = styled(Image)`
+    @media all and (max-width:479px) {
+        width: 320px;
+        height: 160px;
+    }
+    width: 350px;
+    height: 175px;
 `;
 
 const MembersDetailCompanyContainer = styled.div`
