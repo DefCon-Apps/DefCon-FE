@@ -1,15 +1,16 @@
 import Image from "next/image";
+import React, { RefObject } from "react";
 import styled from "styled-components";
 
 import { MemberData } from "./Members";
 
-const MembersDetail = (props: {isFirstClicked: boolean, memberData: MemberData}) => {
+const MembersDetail = React.forwardRef((props: {isFirstClicked: boolean, memberData: MemberData}, ref: React.ForwardedRef<HTMLDivElement>) => {
     if(!props.isFirstClicked){
         return null;
     }
 
     return (
-        <MembersDetailContainer>
+        <MembersDetailContainer ref={ref}>
             <MembersDetailCompanyContainer>
                 <Image alt={"Company Logo"} src={props.memberData.data && props.memberData.data.company_img} width="200" height="200" unoptimized={true} />
             </MembersDetailCompanyContainer>
@@ -31,7 +32,7 @@ const MembersDetail = (props: {isFirstClicked: boolean, memberData: MemberData})
             </MembersDetailHistoryContainer>
         </MembersDetailContainer>
     );
-};
+});
 
 const MemberDetailHistoryItem = (props: {historyData: {content: string, date: string}}) => {
     return(
