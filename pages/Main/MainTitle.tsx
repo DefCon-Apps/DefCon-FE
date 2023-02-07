@@ -43,6 +43,7 @@ const MainTitleStyle = styled.div`
   justify-content: center;
   align-items: center;
   font-family: "Noto Sans KR";
+  height: 100vh;
 `;
 
 const TitleContentsStyle = styled.div<Props>`
