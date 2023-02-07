@@ -10,14 +10,14 @@ interface Props {
 
 const MainTitle = () => {
   const isDesktop = useMediaQuery({
-    query: "(min-width:768px)",
+    query: "(min-width:1208px)",
   });
 
   return (
     <MainTitleStyle>
-      <TitleContentsStyle isDesktop={isDesktop}>
+      <TitleContentsStyle>
       <Crab width={isDesktop ? 18 : 12} height={isDesktop ? 18 : 12} marginTop={2} />
-      <IntroStyle isDesktop={isDesktop}>
+      <IntroStyle>
         <p>&quot;이거 님이 만드신 거였군요!&quot;</p>
         <h1>TEAM DEF:CON</h1>
         <p id="intro">
@@ -46,35 +46,52 @@ const MainTitleStyle = styled.div`
   height: 100vh;
 `;
 
-const TitleContentsStyle = styled.div<Props>`
+const TitleContentsStyle = styled.div`
     display: flex;
-    flex-direction: ${props=>props.isDesktop ? "row" : "column"};
+    @media all and (min-width: 1280px) {
+      flex-direction: row;
+      text-align: right;
+    }
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: ${props=>props.isDesktop ? "right" : "center"};
+    text-align: center;
     margin-top: 15rem;
 
     h1 {
-      font-size: ${props=>props.isDesktop ? "100px" : "70px"};
+      @media all and (min-width: 1280px) {
+        font-size:100px;
+      }
+      font-size: 70px;
       font-weight: bolder;
       letter-spacing: -5px;
     }
     p {
-      font-size: ${props=>props.isDesktop ? "30pt" : "18pt"};
+      @media all and (min-width: 1280px) {
+        font-size:30px;
+      }
+      font-size: 18px;
       font-weight: bold;
       letter-spacing: -1px;
     }
 
     #intro {
-      font-size: ${props=>props.isDesktop ? "25pt" : "15pt"};
+      @media all and (min-width: 1280px) {
+        font-size:25px;
+      }
+      font-size: 15px;
       font-weight: 300;
     }
 `;
 
-const IntroStyle = styled.div<Props>`
+const IntroStyle = styled.div`
   letter-spacing: 0.1rem;
-  margin: ${props=>props.isDesktop ? "5px 0px 0px 100px" : "100px 0px 0px 0px"};
-  font-size: ${props=>props.isDesktop ? "25px" : "10px"};
+  @media all and (min-width: 1280px) {
+    margin:5px 0px 0px 100px;
+    font-size: 25px;
+  }
+  margin: 100px 0px 0px 0px;
+  font-size: 10px;
 `;
 
 const ScrollIconStyle = styled.div`
