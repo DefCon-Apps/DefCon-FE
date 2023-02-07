@@ -1,15 +1,16 @@
 import Image from "next/image";
+import React from "react";
 import styled from "styled-components";
 
 import { MemberData } from "./Members";
 
-const MembersDetail = (props: {isFirstClicked: boolean, memberData: MemberData}) => {
+const MembersDetail = React.forwardRef((props: {isFirstClicked: boolean, memberData: MemberData}, ref: React.ForwardedRef<HTMLDivElement>) => {
     if(!props.isFirstClicked){
         return null;
     }
 
     return (
-        <MembersDetailContainer>
+        <MembersDetailContainer ref={ref}>
             <MembersDetailCompanyContainer>
                 <Image alt={"Company Logo"} src={props.memberData.data && props.memberData.data.company_img} width="200" height="200" unoptimized={true} />
             </MembersDetailCompanyContainer>
@@ -17,7 +18,7 @@ const MembersDetail = (props: {isFirstClicked: boolean, memberData: MemberData})
                 props.memberData.data.boj.isEnabled ?
                     <MembersDetailBojContainer>
                         <MembersDetailTitle>Solved. ac</MembersDetailTitle>
-                        <Image alt={"BOJ Badge"} src={`https://mazassumnida.wtf/api/v2/generate_badge?boj=${props.memberData.data && props.memberData.data.boj.username}`} width="350" height="175" unoptimized={true} />
+                        <MembersDetailBojImage alt={"BOJ Badge"} src={`https://mazassumnida.wtf/api/v2/generate_badge?boj=${props.memberData.data && props.memberData.data.boj.username}`} width="350" height="175" unoptimized={true} />
                     </MembersDetailBojContainer>
                 : null
             }
@@ -31,7 +32,7 @@ const MembersDetail = (props: {isFirstClicked: boolean, memberData: MemberData})
             </MembersDetailHistoryContainer>
         </MembersDetailContainer>
     );
-};
+});
 
 const MemberDetailHistoryItem = (props: {historyData: {content: string, date: string}}) => {
     return(
@@ -51,6 +52,10 @@ const MembersDetailContainer = styled.div`
     align-items: center;
     
     margin: 30px 0 100px 0;
+
+    border: 1rem solid;
+    border-color: #35B6F7;
+    border-radius: 2rem;
 `;
 
 const MembersDetailBojContainer = styled.div`
@@ -59,6 +64,15 @@ const MembersDetailBojContainer = styled.div`
     align-items: center;
 
     margin: 15px 0;
+`;
+
+const MembersDetailBojImage = styled(Image)`
+    @media all and (max-width:479px) {
+        width: 320px;
+        height: 160px;
+    }
+    width: 350px;
+    height: 175px;
 `;
 
 const MembersDetailCompanyContainer = styled.div`
@@ -103,4 +117,5 @@ const MembersDetailTitle = styled.p`
     margin: 0 0 15px 0;
 `;
 
+MembersDetail.displayName = "MembersDetail";
 export default MembersDetail;
