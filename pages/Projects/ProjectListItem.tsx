@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import styled from "styled-components";
 
@@ -11,7 +12,7 @@ const ProjectListItem = (props: Props) => {
   return (
     <ListItemWrapper>
       <Link href={`Projects/${props.id}`}>
-        <ListItemImage src={props.image} />
+        <ListItemImage alt="Project Image" src={`/${props.image}`} width={560} height={324} />
         <ListItemTitle>{props.title}</ListItemTitle>
       </Link>
     </ListItemWrapper>
@@ -26,29 +27,25 @@ const ListItemWrapper = styled.div`
   margin 0 10px 0 10px;
 `;
 
-const ListItemImage = styled.img`
+const ListItemImage = styled(Image)`
   @media all and (min-width: 768px) {
     width: 560px;
     height: 324px;
-    border-radius: 20px;
-    object-fit: cover;
   }
 
   /* 모바일 가로 & 테블릿 세로 (해상도 480px ~ 767px)*/ 
   @media all and (min-width:480px) and (max-width:767px) {
     width: 420px;
     height: 243px;
-    border-radius: 20px;
-    object-fit: cover;
   } 
 
   /* 모바일 세로 (해상도 ~ 479px)*/ 
   @media all and (max-width:479px) {
     width: 280px;
     height: 162px;
-    border-radius: 20px;
-    object-fit: cover;
   }
+  border-radius: 20px;
+  object-fit: cover;
 `;
 
 const ListItemTitle = styled.h2`

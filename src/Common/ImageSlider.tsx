@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Image from "next/image";
 
 interface Props {
   images: Array<string>;
@@ -21,7 +22,7 @@ const ImageSlider = (props: Props) => {
     <SliderStyle>
       <Slider {...settings} >
         {props.images.map((url, i) => (
-          <img src={url} key={i}/>
+          <Image alt="Project Image" src={`/${url}`} key={i} width={600} height={450}/>
         ))}
       </Slider>
     </SliderStyle>

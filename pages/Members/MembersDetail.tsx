@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { RefObject } from "react";
+import React from "react";
 import styled from "styled-components";
 
 import { MemberData } from "./Members";
@@ -117,4 +117,5 @@ const MembersDetailTitle = styled.p`
     margin: 0 0 15px 0;
 `;
 
+MembersDetail.displayName = "MembersDetail";
 export default MembersDetail;
