@@ -26,6 +26,9 @@ const BackgroundCard = (props: Props) => {
 };
 
 const CardStyled = styled.div<Props>`
+  @media all and (max-width: 1279px) {
+    display: none;
+  }
   position: absolute;
   left: 0;
   width: ${(props) => props.width};
