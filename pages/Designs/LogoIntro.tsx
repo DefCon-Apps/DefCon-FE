@@ -36,11 +36,41 @@ const LogoIntro = () => {
   );
 };
 
+const LogoIntroContainer = styled.div`
+  height: 100%;
+  @media all and (min-width: 1280px) {
+    width: 1400px;
+  }
+
+  /* 노트북 & 테블릿 가로 (해상도 1024px ~ 1279px)*/
+  @media all and (min-width: 1024px) and (max-width: 1279px) {
+    width: 1024px;
+  }
+
+  /* 테블릿 가로 (해상도 768px ~ 1023px)*/
+  @media all and (min-width: 768px) and (max-width: 1023px) {
+    width: 768px;
+  }
+
+  /* 모바일 가로 & 테블릿 세로 (해상도 480px ~ 767px)*/
+  @media all and (min-width: 480px) and (max-width: 767px) {
+    width: 480px;
+  }
+
+  /* 모바일 세로 (해상도 ~ 479px)*/
+  @media all and (max-width: 479px) {
+    width: 360px;
+  }
+`;
+
 const LogoIntroWrapper = styled.div`
   height: 100vh;
   margin-bottom: 10vh;
   display: flex;
-  flex-direction: row;
+  @media all and (min-width: 1280px) {
+    flex-direction: row;
+  }
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-family: "Noto Sans KR";
@@ -54,21 +84,59 @@ const LogoIntroContents = styled.div`
 `;
 
 const LogoIntroTitle = styled.h1`
-  font-size: 45pt;
-  letter-spacing: -5px;
+  @media all and (min-width: 1280px) {
+    font-size: 45pt;
+    letter-spacing: -5px;
+    text-align: left;
+  }
+
+  @media all and (min-width: 768px) {
+    font-size: 35pt;
+    letter-spacing: -2px;
+    text-align: center;
+  }
+  font-size: 20pt;
+  letter-spacing: -2px;
+  text-align: center;
 `;
 
 const LogoIntroImg = styled.img`
-  width: 25vw;
-  margin-top: 15vh;
+  @media all and (min-width: 1280px) {
+    width: 25vw;
+    margin-top: 15vh;
+  }
+  width: 60vw;
+  margin-top: 5vh;
 `;
 
 const LogoIntroContext = styled.div`
-  margin-top: 30vh;
+  @media all and (min-width: 1280px) {
+    margin-top: 30vh;
+
+    p {
+      font-size: 16pt;
+      font-weight: 100;
+      text-align: right;
+    }
+  }
+
+  @media all and (min-width: 767px) {
+    margin-top: 10vh;
+
+    p {
+      width: 80vw;
+      font-size: 16pt;
+      font-weight: 100;
+      text-align: center;
+    }
+  }
+  margin-top: 10vh;
+
   p {
-    font-size: 16pt;
+    width: 80vw;
+    font-size: 12pt;
     font-weight: 100;
-    text-align: right;
+    text-align: center;
   }
 `;
 
