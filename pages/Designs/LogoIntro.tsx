@@ -70,7 +70,7 @@ const LogoIntroTitle = styled.h1`
     letter-spacing: -2px;
     text-align: center;
   }
-  font-size: 20pt;
+  font-size: 25pt;
   letter-spacing: -2px;
   text-align: center;
 `;

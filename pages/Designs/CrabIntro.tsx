@@ -1,11 +1,27 @@
 import styled from "styled-components";
 import Crab from "../../src/Common/Crab";
 import BackgroundCard from "../../src/Common/BackgroundCard";
+import { useMediaQuery } from "react-responsive";
+import { useEffect, useState } from "react";
 
 const CrabIntro = () => {
+  const desktopChk = useMediaQuery({
+    query: "(min-width:1280px)",
+  });
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    if (desktopChk) setIsDesktop(true);
+  }, [desktopChk]);
+
   return (
     <CrabIntroWrapper>
       <CrabIntroContents>
+        <CrabIntroTitle>
+          우리의 헤리티지
+          <br />
+          DEF:CON CRAB
+        </CrabIntroTitle>
         <CrabIntroDesc>
           <p>
             DEF:CON의 마스코트인 DEF:CON CRAB은 메인 컬러와 마찬가지로
@@ -22,11 +38,7 @@ const CrabIntro = () => {
             유지되어온 DEF:CON의 헤리티지입니다. <br />
           </p>
         </CrabIntroDesc>
-        <CrabIntroTitle>
-          우리의 헤리티지
-          <br />
-          DEF:CON CRAB
-        </CrabIntroTitle>
+
         <BackgroundCard
           color="#C7E7FF"
           height="22rem"
@@ -42,11 +54,11 @@ const CrabIntro = () => {
           <Logo src="/Images/preLogo.svg" />
           <Logo src="/Images/mainLogo.svg" />
         </LogoHistoryWrapper>
-        <Crab 
-          width={15} 
-          height={15} 
-          marginTop={8} 
-        />
+        {isDesktop ? (
+          <Crab width={15} height={15} marginTop={8} />
+        ) : (
+          <Crab width={10} height={10} marginTop={2} />
+        )}
       </CrabIntroLogoWrapper>
     </CrabIntroWrapper>
   );
@@ -54,7 +66,7 @@ const CrabIntro = () => {
 
 const CrabIntroWrapper = styled.div`
   height: 100vh;
-  margin-bottom: 10vh;
+  margin-bottom: 20vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -64,25 +76,68 @@ const CrabIntroWrapper = styled.div`
 
 const CrabIntroContents = styled.div`
   display: flex;
-  flex-direction: row;
+  @media all and (min-width: 1280px) {
+    flex-direction: row;
+  }
+  flex-direction: column;
 `;
 
 const CrabIntroTitle = styled.h1`
-  font-size: 45pt;
-  letter-spacing: -5px;
+  @media all and (min-width: 1280px) {
+    font-size: 45pt;
+    letter-spacing: -5px;
+    text-align: left;
+  }
+
+  @media all and (min-width: 768px) {
+    font-size: 35pt;
+    letter-spacing: -2px;
+    text-align: center;
+  }
+
+  font-size: 25pt;
+  letter-spacing: -2px;
+  text-align: center;
 `;
 
 const CrabIntroDesc = styled.div`
-  margin-right: 14vw;
+  @media all and (min-width: 1280px) {
+    margin-right: 14vw;
+    p {
+      font-size: 16pt;
+      font-weight: 100;
+      text-align: right;
+    }
+  }
+
+  @media all and (min-width: 768px) {
+    p {
+      font-size: 16pt;
+      font-weight: 100;
+      text-align: right;
+    }
+  }
+
+  margin-top: 5vh;
   p {
-    font-size: 16pt;
-    font-weight: 200;
+    width: 80vw;
+    font-size: 12pt;
+    font-weight: 100;
+    text-align: center;
   }
 `;
 
 const CrabIntroLogoWrapper = styled.div`
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  @media all and (min-width: 1280px) {
+    flex-direction: row;
+  }
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-top: 8vh;
 `;
 
@@ -90,11 +145,13 @@ const LogoHistoryWrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 5vh;
-  margin-right: 20vw;
 `;
 
 const Logo = styled.img`
-  width: 20vw;
+  @media all and (min-width: 1280px) {
+    width: 10vw;
+  }
+  width: 50vw;
   margin-bottom: 8vh;
   filter: drop-shadow(1px 1px 3px grey);
 `;
