@@ -3,15 +3,21 @@ import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDoubleDown } from "@fortawesome/free-solid-svg-icons";
 import { useMediaQuery } from "react-responsive";
+import { useEffect, useState } from "react";
 
 interface Props {
   isDesktop: boolean;
 }
 
 const MainTitle = () => {
-  const isDesktop = useMediaQuery({
+  const desktop = useMediaQuery({
     query: "(min-width:1208px)",
   });
+  const [isDesktop, setDesktop] = useState(false);
+
+  useEffect(() => {
+    if (desktop) setDesktop(true);
+  }, [desktop]);
 
   return (
     <MainTitleStyle>
