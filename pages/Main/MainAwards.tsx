@@ -20,16 +20,18 @@ const tmpEventData: MainEventData = {
 };
 
 const MainAwards = () => {
-  const isDesktop = useMediaQuery({
+  const desktop = useMediaQuery({
     query: "(min-width:1208px)",
   });
+  const [isDesktop, setDesktop] = useState(false);
   const [mainEvent, setMainEvent] = useState(tmpEventData);
 
   useEffect(() => {
+    if (desktop) setDesktop(true);
     API.getMainEventData().then((apiResult: any) => {
       setMainEvent(apiResult);
     });
-  }, []);
+  }, [desktop]);
 
   return (
     <MainAwardsStyle>
