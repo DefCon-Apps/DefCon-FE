@@ -13,10 +13,10 @@ type MainEventData = {
 };
 
 const tmpEventData: MainEventData = {
-  title: "집에 가고 싶지 않으십니까?",
+  title: "",
   content:
-    "저는 지금 API 연동을 하고 있는데요 먼가 하기 싫습니다. 아뇨 그렇P다구요",
-  image: "asdfasdf",
+    "",
+  image: "",
 };
 
 const MainAwards = () => {
