@@ -38,11 +38,10 @@ const LogoIntro = () => {
 
 const LogoIntroWrapper = styled.div`
   height: 100vh;
-  margin-bottom: 5vh;
+  margin-bottom: 10vh;
   display: flex;
   @media screen and (min-width: 1280px) {
     flex-direction: row;
-    margin-bottom: 10vh;
   }
   flex-direction: column;
   justify-content: center;
@@ -67,12 +66,6 @@ const LogoIntroTitle = styled.h1`
     letter-spacing: -5px;
     text-align: left;
   }
-
-  @media screen and (min-width: 768px) {
-    font-size: 35pt;
-    letter-spacing: -2px;
-    text-align: center;
-  }
   font-size: 25pt;
   letter-spacing: -2px;
   text-align: center;
@@ -83,39 +76,23 @@ const LogoIntroImg = styled.img`
     width: 25vw;
     margin-top: 15vh;
   }
-  width: 60vw;
+  width: 70vw;
   margin-top: 5vh;
 `;
 
 const LogoIntroContext = styled.div`
   @media screen and (min-width: 1280px) {
+    width: 40%;
     margin-top: 30vh;
-
-    p {
-      font-size: 16pt;
-      font-weight: 100;
-      text-align: right;
-    }
-  }
-
-  @media screen and (min-width: 767px) {
-    margin-top: 10vh;
-
-    p {
-      width: 80vw;
-      font-size: 16pt;
-      font-weight: 100;
-      text-align: center;
-    }
-  }
-  margin-top: 10vh;
-
-  p {
-    width: 80vw;
-    font-size: 12pt;
+    font-size: 16pt;
     font-weight: 100;
-    text-align: center;
+    text-align: right;
   }
+  width: 85%;
+  margin-top: 5vh;
+  font-size: 12pt;
+  font-weight: 100;
+  text-align: center;
 `;
 
 export default LogoIntro;
