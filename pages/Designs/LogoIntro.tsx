@@ -88,21 +88,20 @@ const LogoIntroImg = styled.img`
 
 const LogoIntroContext = styled.div`
   @media screen and (min-width: 1280px) {
-    width: 40%;
     margin-top: 30vh;
-    font-size: 16pt;
+    font-size: 15pt;
     font-weight: 100;
     text-align: right;
   }
 
   @media screen and (min-width: 768px) {
-    width: 85%;
-    font-size: 20pt;
+    font-size: 16pt;
+    font-weight: 100;
+    text-align: center;
   }
 
-  width: 85%;
   margin-top: 5vh;
-  font-size: 12pt;
+  font-size: 13pt;
   font-weight: 100;
   text-align: center;
 `;
