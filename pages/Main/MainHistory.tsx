@@ -75,34 +75,34 @@ const MainHistory = () => {
 };
 
 const MainHistoryContainer = styled.div`
- @media all and (min-width: 1280px) {
+ @media screen and (min-width: 1280px) {
         width: 1400px;
     }
     
     /* 노트북 & 테블릿 가로 (해상도 1024px ~ 1279px)*/ 
-    @media all and (min-width:1024px) and (max-width:1279px) {
+    @media screen and (min-width:1024px) and (max-width:1279px) {
         width: 1024px;
     }   
     
     /* 테블릿 가로 (해상도 768px ~ 1023px)*/ 
-    @media all and (min-width:768px) and (max-width:1023px) {
+    @media screen and (min-width:768px) and (max-width:1023px) {
         width: 768px;
     } 
     
     /* 모바일 가로 & 테블릿 세로 (해상도 480px ~ 767px)*/ 
-    @media all and (min-width:480px) and (max-width:767px) {
+    @media screen and (min-width:480px) and (max-width:767px) {
         width: 480px;
     } 
     
     /* 모바일 세로 (해상도 ~ 479px)*/ 
-    @media all and (max-width:479px) {
+    @media screen and (max-width:479px) {
         width: 360px;
     }
   
 `;
 const MainHistoryWrapper = styled.div`
   display: flex;
-  @media all and (min-width: 1280px) {
+  @media screen and (min-width: 1280px) {
     flex-direction: row;
   }
   flex-direction: column;
@@ -116,12 +116,12 @@ const MainHistoryWrapper = styled.div`
 const HistoryTitle = styled.div`
   display: flex;
   flex-direction: column;
-  @media all and (min-width: 1280px) {
+  @media screen and (min-width: 1280px) {
     align-items: flex-start;
   }
   align-items: center;
   h1 {
-    @media all and (min-width: 1280px) {
+    @media screen and (min-width: 1280px) {
       text-align: left;
       font-size:55pt;
       letter-spacing: -7px;
@@ -133,7 +133,7 @@ const HistoryTitle = styled.div`
 `;
 
 const HistoryImage = styled.img`
-  @media all and (min-width: 1280px) {
+  @media screen and (min-width: 1280px) {
     width: 600px;
   }
   width: 400px;
@@ -144,7 +144,7 @@ const HistoryImage = styled.img`
 const HistoryButton = styled.div`
   display: flex;
   flex-direction: row;
-  @media all and (min-width: 1280px) {
+  @media screen and (min-width: 1280px) {
     justify-content: right;
   }
   justify-content: center;
@@ -152,13 +152,13 @@ const HistoryButton = styled.div`
 `;
 
 const HistoryContents = styled.div`
-  @media all and (min-width: 1280px) {
+  @media screen and (min-width: 1280px) {
     margin: 200px 0px 0px 160px;
   }
   margin:10px 0px 0px 0px;
 
   p {
-    @media all and (min-width: 1280px) {
+    @media screen and (min-width: 1280px) {
       width: 34vw;
       text-align: right;
       font-size: 18pt;

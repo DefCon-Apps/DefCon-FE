@@ -13,10 +13,10 @@ type MainEventData = {
 };
 
 const tmpEventData: MainEventData = {
-  title: "집에 가고 싶지 않으십니까?",
+  title: "",
   content:
-    "저는 지금 API 연동을 하고 있는데요 먼가 하기 싫습니다. 아뇨 그렇P다구요",
-  image: "asdfasdf",
+    "",
+  image: "",
 };
 
 const MainAwards = () => {
@@ -117,27 +117,27 @@ const MainAwards = () => {
   );
 };
 const MainAwardsContainer = styled.div`
-  @media all and (min-width: 1280px) {
+  @media screen and (min-width: 1280px) {
     width: 1400px;
   }
 
   /* 노트북 & 테블릿 가로 (해상도 1024px ~ 1279px)*/
-  @media all and (min-width: 1024px) and (max-width: 1279px) {
+  @media screen and (min-width: 1024px) and (max-width: 1279px) {
     width: 1024px;
   }
 
   /* 테블릿 가로 (해상도 768px ~ 1023px)*/
-  @media all and (min-width: 768px) and (max-width: 1023px) {
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
     width: 768px;
   }
 
   /* 모바일 가로 & 테블릿 세로 (해상도 480px ~ 767px)*/
-  @media all and (min-width: 480px) and (max-width: 767px) {
+  @media screen and (min-width: 480px) and (max-width: 767px) {
     width: 480px;
   }
 
   /* 모바일 세로 (해상도 ~ 479px)*/
-  @media all and (max-width: 479px) {
+  @media screen and (max-width: 479px) {
     width: 360px;
   }
 `;
@@ -157,12 +157,12 @@ const MainAwardsStyle = styled.div`
 const AwardsTitle = styled.div`
   display: flex;
   flex-direction: column;
-  @media all and (min-width: 1280px) {
+  @media screen and (min-width: 1280px) {
     margin-left: 10vw;
   }
 
   h1 {
-    @media all and (min-width: 1280px) {
+    @media screen and (min-width: 1280px) {
       text-align: right;
       font-size: 55pt;
       letter-spacing: -7px;
@@ -176,7 +176,7 @@ const AwardsTitle = styled.div`
 `;
 
 const AwardsImage = styled.img`
-  @media all and (min-width: 1280px) {
+  @media screen and (min-width: 1280px) {
     width: 600px;
     height: 400px;
   }

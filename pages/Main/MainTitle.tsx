@@ -58,7 +58,7 @@ const MainTitleStyle = styled.div`
 
 const TitleContentsStyle = styled.div`
   display: flex;
-  @media all and (min-width: 1280px) {
+  @media screen and (min-width: 1280px) {
     flex-direction: row;
     text-align: right;
   }
@@ -69,7 +69,7 @@ const TitleContentsStyle = styled.div`
   margin-top: 15rem;
 
   h1 {
-    @media all and (min-width: 1280px) {
+    @media screen and (min-width: 1280px) {
       font-size: 100px;
     }
     font-size: 70px;
@@ -77,7 +77,7 @@ const TitleContentsStyle = styled.div`
     letter-spacing: -5px;
   }
   p {
-    @media all and (min-width: 1280px) {
+    @media screen and (min-width: 1280px) {
       font-size: 30px;
     }
     font-size: 18px;
@@ -86,7 +86,7 @@ const TitleContentsStyle = styled.div`
   }
 
   #intro {
-    @media all and (min-width: 1280px) {
+    @media screen and (min-width: 1280px) {
       font-size: 25px;
     }
     font-size: 15px;
@@ -96,7 +96,7 @@ const TitleContentsStyle = styled.div`
 
 const IntroStyle = styled.div`
   letter-spacing: 0.1rem;
-  @media all and (min-width: 1280px) {
+  @media screen and (min-width: 1280px) {
     margin: 5px 0px 0px 100px;
     font-size: 25px;
   }

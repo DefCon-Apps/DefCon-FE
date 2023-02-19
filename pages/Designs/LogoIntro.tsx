@@ -40,7 +40,10 @@ const LogoIntroWrapper = styled.div`
   height: 100vh;
   margin-bottom: 10vh;
   display: flex;
-  flex-direction: row;
+  @media screen and (min-width: 1280px) {
+    flex-direction: row;
+  }
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-family: "Noto Sans KR";
@@ -49,27 +52,61 @@ const LogoIntroWrapper = styled.div`
 const LogoIntroContents = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  @media screen and (min-width: 1280px) {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  justify-content: center;
+  align-items: center;
 `;
 
 const LogoIntroTitle = styled.h1`
-  font-size: 45pt;
-  letter-spacing: -5px;
+  @media screen and (min-width: 1280px) {
+    font-size: 45pt;
+    letter-spacing: -5px;
+    text-align: left;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 40pt;
+    letter-spacing: -2px;
+  }
+
+  font-size: 25pt;
+  letter-spacing: -2px;
+  text-align: center;
 `;
 
 const LogoIntroImg = styled.img`
-  width: 25vw;
-  margin-top: 15vh;
+  @media screen and (min-width: 1280px) {
+    width: 25vw;
+    margin-top: 15vh;
+  }
+  width: 70vw;
+  margin-top: 5vh;
 `;
 
 const LogoIntroContext = styled.div`
-  margin-top: 30vh;
-  p {
-    font-size: 16pt;
+  @media screen and (min-width: 1280px) {
+    margin-top: 30vh;
+    font-size: 15pt;
     font-weight: 100;
     text-align: right;
   }
+
+  @media screen and (min-width: 768px) {
+    font-size: 16pt;
+    font-weight: 100;
+    text-align: center;
+  }
+  p{
+    width: 85%;
+  }
+  
+  margin-top: 5vh;
+  font-size: 13pt;
+  font-weight: 100;
+  text-align: center;
 `;
 
 export default LogoIntro;
