@@ -125,6 +125,11 @@ const CrabIntroTitle = styled.h1`
     letter-spacing: -5px;
     text-align: right;
   }
+
+  @media screen and (min-width: 768px) {
+    font-size: 40pt;
+  }
+
   font-size: 30pt;
   letter-spacing: -2px;
   text-align: center;
@@ -139,6 +144,11 @@ const CrabIntroDesc = styled.div`
     font-weight: 100;
     text-align: left;
   }
+
+  @media screen and (min-width: 768px) {
+    font-size: 20pt;
+  }
+
   width: 85%;
   margin-top: 5vh;
   margin-right: 0;
