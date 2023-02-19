@@ -3,54 +3,24 @@ import styled from "styled-components";
 
 const Header = () => {
   return (
-    <HeaderContainer>
-      <HeaderDiv>
-        <Link href="/">
-          <HeaderLogo src="/Images/mainLogo.svg" />
-        </Link>
-        <HeaderNavUl>
-          <HeaderNavLi>
-            <Link href="/Designs">Designs </Link>
-          </HeaderNavLi>
-          <HeaderNavLi>
-            <Link href="/Projects">Projects</Link>
-          </HeaderNavLi>
-          <HeaderNavLi>
-            <Link href="/Members">Members</Link>
-          </HeaderNavLi>
-        </HeaderNavUl>
-      </HeaderDiv>
-    </HeaderContainer>
+    <HeaderDiv>
+      <Link href="/">
+        <HeaderLogo src="/Images/mainLogo.svg" />
+      </Link>
+      <HeaderNavUl>
+        <HeaderNavLi>
+          <Link href="/Designs">Designs </Link>
+        </HeaderNavLi>
+        <HeaderNavLi>
+          <Link href="/Projects">Projects</Link>
+        </HeaderNavLi>
+        <HeaderNavLi>
+          <Link href="/Members">Members</Link>
+        </HeaderNavLi>
+      </HeaderNavUl>
+    </HeaderDiv>
   );
 };
-
-const HeaderContainer = styled.div`
-  height: 8vh;
-
-  @media all and (min-width: 1280px) {
-    width: 1400px;
-  }
-
-  /* 노트북 & 테블릿 가로 (해상도 1024px ~ 1279px)*/
-  @media all and (min-width: 1024px) and (max-width: 1279px) {
-    width: 1024px;
-  }
-
-  /* 테블릿 가로 (해상도 768px ~ 1023px)*/
-  @media all and (min-width: 768px) and (max-width: 1023px) {
-    width: 768px;
-  }
-
-  /* 모바일 가로 & 테블릿 세로 (해상도 480px ~ 767px)*/
-  @media all and (min-width: 480px) and (max-width: 767px) {
-    width: 480px;
-  }
-
-  /* 모바일 세로 (해상도 ~ 479px)*/
-  @media all and (max-width: 479px) {
-    width: 360px;
-  }
-`;
 
 const HeaderDiv = styled.div`
   display: flex;
@@ -65,35 +35,67 @@ const HeaderDiv = styled.div`
 `;
 
 const HeaderLogo = styled.img`
-  width: 150px;
-  height: 30px;
-  @media all and (min-width: 1024px) {
+  @media screen and (min-width: 1280px) {
+    margin-top: 1.5rem;
     margin-left: 1.5rem;
+    width: 150px;
+    height: 30px;
   }
+
+  @media screen and (min-width: 768px) {
+    margin-left: 1rem;
+    width: 150px;
+    height: 30px;
+  }
+
+  width: 100px;
+  height: 20px;
   margin-left: 0.5rem;
-  margin-top: 1.5rem;
 `;
 
 const HeaderNavUl = styled.ul`
   display: flex;
   flex-flow: row nowrap;
-
-  margin-top: 2.5rem;
-  @media all and (min-width: 1024px) {
-    margin-right: 2rem;
+  @media screen and (min-width: 1280px) {
+    margin-left: 2rem;
+    margin-top: 2.5rem;
+    margin-right: 1rem;
+    font-size: 15pt;
   }
-  margin-right: 0.9rem;
-  font-size: 15pt;
+
+  @media screen and (min-width: 768px) {
+    margin-left: 2rem;
+    margin-top: 2rem;
+    margin-right: 1.5rem;
+    font-size: 15pt;
+  }
+
+  margin-top: 0.3rem;
+  margin-right: 1rem;
+  font-size: 10pt;
   font-weight: bold;
 `;
 
 const HeaderNavLi = styled.li`
-  margin-left: 2rem;
-  padding-bottom: 15px;
   list-style: none;
+
+  @media screen and (min-width: 1280px) {
+    margin-left: 2rem;
+    padding-bottom: 15px;
+    
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-left: 1rem;
+    padding-bottom: 15px;
+  }
+
+  margin-left: 1rem;
+
   a {
     text-decoration: none;
   }
+
   a:visited {
     color: #0e0e0e;
   }
