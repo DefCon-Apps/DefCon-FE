@@ -66,6 +66,12 @@ const LogoIntroTitle = styled.h1`
     letter-spacing: -5px;
     text-align: left;
   }
+
+  @media screen and (min-width: 768px) {
+    font-size: 40pt;
+    letter-spacing: -2px;
+  }
+
   font-size: 25pt;
   letter-spacing: -2px;
   text-align: center;
@@ -88,6 +94,12 @@ const LogoIntroContext = styled.div`
     font-weight: 100;
     text-align: right;
   }
+
+  @media screen and (min-width: 768px) {
+    width: 85%;
+    font-size: 20pt;
+  }
+
   width: 85%;
   margin-top: 5vh;
   font-size: 12pt;
