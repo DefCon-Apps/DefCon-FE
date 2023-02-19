@@ -99,7 +99,10 @@ const LogoIntroContext = styled.div`
     font-weight: 100;
     text-align: center;
   }
-
+  p{
+    width: 85%;
+  }
+  
   margin-top: 5vh;
   font-size: 13pt;
   font-weight: 100;

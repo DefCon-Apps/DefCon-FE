@@ -146,7 +146,13 @@ const CrabIntroDesc = styled.div`
   }
 
   @media screen and (min-width: 768px) {
-    font-size: 20pt;
+    width: 50%;
+    margin-top: 0;
+    margin-right: 12vw;
+    font-size: 16pt;
+    font-weight: 100;
+    text-align: center;
+  
   }
 
   width: 85%;
@@ -154,7 +160,7 @@ const CrabIntroDesc = styled.div`
   margin-right: 0;
   font-size: 12pt;
   font-weight: 100;
-  text-align: center;
+  font-weight: 100;
 `;
 
 const CrabIntroLogoWrapper = styled.div`
