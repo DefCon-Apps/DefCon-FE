@@ -36,7 +36,6 @@ const HeaderDiv = styled.div`
 
 const HeaderLogo = styled.img`
   @media screen and (min-width: 1280px) {
-    margin-top: 1.5rem;
     margin-left: 1.5rem;
     width: 150px;
     height: 30px;
@@ -57,20 +56,15 @@ const HeaderNavUl = styled.ul`
   display: flex;
   flex-flow: row nowrap;
   @media screen and (min-width: 1280px) {
-    margin-left: 2rem;
-    margin-top: 2.5rem;
     margin-right: 1rem;
     font-size: 15pt;
   }
 
   @media screen and (min-width: 768px) {
-    margin-left: 2rem;
-    margin-top: 2rem;
     margin-right: 1.5rem;
     font-size: 15pt;
   }
 
-  margin-top: 0.3rem;
   margin-right: 1rem;
   font-size: 10pt;
   font-weight: bold;
@@ -81,16 +75,14 @@ const HeaderNavLi = styled.li`
 
   @media screen and (min-width: 1280px) {
     margin-left: 2rem;
-    padding-bottom: 15px;
     
   }
 
   @media screen and (min-width: 768px) {
-    margin-left: 1rem;
-    padding-bottom: 15px;
+    margin-left: 2rem;
   }
 
-  margin-left: 1rem;
+  margin-left: 2rem;
 
   a {
     text-decoration: none;
