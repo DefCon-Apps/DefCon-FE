@@ -80,10 +80,13 @@ const MainHistoryWrapper = styled.div`
   font-family: "Noto Sans KR";
 
   @media screen and (min-width: 1280px) {
-    width: 1400px;
     flex-direction: row;
     justify-content: center;
     margin-bottom: 200px;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 100px;
   }
   
 `;
