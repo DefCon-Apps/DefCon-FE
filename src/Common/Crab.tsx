@@ -4,7 +4,7 @@ interface Props {
   width: number;
   height: number;
   marginTop: number;
-  float: boolean;
+  anim: boolean;
 }
 
 const Crab = (props: Props) => {
@@ -13,7 +13,7 @@ const Crab = (props: Props) => {
       width={props.width}
       height={props.height}
       marginTop={props.marginTop}
-      float={props.float}
+      anim={props.anim}
     >
       <img src="/Images/crab.svg" />
     </CrabStyle>
@@ -36,6 +36,6 @@ const CrabStyle = styled.div<Props>`
   height: ${(props) => props.height + "rem"};
   margin-top: ${(props) => props.marginTop + "rem"};
   filter: drop-shadow(0 0.3rem 0.3rem grey);
-  animation: ${(props) => props.float && "crabFloat 2s ease-in-out infinite"};
+  animation: ${(props) => props.anim && "crabFloat 2s ease-in-out infinite"};
 `;
 export default Crab;

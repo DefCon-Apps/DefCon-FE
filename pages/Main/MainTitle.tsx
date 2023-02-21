@@ -22,7 +22,7 @@ const MainTitle = () => {
           width={isDesktop ? 18 : 12}
           height={isDesktop ? 18 : 12}
           marginTop={2}
-          float={true}
+          anim={true}
         />
         <IntroStyle>
           <p>&quot;이거 님이 만드신 거였군요!&quot;</p>
@@ -52,7 +52,8 @@ const MainTitleStyle = styled.div`
   font-family: "Noto Sans KR";
   height: 100vh;
   margin-top: 50px;
-  `;
+  margin-bottom: 200px; 
+`;
 
 const TitleContentsStyle = styled.div`
   display: flex;
