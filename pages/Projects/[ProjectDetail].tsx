@@ -61,6 +61,7 @@ const ProjectDetail = ()=> {
 }
 
 const ProjectDetailWrapper = styled.div`
+  font-family: "Noto Sans KR";
   min-height: 100vh;
   display: flex;
   justify-content: center;
