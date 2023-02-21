@@ -22,6 +22,7 @@ const MainTitle = () => {
           width={isDesktop ? 18 : 12}
           height={isDesktop ? 18 : 12}
           marginTop={2}
+          float={true}
         />
         <IntroStyle>
           <p>&quot;이거 님이 만드신 거였군요!&quot;</p>

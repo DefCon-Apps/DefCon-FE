@@ -21,22 +21,21 @@ const Crab = (props: Props) => {
 };
 
 const CrabStyle = styled.div<Props>`
-  @keyframes float {
+  @keyframes crabFloat {
     0% {
-      transform: translatey(0px);
+      transform: rotate(15deg) translatey(0px);
     }
     50% {
-      transform: translatey(-20px);
+      transform: rotate(15deg) translatey(-10px);
     }
     100% {
-      transform: translatey(0px);
+      transform: rotate(15deg) translatey(0px);
     }
   }
   width: ${(props) => props.width + "rem"};
   height: ${(props) => props.height + "rem"};
   margin-top: ${(props) => props.marginTop + "rem"};
-  transform: rotate(15deg);
   filter: drop-shadow(0 0.3rem 0.3rem grey);
-  animation: ${(props) => props.float && "float 2s ease-in-out infinite"};
+  animation: ${(props) => props.float && "crabFloat 2s ease-in-out infinite"};
 `;
 export default Crab;
