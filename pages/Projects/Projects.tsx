@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import styled from "styled-components";
 import * as API from "../../src/Common/API";
 import ProjectList from "./ProjectList";
 import ProjectSection from "./ProjectSection";
@@ -32,7 +33,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <>
+    <ProjectWrapper>
       <ProjectSection 
         name="Android Applications"
         description="DEF:CON이 만든 안드로이드 애플리케이션 입니다.">
@@ -53,8 +54,12 @@ const Projects = () => {
         description="그 외에 진행한 프로젝트 입니다">
           <ProjectList list={etcProjectList} />
       </ProjectSection>
-    </>
+    </ProjectWrapper>
   );
 };
+
+const ProjectWrapper = styled.div`
+  font-family: "Noto Sans KR";
+`;
 
 export default Projects;
