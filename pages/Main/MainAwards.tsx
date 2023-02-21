@@ -14,14 +14,13 @@ type MainEventData = {
 
 const tmpEventData: MainEventData = {
   title: "",
-  content:
-    "",
+  content: "",
   image: "",
 };
 
 const MainAwards = () => {
   const desktop = useMediaQuery({
-    query: "(min-width:1208px)",
+    query: "(min-width:1280px)",
   });
   const [isDesktop, setDesktop] = useState(false);
   const [mainEvent, setMainEvent] = useState(tmpEventData);
@@ -34,144 +33,129 @@ const MainAwards = () => {
   }, [desktop]);
 
   return (
-    <MainAwardsStyle>
-      {isDesktop ? (
-        <>
-          <AwardsContents>
-            <p>{mainEvent.content}</p>
-            <AwardsButton>
-              <Link
-                href="https://github.com/yymin1022/SeoulHealing"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Dbutton
-                  text={"SOUL REST GitHub"}
-                  textColor={"#FFFFFF"}
-                  textSize={20}
-                  width={15}
-                  height={3}
-                  btnColor={"#001E2E"}
-                  direction={"right"}
-                />
-              </Link>
-            </AwardsButton>
-          </AwardsContents>
-          <AwardsTitle>
-            <h1>{mainEvent.title}</h1>
-            <AwardsImage src={mainEvent.image}></AwardsImage>
-          </AwardsTitle>
-        </>
-      ) : (
-        <>
-          <AwardsTitle>
-            <h1>{mainEvent.title}</h1>
-            <AwardsImage src={mainEvent.image}></AwardsImage>
-          </AwardsTitle>
-          <AwardsContents>
-            <p>{mainEvent.content}</p>
-            <AwardsButton>
-              <Link
-                href="https://github.com/yymin1022/SeoulHealing"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Dbutton
-                  text={"SOUL REST GitHub"}
-                  textColor={"#FFFFFF"}
-                  textSize={20}
-                  width={15}
-                  height={3}
-                  btnColor={"#001E2E"}
-                  direction={"right"}
-                />
-              </Link>
-            </AwardsButton>
-          </AwardsContents>
-        </>
-      )}
+    <MainAwardsWrapper>
+      <MainAwardsStyle>
+        <AwardsTitle>
+          <h1>{mainEvent.title}</h1>
+        </AwardsTitle>
+        <AwardsContents>
+          {isDesktop ? (
+            <>
+              <AwardsContentsContext>
+                <p>{mainEvent.content}</p>
+                <AwardsButton>
+                  <Link
+                    href="https://github.com/yymin1022/SeoulHealing"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <Dbutton
+                      text={"SOUL REST GitHub"}
+                      textColor={"#FFFFFF"}
+                      textSize={20}
+                      width={15}
+                      height={3}
+                      btnColor={"#001E2E"}
+                      direction={"right"}
+                    />
+                  </Link>
+                </AwardsButton>
+              </AwardsContentsContext>
+              <AwardsImage src={mainEvent.image}></AwardsImage>
+            </>
+          ) : (
+            <>
+              <AwardsImage src={mainEvent.image}></AwardsImage>
+              <AwardsContentsContext>
+                <p>{mainEvent.content}</p>
+                <AwardsButton>
+                  <Link
+                    href="https://github.com/yymin1022/SeoulHealing"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <Dbutton
+                      text={"SOUL REST GitHub"}
+                      textColor={"#FFFFFF"}
+                      textSize={20}
+                      width={15}
+                      height={3}
+                      btnColor={"#001E2E"}
+                      direction={"right"}
+                    />
+                  </Link>
+                </AwardsButton>
+              </AwardsContentsContext>
+            </>
+          )}
+        </AwardsContents>
+        <BackgroundCard
+          color={"#35B6F7"}
+          height={"35vh"}
+          translateX={"52vw"}
+          translateY={"-13vh"}
+          type={"filled"}
+        />
+        <BackgroundCard
+          color={"#00658F"}
+          height={"35vh"}
+          translateX={"50vw"}
+          translateY={"-20vh"}
+          type={"filled"}
+        />
 
-      <BackgroundCard
-        color={"#35B6F7"}
-        height={"35vh"}
-        translateX={"52vw"}
-        translateY={"-13vh"}
-        type={"filled"}
-      />
-      <BackgroundCard
-        color={"#00658F"}
-        height={"35vh"}
-        translateX={"50vw"}
-        translateY={"-20vh"}
-        type={"filled"}
-      />
-
-      <BackgroundCard
-        color={"#00658F"}
-        height={"35vh"}
-        translateX={"-60vw"}
-        translateY={"30.6vh"}
-        type={"bordered"}
-      />
-    </MainAwardsStyle>
+        <BackgroundCard
+          color={"#00658F"}
+          height={"35vh"}
+          translateX={"-60vw"}
+          translateY={"30.6vh"}
+          type={"bordered"}
+        />
+      </MainAwardsStyle>
+    </MainAwardsWrapper>
   );
 };
-const MainAwardsContainer = styled.div`
+
+const MainAwardsWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Noto Sans KR";
+
   @media screen and (min-width: 1280px) {
-    width: 1400px;
-  }
-
-  /* 노트북 & 테블릿 가로 (해상도 1024px ~ 1279px)*/
-  @media screen and (min-width: 1024px) and (max-width: 1279px) {
-    width: 1024px;
-  }
-
-  /* 테블릿 가로 (해상도 768px ~ 1023px)*/
-  @media screen and (min-width: 768px) and (max-width: 1023px) {
-    width: 768px;
-  }
-
-  /* 모바일 가로 & 테블릿 세로 (해상도 480px ~ 767px)*/
-  @media screen and (min-width: 480px) and (max-width: 767px) {
-    width: 480px;
-  }
-
-  /* 모바일 세로 (해상도 ~ 479px)*/
-  @media screen and (max-width: 479px) {
-    width: 360px;
+    margin-bottom: 200px;
   }
 `;
 
 const MainAwardsStyle = styled.div`
   display: flex;
-  @media all and (min-width: 1280px) {
-    flex-direction: row;
-  }
   flex-direction: column;
-  justify-content: center;
-  height: 100vh;
-  font-family: "Noto Sans KR";
-  margin-bottom: 200px;
+  @media screen and (min-width: 1280px) {
+    align-items: flex-end;
+  }
+
+  @media screen and (max-width: 768px) {
+    align-items: center; 
+  }
 `;
 
 const AwardsTitle = styled.div`
-  display: flex;
-  flex-direction: column;
-  @media screen and (min-width: 1280px) {
-    margin-left: 10vw;
-  }
-
   h1 {
     @media screen and (min-width: 1280px) {
+      width: 1400px;
       text-align: right;
       font-size: 55pt;
       letter-spacing: -7px;
       color: #fff;
     }
-    text-align: center;
-    font-size: 40pt;
-    letter-spacing: -5px;
-    color: #000;
+
+    @media screen and (max-width: 768px) {
+      text-align: center;
+      font-size: 40pt;
+      letter-spacing: -5px;
+      color: #000;
+    }
   }
 `;
 
@@ -180,8 +164,12 @@ const AwardsImage = styled.img`
     width: 600px;
     height: 400px;
   }
-  width: 400px;
-  height: 300px;
+
+  @media screen and (max-width: 768px) {
+    width: 400px;
+    height: 250px;
+  }
+
   margin-top: 20px;
   border-radius: 20px;
 `;
@@ -195,15 +183,48 @@ const AwardsButton = styled.div`
 
 const AwardsContents = styled.div`
   display: flex;
-  flex-direction: column;
-  align-items: center;
+
+  @media screen and (min-width: 1280px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
   margin-top: 2vh;
 
   p {
-    text-align: center;
-    font-size: 18pt;
-    font-weight: 300;
+    font-weight: 100;
+    @media screen and (min-width: 1280px) {
+      width: 40vw;
+      text-align: left;
+      font-size: 18pt;
+    }
+
+    @media screen and (max-width: 768px) {
+      width: 85vw;
+      margin-top: 5vh;
+      margin-bottom: 5vh;
+      text-align: center;
+      font-size: 15pt;
+    }
+  }
+`;
+
+const AwardsContentsContext = styled.div`
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 1280px) {
+    align-items: flex-start;
+  }
+
+  @media screen and (max-width: 768px) {
+    align-items: center; 
   }
 `;
 

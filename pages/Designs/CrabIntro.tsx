@@ -85,9 +85,9 @@ const CrabIntro = () => {
           <Logo src="/Images/mainLogo.svg" />
         </LogoHistoryWrapper>
         {isDesktop ? (
-          <Crab width={15} height={15} marginTop={8} />
+          <Crab width={15} height={15} marginTop={8} anim={true} />
         ) : (
-          <Crab width={10} height={10} marginTop={2} />
+          <Crab width={10} height={10} marginTop={2} anim={true} />
         )}
       </CrabIntroLogoWrapper>
     </CrabIntroWrapper>
@@ -152,7 +152,6 @@ const CrabIntroDesc = styled.div`
     font-size: 16pt;
     font-weight: 100;
     text-align: center;
-  
   }
 
   width: 85%;

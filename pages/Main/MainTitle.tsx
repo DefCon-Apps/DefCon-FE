@@ -5,10 +5,6 @@ import { faAngleDoubleDown } from "@fortawesome/free-solid-svg-icons";
 import { useMediaQuery } from "react-responsive";
 import { useEffect, useState } from "react";
 
-interface Props {
-  isDesktop: boolean;
-}
-
 const MainTitle = () => {
   const desktop = useMediaQuery({
     query: "(min-width:1208px)",
@@ -26,6 +22,7 @@ const MainTitle = () => {
           width={isDesktop ? 18 : 12}
           height={isDesktop ? 18 : 12}
           marginTop={2}
+          anim={true}
         />
         <IntroStyle>
           <p>&quot;이거 님이 만드신 거였군요!&quot;</p>
@@ -36,7 +33,7 @@ const MainTitle = () => {
             우리의 작품이었으면 좋겠습니다.
             <br />
             <br />
-            2023년 새로워진 대학생 프로그래밍팀 DEF:CON을 만나보세요.
+            2023년, 새로워진 대학생 프로그래밍팀 DEF:CON을 만나보세요.
           </p>
         </IntroStyle>
       </TitleContentsStyle>
@@ -54,43 +51,65 @@ const MainTitleStyle = styled.div`
   align-items: center;
   font-family: "Noto Sans KR";
   height: 100vh;
+  margin-top: 50px;
+  margin-bottom: 200px; 
 `;
 
 const TitleContentsStyle = styled.div`
   display: flex;
+  margin-top: 20px;
+
   @media screen and (min-width: 1280px) {
     flex-direction: row;
     text-align: right;
+    justify-content: center;
   }
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-top: 15rem;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 
   h1 {
-    @media screen and (min-width: 1280px) {
-      font-size: 100px;
-    }
-    font-size: 70px;
     font-weight: bolder;
     letter-spacing: -5px;
-  }
-  p {
     @media screen and (min-width: 1280px) {
-      font-size: 30px;
+      font-size: 70pt;
     }
-    font-size: 18px;
-    font-weight: bold;
+
+    @media screen and (max-width: 768px) {
+      font-size: 40pt;
+    }
+  }
+
+  p {
+    font-weight: 300;
     letter-spacing: -1px;
+
+    @media screen and (min-width: 1280px) {
+      font-size: 25pt;
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: 15pt;
+    }
   }
 
   #intro {
-    @media screen and (min-width: 1280px) {
-      font-size: 25px;
-    }
-    font-size: 15px;
     font-weight: 300;
+
+    @media screen and (min-width: 1280px) {
+      font-size: 20pt;
+    }
+
+    @media screen and (max-width: 768px) {
+      width: 85vw;
+      margin-top: 2vh;
+      margin-bottom: 2vh;
+      font-size: 15pt;
+    }
   }
 `;
 
@@ -105,8 +124,27 @@ const IntroStyle = styled.div`
 `;
 
 const ScrollIconStyle = styled.div`
-  margin-top: 180px;
-  justify-content: center;
+  @keyframes float {
+    0% {
+      transform: translatey(0px);
+    }
+    50% {
+      transform: translatey(-20px);
+    }
+    100% {
+      transform: translatey(0px);
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-top: 180px;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-top: 50px;
+  }
+  transform: translatey(0px);
+  animation: float 2s ease-in-out infinite;
 `;
 
 export default MainTitle;
