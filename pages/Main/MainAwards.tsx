@@ -161,7 +161,7 @@ const AwardsTitle = styled.div`
 const AwardsImage = styled.img`
   @media screen and (min-width: 1280px) {
     width: 600px;
-    height: 300px;
+    height: 400px;
   }
 
   @media screen and (max-width: 768px) {
