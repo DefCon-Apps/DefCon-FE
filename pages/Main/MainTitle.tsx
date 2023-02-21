@@ -5,9 +5,6 @@ import { faAngleDoubleDown } from "@fortawesome/free-solid-svg-icons";
 import { useMediaQuery } from "react-responsive";
 import { useEffect, useState } from "react";
 
-interface Props {
-  isDesktop: boolean;
-}
 
 const MainTitle = () => {
   const desktop = useMediaQuery({
@@ -57,7 +54,10 @@ const MainTitleStyle = styled.div`
 `;
 
 const TitleContentsStyle = styled.div`
+  
+
   display: flex;
+  
   @media screen and (min-width: 1280px) {
     flex-direction: row;
     text-align: right;
@@ -107,6 +107,21 @@ const IntroStyle = styled.div`
 const ScrollIconStyle = styled.div`
   margin-top: 180px;
   justify-content: center;
+
+  @keyframes float {
+    0% {
+      transform: translatey(0px);
+    }
+    50% {
+      transform: translatey(-20px);
+    }
+    100% {
+      transform: translatey(0px);
+    }
+  }
+
+  transform: translatey(0px);
+	animation: float 2s ease-in-out infinite;
 `;
 
 export default MainTitle;
