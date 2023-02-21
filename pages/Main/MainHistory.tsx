@@ -73,16 +73,21 @@ const MainHistory = () => {
 };
 
 const MainHistoryWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
   height: 100vh;
-  margin-top: 300px;
+  display: flex;
+  justify-content: center;
   font-family: "Noto Sans KR";
 
   @media screen and (min-width: 1280px) {
+    width: 1400px;
     flex-direction: row;
-    justify-content: center;
     margin-bottom: 200px;
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+
+    margin-top: 300px;
   }
 `;
 
