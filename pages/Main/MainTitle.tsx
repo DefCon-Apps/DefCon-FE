@@ -51,7 +51,8 @@ const MainTitleStyle = styled.div`
   align-items: center;
   font-family: "Noto Sans KR";
   height: 100vh;
-`;
+  margin-top: 50px;
+  `;
 
 const TitleContentsStyle = styled.div`
   display: flex;

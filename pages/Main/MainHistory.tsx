@@ -84,11 +84,6 @@ const MainHistoryWrapper = styled.div`
     justify-content: center;
     margin-bottom: 200px;
   }
-
-  @media screen and (max-width: 768px) {
-    margin-bottom: 100px;
-  }
-  
 `;
 
 const HistoryTitle = styled.div`
