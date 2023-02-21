@@ -138,7 +138,7 @@ const HistoryContents = styled.div`
   @media screen and (min-width: 1280px) {
     
     align-items: flex-end;
-    margin-top: 20vh;
+    margin-top: 20rem;
   }
 
   @media screen and (max-width: 768px) {
