@@ -150,7 +150,7 @@ const AwardsTitle = styled.div`
       text-align: right;
       font-size: 55pt;
       letter-spacing: -7px;
-      color: #000;
+      color: #fff;
     }
 
     @media screen and (max-width: 768px) {
