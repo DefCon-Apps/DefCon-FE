@@ -53,17 +53,12 @@ const CrabIntro = () => {
             <CrabIntroDesc>
               <p>
                 DEF:CON의 마스코트인 DEF:CON CRAB은 메인 컬러와 마찬가지로
-                <br />
-                Windows 10의 블루스크린에서 착안하였습니다.
-                <br />
-                DEF:CON의 철자 C의 앞에 콜론 (:)을 삽입하여 블루스크린의
-                이모티콘인 &quot;:(&quot;을 연상할 수 있게 만들어냈죠.
-                <br />
-                <br />
-                코딩을 하다보면 웃음을 지을 때보단 울상일 때가 더 많은 우리의{" "}
-                <br />
-                표정과도 비슷한 DEF:CON CRAB은 DEF:CON의 초창기 로고부터 <br />
-                유지되어온 DEF:CON의 헤리티지입니다. <br />
+                Windows 10의 블루스크린에서 착안하였습니다. DEF:CON의 철자 C의
+                앞에 콜론 (:)을 삽입하여 블루스크린의 이모티콘인
+                &quot;:(&quot;을 연상할 수 있게 만들어냈죠. 코딩을 하다보면
+                웃음을 지을 때보단 울상일 때가 더 많은 우리의 표정과도 비슷한
+                DEF:CON CRAB은 DEF:CON의 초창기 로고부터 유지되어온 DEF:CON의
+                헤리티지입니다.
               </p>
             </CrabIntroDesc>
           </>
@@ -96,74 +91,72 @@ const CrabIntro = () => {
 
 const CrabIntroWrapper = styled.div`
   height: 100vh;
-  @media screen and (min-width: 1280px) {
-    margin-bottom: 10vh;
-  }
-  margin-bottom: 20vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-family: "Noto Sans KR";
+
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 10vh;
+  }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 20vh;
+  }
 `;
 
 const CrabIntroContents = styled.div`
   display: flex;
+
   @media screen and (min-width: 1280px) {
     flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: space-evenly;
+    align-items: center;
   }
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 const CrabIntroTitle = styled.h1`
   @media screen and (min-width: 1280px) {
+    width: 50%;
     font-size: 45pt;
     letter-spacing: -5px;
     text-align: right;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (max-width: 768px) {
     font-size: 40pt;
+    letter-spacing: -2px;
+    text-align: center;
   }
-
-  font-size: 30pt;
-  letter-spacing: -2px;
-  text-align: center;
 `;
 
 const CrabIntroDesc = styled.div`
-  @media screen and (min-width: 1280px) {
-    width: 50%;
-    margin-top: 0;
-    margin-right: 12vw;
-    font-size: 16pt;
-    font-weight: 100;
-    text-align: left;
-  }
-
-  @media screen and (min-width: 768px) {
-    width: 50%;
-    margin-top: 0;
-    margin-right: 12vw;
-    font-size: 16pt;
-    font-weight: 100;
-    text-align: center;
-  }
-
-  width: 85%;
   margin-top: 5vh;
-  margin-right: 0;
-  font-size: 12pt;
   font-weight: 100;
-  font-weight: 100;
+  font-size: 16pt;
+
+  p {
+    @media screen and (min-width: 1280px) {
+      width: 60vw;
+      text-align: left;
+    }
+
+    @media screen and (max-width: 768px) {
+      width: 65vw;
+      text-align: center;
+    }
+  }
 `;
 
 const CrabIntroLogoWrapper = styled.div`
   display: flex;
+
   @media screen and (min-width: 1280px) {
     flex-direction: row;
     margin-top: 8vh;
@@ -171,10 +164,12 @@ const CrabIntroLogoWrapper = styled.div`
     align-items: flex-start;
   }
 
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 5vh;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    margin-top: 5vh;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 const LogoHistoryWrapper = styled.div`
@@ -187,19 +182,25 @@ const LogoHistoryWrapper = styled.div`
     margin-top: 5vh;
     margin-right: 20vw;
   }
-  margin-top: 5vh;
-  margin-right: 0;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 5vh;
+    margin-right: 0;
+  }
 `;
 
 const Logo = styled.img`
+  filter: drop-shadow(1px 1px 3px grey);
+
   @media screen and (min-width: 1280px) {
     width: 20vw;
     margin-bottom: 8vh;
   }
-  width: 50vw;
-  margin-bottom: 8vh;
 
-  filter: drop-shadow(1px 1px 3px grey);
+  @media screen and (max-width: 768px) {
+    width: 50vw;
+    margin-bottom: 8vh;
+  }
 `;
 
 export default CrabIntro;
