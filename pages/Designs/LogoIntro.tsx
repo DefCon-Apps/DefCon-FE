@@ -37,7 +37,6 @@ const LogoIntro = () => {
 
 const LogoIntroWrapper = styled.div`
   height: 100vh;
-  margin-bottom: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,31 +44,23 @@ const LogoIntroWrapper = styled.div`
 `;
 
 const LogoIntroContainer = styled.div`
-  width: 80%;
+  width: 70vw;
   display: flex;
   flex-direction: column;
 `;
 
 const LogoIntroTitle = styled.div`
+  @media screen and (min-width: 1280px) {
+    width: 50%;
+  }
   h1 {
-    @media screen and (min-width: 2000px) {
-      font-size: 70pt;
-      letter-spacing: -5px;
-    }
-
     @media screen and (min-width: 1280px) {
-      width: 40%;
       font-size: 45pt;
       letter-spacing: -5px;
       text-align: left;
     }
-
-    @media screen and (max-width: 1024px) {
-      font-size: 40pt;
-    }
-
     @media screen and (max-width: 768px) {
-      font-size: 25pt;
+      font-size: 40pt;
       letter-spacing: -2px;
       text-align: center;
     }
@@ -78,9 +69,8 @@ const LogoIntroTitle = styled.div`
 
 const LogoIntroImg = styled.img`
   @media screen and (min-width: 1280px) {
-    width: 40%;
+    width: 30rem;
   }
-
   @media screen and (max-width: 768px) {
     width: 55vw;
     margin-top: 5vh;
@@ -89,42 +79,28 @@ const LogoIntroImg = styled.img`
 
 const LogoIntroContents = styled.div`
   display: flex;
-
   @media screen and (min-width: 1280px) {
     font-size: 15pt;
     font-weight: 100;
     text-align: right;
-
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     margin-top: 15vh;
   }
-
-  @media screen and (max-width: 1024px) {
-    font-size: 16pt;
-  }
-
   @media screen and (max-width: 768px) {
-    font-size: 12pt;
+    font-size: 16pt;
     font-weight: 100;
     text-align: center;
-
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-
   p {
-    @media screen and (min-width: 2000px) {
-      font-size: 25pt;
-    }
-
     @media screen and (min-width: 1280px) {
-      width: 50%;
+      width: 45%;
       text-align: right;
     }
-
     @media screen and (max-width: 768px) {
       width: 85%;
       margin-top: 5vh;
