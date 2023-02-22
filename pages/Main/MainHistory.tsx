@@ -100,6 +100,7 @@ const HistoryTitle = styled.div`
   align-items: center;
   h1 {
     @media screen and (min-width: 1280px) {
+      width: 100%;
       text-align: left;
       font-size: 55pt;
       letter-spacing: -7px;
