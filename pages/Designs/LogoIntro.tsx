@@ -37,6 +37,7 @@ const LogoIntro = () => {
 
 const LogoIntroWrapper = styled.div`
   height: 100vh;
+  margin-bottom: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,19 +51,25 @@ const LogoIntroContainer = styled.div`
 `;
 
 const LogoIntroTitle = styled.div`
-  @media screen and (min-width: 1280px) {
-    width: 50%;
-  }
-
   h1 {
+    @media screen and (min-width: 2000px) {
+      font-size: 70pt;
+      letter-spacing: -5px;
+    }
+
     @media screen and (min-width: 1280px) {
+      width: 40%;
       font-size: 45pt;
       letter-spacing: -5px;
       text-align: left;
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
       font-size: 40pt;
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: 25pt;
       letter-spacing: -2px;
       text-align: center;
     }
@@ -71,7 +78,7 @@ const LogoIntroTitle = styled.div`
 
 const LogoIntroImg = styled.img`
   @media screen and (min-width: 1280px) {
-    width: 30rem;
+    width: 40%;
   }
 
   @media screen and (max-width: 768px) {
@@ -94,8 +101,12 @@ const LogoIntroContents = styled.div`
     margin-top: 15vh;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     font-size: 16pt;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 12pt;
     font-weight: 100;
     text-align: center;
 
@@ -105,8 +116,12 @@ const LogoIntroContents = styled.div`
   }
 
   p {
+    @media screen and (min-width: 2000px) {
+      font-size: 25pt;
+    }
+
     @media screen and (min-width: 1280px) {
-      width: 45%;
+      width: 50%;
       text-align: right;
     }
 
