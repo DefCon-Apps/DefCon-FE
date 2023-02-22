@@ -143,7 +143,7 @@ const MainAwardsStyle = styled.div`
 
 const AwardsTitle = styled.div`
   @media screen and (min-width: 1280px) {
-    width: 50%;
+    width: 60%;
   }
   h1 {
     @media screen and (min-width: 1280px) {
@@ -155,7 +155,7 @@ const AwardsTitle = styled.div`
 
     @media screen and (max-width: 768px) {
       text-align: center;
-      font-size: 40pt;
+      font-size: 35pt;
       letter-spacing: -5px;
       color: #000;
     }
@@ -204,13 +204,13 @@ const AwardsContents = styled.div`
   p {
     font-weight: 100;
     @media screen and (min-width: 1280px) {
-      width: 40vw;
+      width: 80%;
       text-align: left;
       font-size: 18pt;
     }
 
     @media screen and (max-width: 768px) {
-      width: 85vw;
+      width: 100%;
       margin-top: 5vh;
       margin-bottom: 5vh;
       text-align: center;
