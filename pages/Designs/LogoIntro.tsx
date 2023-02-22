@@ -81,7 +81,7 @@ const LogoIntroImg = styled.img`
 const LogoIntroContents = styled.div`
   display: flex;
   @media screen and (min-width: 1280px) {
-    font-size: 15pt;
+    font-size: 1.5em;
     font-weight: 100;
     text-align: right;
     flex-direction: row;

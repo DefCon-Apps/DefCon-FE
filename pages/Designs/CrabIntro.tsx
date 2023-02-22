@@ -143,7 +143,7 @@ const CrabIntroTitle = styled.div`
 const CrabIntroDesc = styled.div`
   margin-top: 5vh;
   font-weight: 100;
-  font-size: 16pt;
+  font-size: 1.5em;
   p {
     @media screen and (min-width: 1280px) {
       flex-basis: 70%;
