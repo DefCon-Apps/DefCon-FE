@@ -132,6 +132,7 @@ const MainAwardsStyle = styled.div`
   display: flex;
   flex-direction: column;
   @media screen and (min-width: 1280px) {
+    justify-content: flex-end;
     align-items: flex-end;
   }
 
@@ -141,13 +142,15 @@ const MainAwardsStyle = styled.div`
 `;
 
 const AwardsTitle = styled.div`
+  @media screen and (min-width: 1280px) {
+    width: 50%;
+  }
   h1 {
     @media screen and (min-width: 1280px) {
-      width: 1400px;
       text-align: right;
       font-size: 55pt;
       letter-spacing: -7px;
-      color: #fff;
+      color: #000;
     }
 
     @media screen and (max-width: 768px) {
