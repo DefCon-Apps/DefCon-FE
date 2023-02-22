@@ -40,7 +40,7 @@ const CrabIntro = () => {
             <CrabIntroTitle>
               <h1>
                 우리의 헤리티지
-                <br/>
+                <br />
                 DEF:CON CRAB
               </h1>
             </CrabIntroTitle>
@@ -48,9 +48,9 @@ const CrabIntro = () => {
         ) : (
           <>
             <CrabIntroTitle>
-              <h1>
+            <h1>
                 우리의 헤리티지
-                <br/>
+                <br />
                 DEF:CON CRAB
               </h1>
             </CrabIntroTitle>
@@ -109,13 +109,12 @@ const CrabIntroWrapper = styled.div`
 `;
 
 const CrabIntroContents = styled.div`
-  display: flex;
   width: 70vw;
+  display: flex;
   @media screen and (min-width: 1280px) {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    
   }
   @media screen and (max-width: 768px) {
     flex-direction: column;
@@ -127,14 +126,14 @@ const CrabIntroContents = styled.div`
 const CrabIntroTitle = styled.div`
   h1 {
     @media screen and (min-width: 1280px) {
-      flex-basis: 40%;
-      margin-left: 0;
+      width: 40vw;
+      flex-basis: 70%;
       font-size: 45pt;
       letter-spacing: -5px;
       text-align: right;
     }
     @media screen and (max-width: 768px) {
-      font-size: 40pt;
+      font-size: 30pt;
       letter-spacing: -2px;
       text-align: center;
     }
@@ -147,11 +146,12 @@ const CrabIntroDesc = styled.div`
   font-size: 16pt;
   p {
     @media screen and (min-width: 1280px) {
-      flex-basis: 60%;
+      flex-basis: 70%;
       text-align: left;
     }
     @media screen and (max-width: 768px) {
       width: 65vw;
+      font-size: 12pt;
       text-align: center;
     }
   }
