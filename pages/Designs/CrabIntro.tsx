@@ -148,7 +148,7 @@ const CrabIntroDesc = styled.div`
     }
 
     @media screen and (max-width: 768px) {
-      width: 80vw;
+      width: 65vw;
       text-align: center;
     }
   }
