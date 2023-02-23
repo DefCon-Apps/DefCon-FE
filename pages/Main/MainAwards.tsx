@@ -22,15 +22,15 @@ const MainAwards = () => {
   const desktop = useMediaQuery({
     query: "(min-width:1280px)",
   });
-  const [isDesktop, setDesktop] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(true);
   const [mainEvent, setMainEvent] = useState(tmpEventData);
 
   useEffect(() => {
-    if (desktop) setDesktop(true);
+    if (!desktop) setIsDesktop(false);
     API.getMainEventData().then((apiResult: any) => {
       setMainEvent(apiResult);
     });
-  }, [desktop]);
+  }, [isDesktop]);
 
   return (
     <MainAwardsWrapper>
