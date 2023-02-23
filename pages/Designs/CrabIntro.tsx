@@ -38,17 +38,21 @@ const CrabIntro = () => {
               </p>
             </CrabIntroDesc>
             <CrabIntroTitle>
-              우리의 헤리티지
-              <br />
-              DEF:CON CRAB
+              <h1>
+                우리의 헤리티지
+                <br />
+                DEF:CON CRAB
+              </h1>
             </CrabIntroTitle>
           </>
         ) : (
           <>
             <CrabIntroTitle>
-              우리의 헤리티지
-              <br />
-              DEF:CON CRAB
+            <h1>
+                우리의 헤리티지
+                <br />
+                DEF:CON CRAB
+              </h1>
             </CrabIntroTitle>
             <CrabIntroDesc>
               <p>
@@ -96,7 +100,6 @@ const CrabIntroWrapper = styled.div`
   justify-content: center;
   align-items: center;
   font-family: "Noto Sans KR";
-
   @media screen and (min-width: 1280px) {
     margin-bottom: 10vh;
   }
@@ -106,14 +109,13 @@ const CrabIntroWrapper = styled.div`
 `;
 
 const CrabIntroContents = styled.div`
+  width: 70vw;
   display: flex;
-
   @media screen and (min-width: 1280px) {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
   }
-
   @media screen and (max-width: 768px) {
     flex-direction: column;
     justify-content: center;
@@ -121,34 +123,35 @@ const CrabIntroContents = styled.div`
   }
 `;
 
-const CrabIntroTitle = styled.h1`
-  @media screen and (min-width: 1280px) {
-    width: 50%;
-    font-size: 45pt;
-    letter-spacing: -5px;
-    text-align: right;
-  }
-
-  @media screen and (max-width: 768px) {
-    font-size: 40pt;
-    letter-spacing: -2px;
-    text-align: center;
+const CrabIntroTitle = styled.div`
+  h1 {
+    @media screen and (min-width: 1280px) {
+      width: 40vw;
+      flex-basis: 70%;
+      font-size: 45pt;
+      letter-spacing: -5px;
+      text-align: right;
+    }
+    @media screen and (max-width: 768px) {
+      font-size: 30pt;
+      letter-spacing: -2px;
+      text-align: center;
+    }
   }
 `;
 
 const CrabIntroDesc = styled.div`
   margin-top: 5vh;
   font-weight: 100;
-  font-size: 16pt;
-
+  font-size: 1.5em;
   p {
     @media screen and (min-width: 1280px) {
-      width: 60vw;
+      flex-basis: 70%;
       text-align: left;
     }
-
     @media screen and (max-width: 768px) {
       width: 65vw;
+      font-size: 12pt;
       text-align: center;
     }
   }
@@ -156,14 +159,12 @@ const CrabIntroDesc = styled.div`
 
 const CrabIntroLogoWrapper = styled.div`
   display: flex;
-
   @media screen and (min-width: 1280px) {
     flex-direction: row;
     margin-top: 8vh;
     justify-content: flex-start;
     align-items: flex-start;
   }
-
   @media screen and (max-width: 768px) {
     flex-direction: column;
     margin-top: 5vh;
@@ -177,12 +178,10 @@ const LogoHistoryWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   @media screen and (min-width: 1280px) {
     margin-top: 5vh;
     margin-right: 20vw;
   }
-
   @media screen and (max-width: 768px) {
     margin-top: 5vh;
     margin-right: 0;
@@ -191,12 +190,10 @@ const LogoHistoryWrapper = styled.div`
 
 const Logo = styled.img`
   filter: drop-shadow(1px 1px 3px grey);
-
   @media screen and (min-width: 1280px) {
     width: 20vw;
     margin-bottom: 8vh;
   }
-
   @media screen and (max-width: 768px) {
     width: 50vw;
     margin-bottom: 8vh;
