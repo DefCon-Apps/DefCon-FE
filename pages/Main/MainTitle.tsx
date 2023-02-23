@@ -9,11 +9,11 @@ const MainTitle = () => {
   const desktop = useMediaQuery({
     query: "(min-width:1208px)",
   });
-  const [isDesktop, setDesktop] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(true);
 
   useEffect(() => {
-    if (desktop) setDesktop(true);
-  }, [desktop]);
+    if (!desktop) setIsDesktop(false);
+  }, [isDesktop]);
 
   return (
     <MainTitleStyle>
