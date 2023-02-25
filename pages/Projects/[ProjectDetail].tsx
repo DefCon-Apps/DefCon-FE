@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
+import RehypeRaw from "rehype-raw";
 import styled from "styled-components";
 import * as API from "../../src/Common/API";
 import ImageSlider from "../../src/Common/ImageSlider";
@@ -39,7 +40,8 @@ const ProjectDetail = ()=> {
           <br></br>
 
           <ReactMarkdown
-            children={projectData.content}/>
+            children={projectData.content}
+            rehypePlugins={[RehypeRaw]}/>
           {/*<ReactMarkdown>{projectData.content}</ReactMarkdown>*/}
           <br></br>
 
