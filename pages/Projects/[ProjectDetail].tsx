@@ -14,7 +14,7 @@ const ProjectDetail = ()=> {
     API.getProjectData(projectId as string).then((apiResult: any) => {
       setProjectData(apiResult);
     });
-  }, [projectData]);
+  }, [projectId]);
 
   if (!projectData) return (
     <ProjectDetailWrapper>
