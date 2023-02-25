@@ -37,8 +37,10 @@ const ProjectDetail = ()=> {
           <ImageSlider
             images={projectData.image} />
           <br></br>
-          
-          <ReactMarkdown>{projectData.content}</ReactMarkdown>
+
+          <ReactMarkdown
+            children={projectData.content}/>
+          {/*<ReactMarkdown>{projectData.content}</ReactMarkdown>*/}
           <br></br>
 
           <h1>Tech Stack</h1>
