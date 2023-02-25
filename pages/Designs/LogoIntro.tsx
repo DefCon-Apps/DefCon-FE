@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import BackgroundCard from "../../src/Common/BackgroundCard";
 
 const LogoIntro = () => {
   return (
@@ -23,13 +22,6 @@ const LogoIntro = () => {
             입혀 단조로울 수 있는 텍스트 중심의 로고에 포인트 요소가 되었습니다.
           </p>
         </LogoIntroContents>
-        <BackgroundCard
-          color="#00658F"
-          height="22rem"
-          translateX="-1000px"
-          translateY="140px"
-          type="bordered"
-        />
       </LogoIntroContainer>
     </LogoIntroWrapper>
   );

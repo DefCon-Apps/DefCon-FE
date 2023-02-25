@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { ScrollMenu } from "react-horizontal-scrolling-menu";
 import WorksCard from "../../src/Common/WorksCard";
-import BackgroundCard from "../../src/Common/BackgroundCard";
 
 const testArray = [
   {
@@ -43,20 +42,6 @@ const MainWorks = () => {
             소프트웨어가 사용될 수 있다면 우리는 뭐든 재미있게 갖고 놀 수 있습니다.
           </p>
         </WorksTitle>
-        <BackgroundCard
-          color={"#C7E7FF"}
-          height={"35vh"}
-          translateX={"-60vw"}
-          translateY={"8vh"}
-          type={"bordered"}
-        />
-        <BackgroundCard
-          color={"#35B6F7"}
-          height={"35vh"}
-          translateX={"50vw"}
-          translateY={"35vh"}
-          type={"bordered"}
-        />
         <ScrollMenuWrapper>
           <ScrollMenu>
             {testArray.map((items) => (
@@ -74,6 +59,7 @@ const MainWorksWrapper = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  width: 100vw;
   height: 100vh;
   margin-bottom: 200px;
 `;
@@ -98,7 +84,7 @@ const WorksTitle = styled.div`
   h1 {
     text-align: center;
 
-    @media screen and (min-width: 1208px) {
+    @media screen and (min-width: 1280px) {
       text-align: left;
       font-size: 55pt;
       letter-spacing: -7px;
@@ -113,7 +99,7 @@ const WorksTitle = styled.div`
   p {
     font-weight: 300;
 
-    @media screen and (min-width: 1208px) {
+    @media screen and (min-width: 1280px) {
       margin-top: 2vh;
       font-size: 18pt;
       text-align: left;
@@ -129,7 +115,7 @@ const WorksTitle = styled.div`
 `;
 
 const ScrollMenuWrapper = styled.div`
-  @media screen and (min-width: 1208px) {
+  @media screen and (min-width: 1280px) {
     width: 70%;
   }
   width: 100%;
