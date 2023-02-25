@@ -11,9 +11,11 @@ const ProjectDetail = ()=> {
   const [projectData, setProjectData] = useState<API.ProjectData>();
 
   useEffect(() => {
-    API.getProjectData(projectId as string).then((apiResult: any) => {
-      setProjectData(apiResult);
-    });
+    if(projectId !== undefined) {
+      API.getProjectData(projectId as string).then((apiResult: any) => {
+        setProjectData(apiResult);
+      });
+    }
   }, [projectId]);
 
   if (!projectData) return (
