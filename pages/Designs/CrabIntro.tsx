@@ -66,14 +66,6 @@ const CrabIntro = () => {
             </CrabIntroDesc>
           </>
         )}
-
-        {/* <BackgroundCard
-          color="#C7E7FF"
-          height="22rem"
-          translateX="1100px"
-          translateY="-108px"
-          type="filled"
-        /> */}
       </CrabIntroContents>
 
       <CrabIntroLogoWrapper>
