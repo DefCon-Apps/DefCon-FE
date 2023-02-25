@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import Crab from "../../src/Common/Crab";
-import BackgroundCard from "../../src/Common/BackgroundCard";
 import { useMediaQuery } from "react-responsive";
 import { useEffect, useState } from "react";
 
@@ -68,13 +67,13 @@ const CrabIntro = () => {
           </>
         )}
 
-        <BackgroundCard
+        {/* <BackgroundCard
           color="#C7E7FF"
           height="22rem"
           translateX="1100px"
           translateY="-108px"
           type="filled"
-        />
+        /> */}
       </CrabIntroContents>
 
       <CrabIntroLogoWrapper>
