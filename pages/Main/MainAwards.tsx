@@ -3,7 +3,6 @@ import Link from "next/link";
 import Dbutton from "../../src/Common/Dbutton";
 import * as API from "../../src/Common/API";
 import { useState, useEffect } from "react";
-import BackgroundCard from "../../src/Common/BackgroundCard";
 import { useMediaQuery } from "react-responsive";
 
 type MainEventData = {
@@ -40,7 +39,7 @@ const MainAwards = () => {
         </AwardsTitle>
         <AwardsContents>
           {isDesktop ? (
-            <>
+            <AwardsContentsWrapper>
               <AwardsContentsContext>
                 <p>{mainEvent.content}</p>
                 <AwardsButton>
@@ -62,7 +61,7 @@ const MainAwards = () => {
                 </AwardsButton>
               </AwardsContentsContext>
               <AwardsImage src={mainEvent.image}></AwardsImage>
-            </>
+            </AwardsContentsWrapper>
           ) : (
             <>
               <AwardsImage src={mainEvent.image}></AwardsImage>
@@ -89,28 +88,6 @@ const MainAwards = () => {
             </>
           )}
         </AwardsContents>
-        <BackgroundCard
-          color={"#35B6F7"}
-          height={"35vh"}
-          translateX={"52vw"}
-          translateY={"-13vh"}
-          type={"filled"}
-        />
-        <BackgroundCard
-          color={"#00658F"}
-          height={"35vh"}
-          translateX={"50vw"}
-          translateY={"-20vh"}
-          type={"filled"}
-        />
-
-        <BackgroundCard
-          color={"#00658F"}
-          height={"35vh"}
-          translateX={"-60vw"}
-          translateY={"30.6vh"}
-          type={"bordered"}
-        />
       </MainAwardsStyle>
     </MainAwardsWrapper>
   );
@@ -123,15 +100,16 @@ const MainAwardsWrapper = styled.div`
   height: 100vh;
   font-family: "Noto Sans KR";
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 769px) {
     margin-bottom: 200px;
   }
 `;
 
 const MainAwardsStyle = styled.div`
+  width: 100vw;
   display: flex;
   flex-direction: column;
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 769px) {
     justify-content: flex-end;
     align-items: flex-end;
   }
@@ -142,15 +120,21 @@ const MainAwardsStyle = styled.div`
 `;
 
 const AwardsTitle = styled.div`
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 769px) {
     width: 60%;
+    background: #00658F;
+    border-radius: 2rem 0 0 2rem;
+    box-shadow: 16px 64px 0 0 #35B6F7;
   }
   h1 {
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: 769px) {
       text-align: right;
       font-size: 55pt;
       letter-spacing: -7px;
       color: #fff;
+      
+      padding: 96px 0 96px 32px;
+      margin-right: 32px;
     }
 
     @media screen and (max-width: 768px) {
@@ -163,7 +147,7 @@ const AwardsTitle = styled.div`
 `;
 
 const AwardsImage = styled.img`
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 769px) {
     width: 600px;
     height: 400px;
   }
@@ -172,8 +156,8 @@ const AwardsImage = styled.img`
     width: 400px;
     height: 250px;
   }
-
-  margin-top: 20px;
+  
+  margin-top: -64px;
   border-radius: 20px;
 `;
 
@@ -187,7 +171,7 @@ const AwardsButton = styled.div`
 const AwardsContents = styled.div`
   display: flex;
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 769px) {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -203,7 +187,7 @@ const AwardsContents = styled.div`
 
   p {
     font-weight: 100;
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: 769px) {
       width: 80%;
       text-align: left;
       font-size: 18pt;
@@ -219,10 +203,20 @@ const AwardsContents = styled.div`
   }
 `;
 
+const AwardsContentsWrapper = styled.div`
+  @media screen and (min-width: 769px) {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+`;
+
 const AwardsContentsContext = styled.div`
   display: flex;
   flex-direction: column;
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 769px) {
     align-items: flex-start;
   }
 
