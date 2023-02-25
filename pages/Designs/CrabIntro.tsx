@@ -5,14 +5,14 @@ import { useMediaQuery } from "react-responsive";
 import { useEffect, useState } from "react";
 
 const CrabIntro = () => {
-  const desktopChk = useMediaQuery({
+  const desktop = useMediaQuery({
     query: "(min-width:1280px)",
   });
-  const [isDesktop, setIsDesktop] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(true);
 
   useEffect(() => {
-    if (desktopChk) setIsDesktop(true);
-  }, [desktopChk]);
+    if (!desktop) setIsDesktop(false);
+  }, [isDesktop]);
 
   return (
     <CrabIntroWrapper>
