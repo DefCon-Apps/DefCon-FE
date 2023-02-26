@@ -12,7 +12,7 @@ const MainHistory = () => {
           <br />
           컴퓨터실에서부터
         </h1>
-        <HistoryImage src={"/Images/testImage.png"} />
+        <HistoryImage src={"/Images/defcon_history.jpeg"} />
       </HistoryTitle>
       <HistoryContents>
         <HistoryContentsBackground>
