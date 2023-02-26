@@ -150,7 +150,7 @@ const HistoryContents = styled.div`
     @media screen and (max-width: 768px) {
       text-align: center;
       font-size: 15pt;
-      margin 64px 16px 64px 16px;
+      margin: 64px 16px 64px 16px;
     }
     font-weight: 300;
   }
