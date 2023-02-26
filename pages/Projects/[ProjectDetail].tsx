@@ -41,10 +41,10 @@ const ProjectDetail = ()=> {
           <br></br>
 
           <ReactMarkdown
-            children={projectData.content}
             rehypePlugins={[RehypeRaw]}
-            remarkPlugins={[RemarkGFM]} />
-          {/*<ReactMarkdown>{projectData.content}</ReactMarkdown>*/}
+            remarkPlugins={[RemarkGFM]}>
+            {projectData.content}
+          </ReactMarkdown>
           <br></br>
 
           <h1>Tech Stack</h1>
