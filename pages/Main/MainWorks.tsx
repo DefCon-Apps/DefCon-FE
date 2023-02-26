@@ -6,27 +6,27 @@ const testArray = [
   {
     id: "w1",
     text: "Android",
-    image: "testImage.png",
+    image: "defcon_works_android.png",
   },
   {
     id: "w2",
     text: "iOS",
-    image: "testImage.png",
+    image: "defcon_works_ios.png",
   },
   {
     id: "w3",
     text: "Self-Repair",
-    image: "testImage.png",
+    image: "defcon_works_selfrepair.png",
   },
   {
     id: "w4",
     text: "Web",
-    image: "testImage.png",
+    image: "defcon_works_web.png",
   },
   {
     id: "w5",
     text: "Chat Bot",
-    image: "testImage.png",
+    image: "defcon_works_chatbot.png",
   },
 ];
 
