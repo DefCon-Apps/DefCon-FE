@@ -1,6 +1,8 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
+import RehypeRaw from "rehype-raw";
+import RemarkGFM from "remark-gfm";
 import styled from "styled-components";
 import * as API from "../../src/Common/API";
 import ImageSlider from "../../src/Common/ImageSlider";
@@ -37,8 +39,12 @@ const ProjectDetail = ()=> {
           <ImageSlider
             images={projectData.image} />
           <br></br>
-          
-          <ReactMarkdown>{projectData.content}</ReactMarkdown>
+
+          <ReactMarkdown
+            rehypePlugins={[RehypeRaw]}
+            remarkPlugins={[RemarkGFM]}>
+            {projectData.content.toString().replaceAll("\\n", "\n")}
+          </ReactMarkdown>
           <br></br>
 
           <h1>Tech Stack</h1>
