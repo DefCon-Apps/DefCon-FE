@@ -43,7 +43,7 @@ const ProjectDetail = ()=> {
           <ReactMarkdown
             rehypePlugins={[RehypeRaw]}
             remarkPlugins={[RemarkGFM]}>
-            {projectData.content}
+            {projectData.content.toString().replaceAll("\\n", "\n")}
           </ReactMarkdown>
           <br></br>
 
