@@ -106,10 +106,10 @@ const MainAwardsWrapper = styled.div`
 `;
 
 const MainAwardsStyle = styled.div`
-  width: 100vw;
   display: flex;
   flex-direction: column;
   @media screen and (min-width: 769px) {
+    width: 80%;
     justify-content: flex-end;
     align-items: flex-end;
   }
@@ -123,11 +123,12 @@ const AwardsTitle = styled.div`
   @media screen and (min-width: 769px) {
     width: 60%;
     background: #00658F;
-    border-radius: 2rem 0 0 2rem;
+    border-radius: 2rem 2rem 2rem 2rem;
     box-shadow: 16px 64px 0 0 #35B6F7;
   }
   h1 {
     @media screen and (min-width: 769px) {
+      width: 90%;
       text-align: right;
       font-size: 55pt;
       letter-spacing: -7px;
