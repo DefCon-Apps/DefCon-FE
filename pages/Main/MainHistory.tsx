@@ -6,56 +6,56 @@ import BackgroundCard from "../../src/Common/BackgroundCard";
 const MainHistory = () => {
   return (
     <MainHistoryWrapper>
-      <HistoryTitle>
-        <h1>
-          시작은 성보고 꼭대기
-          <br />
-          컴퓨터실에서부터
-        </h1>
-        <HistoryImage src={"/Images/defcon_history.jpeg"} />
-      </HistoryTitle>
-      <HistoryContents>
-        <HistoryContentsBackground>
-          <p>
-            DEF:CON은 성보고등학교 컴퓨터실에서 시작된 동아리로 소프트웨어를
-            좋아하는 학생들이 모여 재미있는 일을 하던 데에서 시작되었습니다. 학교
-            행사에도 적극적으로 참여해 우리가 좋아하는 것들을 다른 학생들과
-            나눴죠.
-          </p>
-          <HistoryButton>
-            <Link
-              href="https://play.google.com/store/apps/details?id=com.defcon.sungbo&hl=ko&gl=US"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Dbutton
-                text={"성보고 App"}
-                textColor={"#FFFFFF"}
-                textSize={20}
-                width={12}
-                height={3}
-                btnColor={"#001E2E"}
-                direction={"left"}
-              />
-            </Link>
-            <Link
-              href="https://sungbo.sen.hs.kr/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Dbutton
-                text={"성보고 알아보기"}
-                textColor={"#FFFFFF"}
-                textSize={20}
-                width={12}
-                height={3}
-                btnColor={"#001E2E"}
-                direction={"left"}
-              />
-            </Link>
-          </HistoryButton>
-        </HistoryContentsBackground>
-      </HistoryContents>
+        <HistoryTitle>
+          <h1>
+            시작은 성보고 꼭대기
+            <br />
+            컴퓨터실에서부터
+          </h1>
+          <HistoryImage src={"/Images/defcon_history.jpeg"} />
+        </HistoryTitle>
+        <HistoryContents>
+          <HistoryContentsBackground>
+            <p>
+              DEF:CON은 성보고등학교 컴퓨터실에서 시작된 동아리로 소프트웨어를
+              좋아하는 학생들이 모여 재미있는 일을 하던 데에서 시작되었습니다.
+              학교 행사에도 적극적으로 참여해 우리가 좋아하는 것들을 다른
+              학생들과 나눴죠.
+            </p>
+            <HistoryButton>
+              <Link
+                href="https://play.google.com/store/apps/details?id=com.defcon.sungbo&hl=ko&gl=US"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Dbutton
+                  text={"성보고 App"}
+                  textColor={"#FFFFFF"}
+                  textSize={20}
+                  width={12}
+                  height={3}
+                  btnColor={"#001E2E"}
+                  direction={"left"}
+                />
+              </Link>
+              <Link
+                href="https://sungbo.sen.hs.kr/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Dbutton
+                  text={"성보고 알아보기"}
+                  textColor={"#FFFFFF"}
+                  textSize={20}
+                  width={12}
+                  height={3}
+                  btnColor={"#001E2E"}
+                  direction={"left"}
+                />
+              </Link>
+            </HistoryButton>
+          </HistoryContentsBackground>
+        </HistoryContents>
     </MainHistoryWrapper>
   );
 };
@@ -67,7 +67,7 @@ const MainHistoryWrapper = styled.div`
   font-family: "Noto Sans KR";
 
   @media screen and (min-width: 769px) {
-    width: 100%;
+    width: 80%;
     flex-direction: row;
     margin-bottom: 200px;
     margin-left: 64px;
@@ -75,10 +75,10 @@ const MainHistoryWrapper = styled.div`
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
-
     margin-top: 300px;
   }
 `;
+
 
 const HistoryTitle = styled.div`
   display: flex;
@@ -159,7 +159,7 @@ const HistoryContents = styled.div`
 const HistoryContentsBackground = styled.div`
   @media screen and (min-width: 769px) {
     border-radius: 2rem 0 0 2rem;
-    background-color: #C7E7FF;
+    background-color: #c7e7ff;
   }
 `;
 
