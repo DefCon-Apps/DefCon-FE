@@ -118,8 +118,8 @@ const HistoryButton = styled.div`
   display: flex;
   flex-direction: row;
   @media screen and (min-width: 769px) {
-    justify-content: center;
-    padding-bottom: 64px;
+    justify-content: right;
+    padding: 0px 64px 64px 0px;
   }
   justify-content: center;
   margin: 0.5rem 0rem 0rem 0rem;
@@ -132,6 +132,7 @@ const HistoryContents = styled.div`
   @media screen and (min-width: 769px) {
     align-items: flex-end;
     margin: 192px 0 0 64px;
+    padding-right: 15px;
   }
 
   @media screen and (max-width: 768px) {
@@ -141,10 +142,10 @@ const HistoryContents = styled.div`
 
   p {
     @media screen and (min-width: 769px) {
-      width: 80%;
       text-align: right;
       font-size: 18pt;
-      padding: 64px 0 16px 64px;
+      margin-right: 0px;
+      padding: 64px 64px 16px 64px;
     }
 
     @media screen and (max-width: 768px) {
@@ -153,12 +154,13 @@ const HistoryContents = styled.div`
       margin: 64px 16px 64px 16px;
     }
     font-weight: 300;
+    
   }
 `;
 
 const HistoryContentsBackground = styled.div`
   @media screen and (min-width: 769px) {
-    border-radius: 2rem 0 0 2rem;
+    border-radius: 2rem 2rem 2rem 2rem;
     background-color: #c7e7ff;
   }
 `;
