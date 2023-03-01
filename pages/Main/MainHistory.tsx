@@ -100,7 +100,7 @@ const HistoryTitle = styled.div`
 const HistoryContents = styled.div`
   display: flex;
   justify-content: center;
-  font-weight: 300;
+  font-weight: 100;
 
   @media screen and (min-width: 1280px) {
     flex-direction: row;
