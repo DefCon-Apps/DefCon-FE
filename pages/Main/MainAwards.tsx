@@ -58,7 +58,6 @@ const MainAwards = () => {
 };
 
 const MainAwardsWrapper = styled.div`
-  width: 70vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -67,6 +66,7 @@ const MainAwardsWrapper = styled.div`
 
   @media screen and (min-width: 1280px) {
     align-items: flex-end;
+    width: 70vw;
   }
 
   @media screen and (max-width: 1023px) {
@@ -76,16 +76,18 @@ const MainAwardsWrapper = styled.div`
 `;
 
 const AwardsTitle = styled.div`
-  width: 50vw;
+  width: 80%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: flex-end;
 
   @media screen and (min-width: 1280px) {
+    width: 50vw;
     background: #00658f;
     border-radius: 2rem;
     box-shadow: 16px 64px 0 0 #35b6f7;
+
   }
 
   h1 {
@@ -176,8 +178,8 @@ const AwardsImage = styled.img`
 
   @media screen and (max-width: 1023px) {
     margin-top: 2vh;
-    width: 400px;
-    height: 266px;
+    width: 350px;
+    height: 232px;
   }
 `;
 
