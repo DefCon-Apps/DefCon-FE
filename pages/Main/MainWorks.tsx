@@ -69,6 +69,7 @@ const MainWorksWrapper = styled.div`
 const MainWorksContents = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
 `;
 
 const WorksTitle = styled.div`
@@ -76,7 +77,7 @@ const WorksTitle = styled.div`
   flex-direction: column;
 
   @media screen and (min-width: 1280px) {
-    margin-left: 32px;
+    width: 70vw; 
   }
 
   @media screen and (max-width: 1279px) {
