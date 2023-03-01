@@ -19,8 +19,8 @@ const MainTitle = () => {
     <MainTitleStyle>
       <TitleContentsStyle>
         <Crab
-          width={isDesktop ? 18 : 12}
-          height={isDesktop ? 18 : 12}
+          width={isDesktop ? 280 : 180}
+          height={isDesktop ? 280 : 180}
           marginTop={2}
           anim={true}
         />
