@@ -36,15 +36,14 @@ const LogoIntroWrapper = styled.div`
 `;
 
 const LogoIntroContainer = styled.div`
-  width: 70vw;
+  @media screen and (min-width: 1024px) {
+    width: 70vw;
+  }
   display: flex;
   flex-direction: column;
 `;
 
 const LogoIntroTitle = styled.div`
-  @media screen and (min-width: 1280px) {
-    
-  }
   h1 {
     @media screen and (min-width: 1280px) {
       font-size: 45pt;
@@ -52,7 +51,7 @@ const LogoIntroTitle = styled.div`
       text-align: left;
     }
     @media screen and (max-width: 768px) {
-      font-size: 22pt;
+      font-size: 27pt;
       letter-spacing: -2px;
       text-align: center;
     }
@@ -61,11 +60,11 @@ const LogoIntroTitle = styled.div`
 
 const LogoIntroImg = styled.img`
   @media screen and (min-width: 1280px) {
-    flex-basis: 40%;
+    flex:1;
     width: 30rem;
   }
   @media screen and (max-width: 768px) {
-    width: 55vw;
+    width: 80vw;
     margin-top: 5vh;
   }
 `;
@@ -91,12 +90,12 @@ const LogoIntroContents = styled.div`
   }
   p {
     @media screen and (min-width: 1280px) {
-      flex-basis: 40%;
+      flex: 1;
+      margin-left: 50px;
       text-align: right;
     }
     @media screen and (max-width: 768px) {
-      width: 85%;
-      margin-top: 5vh;
+      margin: 3rem 2rem 2rem 2rem;
       text-align: center;
     }
   }

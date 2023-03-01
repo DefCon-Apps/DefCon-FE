@@ -1,4 +1,3 @@
-import Link from "next/link";
 import LogoIntro from "./LogoIntro";
 import CrabIntro from "./CrabIntro";
 

@@ -100,9 +100,9 @@ const CrabIntroWrapper = styled.div`
 `;
 
 const CrabIntroContents = styled.div`
-  width: 70vw;
   display: flex;
   @media screen and (min-width: 1280px) {
+    width: 70vw;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
@@ -133,15 +133,15 @@ const CrabIntroTitle = styled.div`
 
 const CrabIntroDesc = styled.div`
   margin-top: 5vh;
+  font-size: 18pt;
   font-weight: 100;
-  font-size: 1.5em;
+  
   p {
     @media screen and (min-width: 1280px) {
-      flex-basis: 70%;
       text-align: left;
     }
     @media screen and (max-width: 768px) {
-      width: 65vw;
+      margin: 3rem 2rem 2rem 2rem;
       font-size: 12pt;
       text-align: center;
     }
