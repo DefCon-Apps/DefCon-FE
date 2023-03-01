@@ -22,9 +22,9 @@ const ProjectListItem = (props: Props) => {
 const ListItemWrapper = styled.div`
   text-align: center;
   @media all and (min-width: 768px) {
-    margin 0 20px 0 20px;
+    margin: 0 20px 0 20px;
   }
-  margin 0 10px 0 10px;
+  margin: 0 10px 0 10px;
 `;
 
 const ListItemImage = styled(Image)`
