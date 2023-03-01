@@ -31,7 +31,7 @@ const MainHistory = () => {
                 text={"성보고 App"}
                 textColor={"#FFFFFF"}
                 textSize={20}
-                width={12}
+                width={11}
                 height={3}
                 btnColor={"#001E2E"}
                 direction={"left"}
@@ -46,7 +46,7 @@ const MainHistory = () => {
                 text={"성보고 알아보기"}
                 textColor={"#FFFFFF"}
                 textSize={20}
-                width={12}
+                width={11}
                 height={3}
                 btnColor={"#001E2E"}
                 direction={"left"}
@@ -60,12 +60,18 @@ const MainHistory = () => {
 };
 
 const MainHistoryWrapper = styled.div`
-  width: 70vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   font-family: "Noto Sans KR";
+
+  @media screen and (min-width: 1024px) {
+    width: 70vw;
+  }
+
+  @media screen and (max-width: 768px) {
+  }
 `;
 
 const HistoryTitle = styled.div`
@@ -105,7 +111,6 @@ const HistoryContents = styled.div`
   @media screen and (min-width: 1280px) {
     flex-direction: row;
     align-items: center;
-    
   }
 
   @media screen and (max-width: 1279px) {
@@ -129,7 +134,7 @@ const HistoryContents = styled.div`
       letter-spacing: -1px;
     }
 
-    @media screen and (min-width: 768px) and (max-width:1023px) {
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
       font-size: 18pt;
       margin: 2rem 0 2rem 0;
       text-align: center;
@@ -137,12 +142,10 @@ const HistoryContents = styled.div`
 
     @media screen and (max-width: 768px) {
       text-align: center;
-      margin: 2rem 0 2rem 0;
+      margin: 2rem 2rem 2rem 2rem;
       font-size: 16pt;
       letter-spacing: -1px;
-      
     }
-    
   }
 `;
 
@@ -162,13 +165,17 @@ const HistoryImage = styled.img`
     margin-top: 2vh;
     width: 400px;
   }
+
+  @media screen and (max-width: 768px) {
+    width: 350px;
+  }
 `;
 
 const HistoryButton = styled.div`
   display: flex;
   flex-direction: row;
   margin: 0.5rem 0rem 0rem 0rem;
-  
+
   @media screen and (min-width: 1280px) {
     padding: 0px 35px 50px 0px;
     justify-content: flex-end;
@@ -177,7 +184,10 @@ const HistoryButton = styled.div`
   @media screen and (max-width: 1279px) {
     justify-content: center;
   }
-  
+
+  @media screen and (max-width: 768px) {
+    margin: 1rem 1rem 0rem 1rem;
+  }
 `;
 
 const HistoryContentsBackground = styled.div`
