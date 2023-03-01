@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Image from "next/image";
 
 interface Props {
   width: number;
@@ -15,7 +16,7 @@ const Crab = (props: Props) => {
       marginTop={props.marginTop}
       anim={props.anim}
     >
-      <img src="/Images/crab.svg" />
+      <Image src="/Images/crab.svg" alt="게새기" width={100} height={100}/>
     </CrabStyle>
   );
 };

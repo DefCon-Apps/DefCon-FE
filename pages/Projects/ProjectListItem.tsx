@@ -49,7 +49,7 @@ const ListItemImage = styled(Image)`
 `;
 
 const ListItemTitle = styled.h2`
-  margin 8px 0 16px 0;
+  margin: 8px 0 16px 0;
 `;
 
 export default ProjectListItem
