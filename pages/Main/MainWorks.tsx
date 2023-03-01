@@ -43,11 +43,11 @@ const MainWorks = () => {
           </p>
         </WorksTitle>
         <ScrollMenuWrapper>
-          <ScrollMenu>
+          <StyledScrollMenu>
             {testArray.map((items) => (
               <WorksCard key={items.id} text={items.text} image={items.image} />
             ))}
-          </ScrollMenu>
+          </StyledScrollMenu>
         </ScrollMenuWrapper>
       </MainWorksContents>
     </MainWorksWrapper>
@@ -57,8 +57,10 @@ const MainWorks = () => {
 const MainWorksWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  @media screen and (max-width: 1279px) {
+    justify-content: center;
+    align-items: center; 
+  }
   width: 100vw;
   height: 100vh;
   margin-bottom: 200px;
@@ -67,16 +69,17 @@ const MainWorksWrapper = styled.div`
 const MainWorksContents = styled.div`
   display: flex;
   flex-direction: column;
-  @media screen and (min-width: 1280px) {
-    margin-left: 400px;
-  }
 `;
 
 const WorksTitle = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (min-width: 1280px) {
+    margin-left: 32px;
+  }
+
+  @media screen and (max-width: 1279px) {
     justify-content: center;
     align-items: center;
   }
@@ -90,7 +93,7 @@ const WorksTitle = styled.div`
       letter-spacing: -7px;
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1279px) {
       font-size: 40pt;
       letter-spacing: -5px;
     }
@@ -105,7 +108,7 @@ const WorksTitle = styled.div`
       text-align: left;
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1279px) {
       width: 85vw;
       margin-top: 5vh;
       font-size: 15pt;
@@ -115,11 +118,13 @@ const WorksTitle = styled.div`
 `;
 
 const ScrollMenuWrapper = styled.div`
-  @media screen and (min-width: 1280px) {
-    width: 70%;
-  }
-  width: 100%;
+  width: 100vw;
+  overflow-x: scroll;
   margin-top: 5vh;
+`;
+
+const StyledScrollMenu = styled(ScrollMenu)`
+  width: 100vw;
 `;
 
 export default MainWorks;

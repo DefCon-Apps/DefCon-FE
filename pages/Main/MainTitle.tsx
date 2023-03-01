@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 
 const MainTitle = () => {
   const desktop = useMediaQuery({
-    query: "(min-width:1208px)",
+    query: "(min-width:1280px)",
   });
   const [isDesktop, setIsDesktop] = useState(true);
 
@@ -57,7 +57,7 @@ const MainTitleStyle = styled.div`
 
 const TitleContentsStyle = styled.div`
   display: flex;
-  margin-top: 20px;
+  margin: 20px 50px 0 50px;
 
   @media screen and (min-width: 1280px) {
     flex-direction: row;
@@ -65,7 +65,7 @@ const TitleContentsStyle = styled.div`
     justify-content: center;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1279px) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -79,7 +79,7 @@ const TitleContentsStyle = styled.div`
       font-size: 70pt;
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1279px) {
       font-size: 40pt;
     }
   }
@@ -92,7 +92,7 @@ const TitleContentsStyle = styled.div`
       font-size: 25pt;
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1279px) {
       font-size: 15pt;
     }
   }
@@ -104,7 +104,7 @@ const TitleContentsStyle = styled.div`
       font-size: 20pt;
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1279px) {
       margin-top: 2vh;
       margin-bottom: 2vh;
       font-size: 15pt;
@@ -139,7 +139,7 @@ const ScrollIconStyle = styled.div`
     margin-top: 180px;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1279px) {
     margin-top: 50px;
   }
   transform: translatey(0px);
