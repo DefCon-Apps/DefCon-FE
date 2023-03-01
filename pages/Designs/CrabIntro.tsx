@@ -75,9 +75,9 @@ const CrabIntro = () => {
           <Logo src="/Images/mainLogo.svg" />
         </LogoHistoryWrapper>
         {isDesktop ? (
-          <Crab width={15} height={15} marginTop={8} anim={true} />
+          <Crab width={280} height={280} marginTop={8} anim={true} />
         ) : (
-          <Crab width={10} height={10} marginTop={2} anim={true} />
+          <Crab width={180} height={180} marginTop={2} anim={true} />
         )}
       </CrabIntroLogoWrapper>
     </CrabIntroWrapper>
