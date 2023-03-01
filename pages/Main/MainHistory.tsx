@@ -69,9 +69,6 @@ const MainHistoryWrapper = styled.div`
   @media screen and (min-width: 1024px) {
     width: 70vw;
   }
-
-  @media screen and (max-width: 768px) {
-  }
 `;
 
 const HistoryTitle = styled.div`
