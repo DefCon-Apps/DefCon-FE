@@ -19,7 +19,7 @@ const ProjectSection = (props: Props) => {
 }
 
 const SectionWrapper = styled.div`
-  width: 100vw;
+  width: 70vw;
   height: 100vh;
   display: flex;
   justify-content: center;

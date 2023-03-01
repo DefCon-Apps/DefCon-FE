@@ -60,6 +60,10 @@ const Projects = () => {
 
 const ProjectWrapper = styled.div`
   font-family: "Noto Sans KR";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-conetent: center;
 `;
 
 export default Projects;
