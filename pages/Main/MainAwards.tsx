@@ -23,7 +23,7 @@ const MainAwards = () => {
     API.getMainEventData().then((apiResult: any) => {
       setMainEvent(apiResult);
     });
-  });
+  }, []);
 
   return (
     <MainAwardsWrapper>
