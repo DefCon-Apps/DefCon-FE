@@ -69,7 +69,7 @@ const MainAwardsWrapper = styled.div`
     width: 70vw;
   }
 
-  @media screen and (max-width: 1023px) {
+  @media screen and (max-width: 1279px) {
     margin-bottom: 200px;
     align-items: center;
   }
