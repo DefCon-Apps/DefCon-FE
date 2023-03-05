@@ -51,7 +51,7 @@ const LogoIntroTitle = styled.div`
       text-align: left;
     }
 
-    @media screen and (min-width: 1024px) and (max-width: 1279px) {
+    @media screen and (min-width: 769px) and (max-width: 1279px) {
       font-size: 35pt;
       letter-spacing: -4px;
       text-align: center;
@@ -73,8 +73,8 @@ const LogoIntroImg = styled.img`
     width: 30vw;
   }
 
-  @media screen and (min-width: 1024px) and (max-width: 1279px) {
-    width: 35vw;
+  @media screen and (min-width: 769px) and (max-width: 1279px) {
+    width: 40vw;
   }
 
   @media screen and (max-width: 768px) {
@@ -94,7 +94,7 @@ const LogoIntroContents = styled.div`
     margin-top: 15vh;
   }
 
-  @media screen and (min-width: 1024px) and (max-width: 1279px) {
+  @media screen and (min-width: 769px) and (max-width: 1279px) {
     text-align: center;
     flex-direction: column;
     justify-content: center;
@@ -117,7 +117,7 @@ const LogoIntroContents = styled.div`
       text-align: right;
     }
 
-    @media screen and (min-width: 1024px) and (max-width: 1279px) {
+    @media screen and (min-width: 769px) and (max-width: 1279px) {
       margin-top: 5vh;
       font-size: 15pt;
       font-weight: 100;
