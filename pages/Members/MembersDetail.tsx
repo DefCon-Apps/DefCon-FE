@@ -44,7 +44,10 @@ const MemberDetailHistoryItem = (props: {historyData: {content: string, date: st
 }
 
 const MembersDetailContainer = styled.div`
-    height: 780px;
+    @media screen and (min-width: 1280px) {
+        height: 780px;    
+    }
+    height: 100%;
     width: 100%;
     overflow-y: scroll;
     
