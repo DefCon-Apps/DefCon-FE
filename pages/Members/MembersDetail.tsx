@@ -44,14 +44,15 @@ const MemberDetailHistoryItem = (props: {historyData: {content: string, date: st
 }
 
 const MembersDetailContainer = styled.div`
-    height: 100%;
+    height: 780px;
     width: 100%;
+    overflow-y: scroll;
     
     display: flex;
     flex-direction: column;
     align-items: center;
     
-    margin: 30px 0 100px 0;
+    margin: 30px 0 0 0;
 
     border: 1rem solid;
     border-color: #35B6F7;
