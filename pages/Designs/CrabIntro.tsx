@@ -120,7 +120,7 @@ const CrabIntroDesc = styled.div`
     }
 
     @media screen and (max-width: 768px) {
-      margin: 5vh 2rem 2rem 2rem;
+      width: 40vh;
       font-size: 12pt;
       text-align: center;
     }
