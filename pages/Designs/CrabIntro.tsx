@@ -29,7 +29,6 @@ const CrabIntro = () => {
           </h1>
         </CrabIntroTitle>
       </CrabIntroContents>
-
       <CrabIntroLogoWrapper>
         <LogoHistoryWrapper>
           <Logo src="/Images/firstLogo.svg" />
@@ -117,11 +116,11 @@ const CrabIntroDesc = styled.div`
 
     @media screen and (min-width: 769px) and (max-width: 1279px) {
       font-size: 15pt;
-      text-align: center;  
+      text-align: center;
     }
 
     @media screen and (max-width: 768px) {
-      margin: 3rem 2rem 2rem 2rem;
+      width: 40vh;
       font-size: 12pt;
       text-align: center;
     }
@@ -138,7 +137,6 @@ const CrabIntroLogoWrapper = styled.div`
   }
   @media screen and (max-width: 768px) {
     flex-direction: column;
-    margin-top: 5vh;
     justify-content: center;
     align-items: center;
   }
@@ -155,7 +153,7 @@ const LogoHistoryWrapper = styled.div`
   }
   @media screen and (max-width: 768px) {
     margin-top: 5vh;
-    margin-right: 0;
+    margin-bottom: -8vh;
   }
 `;
 
