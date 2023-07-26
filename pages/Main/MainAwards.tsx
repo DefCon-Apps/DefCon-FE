@@ -21,6 +21,7 @@ const MainAwards = () => {
 
   useEffect(() => {
     API.getMainEventData().then((apiResult: any) => {
+      console.log(apiResult);
       setMainEvent(apiResult);
     });
   }, []);
@@ -71,6 +72,7 @@ const MainAwardsWrapper = styled.div`
 
   @media screen and (max-width: 1279px) {
     margin-bottom: 200px;
+    width: 50vw;
     align-items: center;
   }
 `;

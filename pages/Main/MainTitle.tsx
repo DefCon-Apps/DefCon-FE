@@ -48,13 +48,13 @@ const MainTitle = () => {
 const MainTitleStyle = styled.div`
   font-family: "Noto Sans KR";
 
-  width: 90vw;
+  width:70vw;
   height: 100%;
 
   padding-top: 15rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 
   @media screen and (max-width: 820px) {
@@ -71,7 +71,7 @@ const MainTitleStyle = styled.div`
 `;
 
 const TitleContentsStyle = styled.div`
-  width: 65%;
+  /* width: 65%; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -86,6 +86,7 @@ const TitleContentsStyle = styled.div`
 `;
 
 const IntroStyle = styled.div`
+  margin-left: 10rem;
   padding-top: 2rem;
   text-align: right;
   p{
@@ -100,6 +101,7 @@ const IntroStyle = styled.div`
 
   @media screen and (max-width: 820px) {
     // iPad Air (820 * 1180) 이하의 기기에서 적용될 스타일
+    margin-left: 0rem;
     padding-top: 5rem;
     text-align: center;
     p{
@@ -114,6 +116,7 @@ const IntroStyle = styled.div`
 
   @media screen and (max-width: 414px) {
     // iPhone XR (414 * 896) 이하의 기기에서 적용될 스타일
+    margin-left: 0rem;
     text-align: center;
     p{
       font-size: 1.2rem;
