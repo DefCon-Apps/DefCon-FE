@@ -92,7 +92,7 @@ const AwardsTitle = styled.div`
 
   @media screen and (max-width: 820px) {
     // iPad Air (820 * 1180) 이하의 기기에서 적용될 스타일
-    width: 70vw;
+    width: 100%;
     align-items: center;
     h1 {
       text-align: center;
@@ -103,7 +103,6 @@ const AwardsTitle = styled.div`
 
   @media screen and (max-width: 414px) {
     // iPhone XR (414 * 896) 이하의 기기에서 적용될 스타일
-    width: 80vw;
     h1 {
       text-align: center;
       font-size: 2.3rem;

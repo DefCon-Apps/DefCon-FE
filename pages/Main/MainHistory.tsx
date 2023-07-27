@@ -73,6 +73,7 @@ const MainHistoryWrapper = styled.div`
 `;
 
 const HistoryTitle = styled.div`
+  width: 60vw;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -87,6 +88,7 @@ const HistoryTitle = styled.div`
 
   @media screen and (max-width: 820px) {
     // iPad Air (820 * 1180) 이하의 기기에서 적용될 스타일
+    width: 80vw;
     align-items: center;
     h1 {
       text-align: center;
@@ -97,7 +99,6 @@ const HistoryTitle = styled.div`
 
   @media screen and (max-width: 414px) {
     // iPhone XR (414 * 896) 이하의 기기에서 적용될 스타일
-    width: 70vw;
     h1 {
       text-align: center;
       font-size: 2.3rem;
