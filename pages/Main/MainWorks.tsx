@@ -39,7 +39,8 @@ const MainWorks = () => {
           <p>
             우리 DEF:CON이 관심을 갖고 즐겨온 일들의 카테고리입니다.
             <br />
-            소프트웨어가 사용될 수 있다면 우리는 뭐든 재미있게 갖고 놀 수 있습니다.
+            소프트웨어가 사용될 수 있다면 우리는 뭐든 재미있게 갖고 놀 수
+            있습니다.
           </p>
         </WorksTitle>
         <ScrollMenuWrapper>
@@ -55,77 +56,99 @@ const MainWorks = () => {
 };
 
 const MainWorksWrapper = styled.div`
+  width: 65vw;
+  height: 80vh;
   display: flex;
   flex-direction: row;
-  @media screen and (max-width: 1279px) {
-    justify-content: center;
-    align-items: center; 
+  justify-content: center;
+  align-items: flex-start;
+  margin: 10vh 0vh 20vh 0vh;
+
+  @media screen and (max-width: 820px) {
+    // iPad Air (820 * 1180) 이하의 기기에서 적용될 스타일
+    margin: 10vh 0vh 10vh 0vh;
   }
-  width: 100vw;
-  height: 100vh;
-  margin-bottom: 200px;
 `;
 
 const MainWorksContents = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 `;
 
 const WorksTitle = styled.div`
   display: flex;
   flex-direction: column;
-
-  @media screen and (min-width: 1280px) {
-    width: 70vw; 
-  }
-
-  @media screen and (max-width: 1279px) {
-    justify-content: center;
-    align-items: center;
-  }
+  align-items: flex-start;
 
   h1 {
-    text-align: center;
-
-    @media screen and (min-width: 1280px) {
-      text-align: left;
-      font-size: 55pt;
-      letter-spacing: -7px;
-    }
-
-    @media screen and (max-width: 1279px) {
-      font-size: 40pt;
-      letter-spacing: -5px;
-    }
+    text-align: left;
+    font-size: 5rem;
+    letter-spacing: -7px;
   }
 
   p {
-    font-weight: 300;
+    width: 100%;
+    font-weight: 100;
+    margin-top: 2vh;
+    font-size: 1.5rem;
+    text-align: left;
+  }
 
-    @media screen and (min-width: 1280px) {
-      margin-top: 2vh;
-      font-size: 18pt;
-      text-align: left;
+  @media screen and (max-width: 820px) {
+    // iPad Air (820 * 1180) 이하의 기기에서 적용될 스타일
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      text-align: center;
+      font-size: 4rem;
+      letter-spacing: -5px;
     }
 
-    @media screen and (max-width: 1279px) {
-      width: 85vw;
-      margin-top: 5vh;
-      font-size: 15pt;
+    p {
+      width: 100%;
+      margin: 3vh 0vh 3vh 0vh;
+      font-size: 2rem;
       text-align: center;
+    }
+  }
+
+  @media screen and (max-width: 414px) {
+    // iPhone XR (414 * 896) 이하의 기기에서 적용될 스타일
+    h1 {
+      text-align: center;
+      font-size: 2.3rem;
+      letter-spacing: -2px;
+    }
+
+    p {
+      text-align: center;
+      font-size: 1.2rem;
     }
   }
 `;
 
 const ScrollMenuWrapper = styled.div`
-  width: 100vw;
+  width: 80vw;
+  margin-left: -5vw;
   overflow-x: scroll;
   margin-top: 5vh;
+
+  @media screen and (max-width: 820px) {
+    // iPad Air (820 * 1180) 이하의 기기에서 적용될 스타일
+    width: 80vw;
+  }
+
+  @media screen and (max-width: 414px) {
+    // iPhone XR (414 * 896) 이하의 기기에서 적용될 스타일
+    width: 80vw;
+  }
 `;
 
 const StyledScrollMenu = styled(ScrollMenu)`
-  width: 100vw;
+  width: 100%;
 `;
 
 export default MainWorks;

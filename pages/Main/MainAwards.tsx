@@ -72,7 +72,7 @@ const MainAwardsWrapper = styled.div`
   @media screen and (max-width: 820px) {
     // iPad Air (820 * 1180) 이하의 기기에서 적용될 스타일
     align-items: center;
-    margin-bottom: 25vh;
+    margin-bottom: 30vh;
   }
 `;
 

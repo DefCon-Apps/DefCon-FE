@@ -100,7 +100,6 @@ const HistoryTitle = styled.div`
   @media screen and (max-width: 414px) {
     // iPhone XR (414 * 896) 이하의 기기에서 적용될 스타일
     h1 {
-      text-align: center;
       font-size: 2.3rem;
       letter-spacing: -2px;
     }
@@ -116,7 +115,7 @@ const HistoryContents = styled.div`
   
 
   p {
-    flex: 3;
+    flex: 1;
     text-align: right;
     font-size: 1.5rem;
     letter-spacing: -1px;
