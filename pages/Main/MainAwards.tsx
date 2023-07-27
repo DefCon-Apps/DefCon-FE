@@ -77,14 +77,14 @@ const MainAwardsWrapper = styled.div`
 `;
 
 const AwardsTitle = styled.div`
-  width: 60%;
+  width: 40vw;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: flex-end;
 
   h1 {
-    width: 80%;
+    width: 100%;
     text-align: right;
     font-size: 5rem;
     letter-spacing: -7px;
@@ -93,7 +93,7 @@ const AwardsTitle = styled.div`
 
   @media screen and (max-width: 820px) {
     // iPad Air (820 * 1180) 이하의 기기에서 적용될 스타일
-    width: 100%;
+    width: 70vw;
     align-items: center;
     h1 {
       text-align: center;
@@ -105,6 +105,7 @@ const AwardsTitle = styled.div`
   @media screen and (max-width: 414px) {
     // iPhone XR (414 * 896) 이하의 기기에서 적용될 스타일
     h1 {
+      width: 100%;
       text-align: center;
       font-size: 2.3rem;
       letter-spacing: -2px;
