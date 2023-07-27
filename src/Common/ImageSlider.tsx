@@ -22,7 +22,7 @@ const ImageSlider = (props: Props) => {
     <SliderStyle>
       <Slider {...settings} >
         {props.images.map((url, i) => (
-          <Image alt="Project Image" src={`/${url}`} key={i} width={600} height={450}/>
+          <Image alt="Project Image" src={url} key={i} width={600} height={450}/>
         ))}
       </Slider>
     </SliderStyle>
