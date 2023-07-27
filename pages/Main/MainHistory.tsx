@@ -16,10 +16,7 @@ const MainHistory = () => {
         <HistoryImage src={"/Images/defcon_history.jpeg"} />
         <HistoryContentsBackground>
           <p>
-            DEF:CON은 성보고등학교 컴퓨터실에서 시작된 동아리로 소프트웨어를
-            좋아하는 학생들이 모여 재미있는 일을 하던 데에서 시작되었습니다.
-            학교 행사에도 적극적으로 참여해 우리가 좋아하는 것들을 다른 학생들과
-            나눴죠.
+            DEF:CON은 성보고등학교 컴퓨터실에서 시작된 동아리로 소프트웨어를 좋아하는 학생들이 모여 재미있는 일을 하던 데에서 시작되었습니다. 학교 행사에도 적극적으로 참여해 우리가 좋아하는 것들을 다른 학생들과 나눴죠.
           </p>
           <HistoryButton>
             <Link
@@ -60,7 +57,7 @@ const MainHistory = () => {
 };
 
 const MainHistoryWrapper = styled.div`
-  width: 70vw;
+  width: 65vw;
   height: 100vh;
   padding-top: 10rem;
   display: flex;
@@ -78,10 +75,10 @@ const MainHistoryWrapper = styled.div`
 const HistoryTitle = styled.div`
   display: flex;
   flex-direction: row;
+  align-items: flex-start;
   justify-content: center;
 
   h1 {
-    align-items: flex-start;
     flex: 1;
     text-align: left;
     font-size: 5rem;
@@ -90,6 +87,7 @@ const HistoryTitle = styled.div`
 
   @media screen and (max-width: 820px) {
     // iPad Air (820 * 1180) 이하의 기기에서 적용될 스타일
+    align-items: center;
     h1 {
       text-align: center;
       font-size: 4rem;
@@ -99,9 +97,10 @@ const HistoryTitle = styled.div`
 
   @media screen and (max-width: 414px) {
     // iPhone XR (414 * 896) 이하의 기기에서 적용될 스타일
+    width: 70vw;
     h1 {
       text-align: center;
-      font-size: 2.2rem;
+      font-size: 2.3rem;
       letter-spacing: -2px;
     }
   }
@@ -110,15 +109,16 @@ const HistoryTitle = styled.div`
 const HistoryContents = styled.div`
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   font-weight: 100;
+  
 
   p {
-    flex: 1;
+    flex: 3;
     text-align: right;
     font-size: 1.5rem;
     letter-spacing: -1px;
-    margin: 35px 40px 40px 40px;
   }
 
   @media screen and (max-width: 820px) {
@@ -127,6 +127,7 @@ const HistoryContents = styled.div`
     align-items: center;
 
     p {
+      margin: 2vh 0vh 2vh 0vh;
       text-align: center;
       font-size: 2rem;
       letter-spacing: -1px;
@@ -136,8 +137,8 @@ const HistoryContents = styled.div`
   @media screen and (max-width: 414px) {
     // iPhone XR (414 * 896) 이하의 기기에서 적용될 스타일
     p {
+      margin: 2vh 0vh 2vh 0vh;
       text-align: center;
-      margin: 2rem 2rem 2rem 2rem;
       font-size: 1.2rem;
       letter-spacing: -1px;
     }
@@ -150,13 +151,14 @@ const HistoryImage = styled.img`
 
   @media screen and (max-width: 820px) {
     // iPad Air (820 * 1180) 이하의 기기에서 적용될 스타일
+    border-radius: 1.5rem;
     margin-top: 2vh;
-    width: 45vw;
+    width: 60vw;
   }
 
   @media screen and (max-width: 414px) {
     // iPhone XR (414 * 896) 이하의 기기에서 적용될 스타일
-    width: 60vw;
+    width: 70vw;
   }
 `;
 
@@ -164,8 +166,6 @@ const HistoryButton = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  margin: 0.5rem 0rem 0rem 0rem;
-  padding: 0rem 3rem 2rem 0rem;
 
   @media screen and (max-width: 820px) {
     // iPad Air (820 * 1180) 이하의 기기에서 적용될 스타일

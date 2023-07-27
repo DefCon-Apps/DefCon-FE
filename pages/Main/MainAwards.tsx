@@ -32,156 +32,138 @@ const MainAwards = () => {
         <h1>{mainEvent.title}</h1>
       </AwardsTitle>
       <AwardsContents>
-            <AwardsContentsContext>
-              <p>{mainEvent.content}</p>
-              <AwardsButton>
-                <Link
-                  href="https://github.com/yymin1022/SeoulHealing"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <Dbutton
-                    text={"SOUL REST GitHub"}
-                    textColor={"#FFFFFF"}
-                    textSize={20}
-                    width={15}
-                    height={3}
-                    btnColor={"#001E2E"}
-                    direction={"right"}
-                  />
-                </Link>
-              </AwardsButton>
-            </AwardsContentsContext>
-            <AwardsImage src={mainEvent.image} />
+        <AwardsContentsContext>
+          <p>{mainEvent.content}</p>
+          <AwardsButton>
+            <Link
+              href="https://github.com/yymin1022/SeoulHealing"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Dbutton
+                text={"SOUL REST GitHub"}
+                textColor={"#FFFFFF"}
+                textSize={20}
+                width={15}
+                height={3}
+                btnColor={"#001E2E"}
+                direction={"right"}
+              />
+            </Link>
+          </AwardsButton>
+        </AwardsContentsContext>
+        <AwardsImage src={mainEvent.image} />
       </AwardsContents>
     </MainAwardsWrapper>
   );
 };
 
 const MainAwardsWrapper = styled.div`
-  height: 100vh;
+  width: 65vw;
+  height: 68vh;
+  padding-top: 10rem;
+  margin-bottom: 30vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: flex-end;
   font-family: "Noto Sans KR";
 
-  @media screen and (min-width: 1280px) {
-    align-items: flex-end;
-    width: 70vw;
-  }
-
-  @media screen and (max-width: 1279px) {
-    margin-bottom: 200px;
-    width: 50vw;
+  @media screen and (max-width: 820px) {
+    // iPad Air (820 * 1180) 이하의 기기에서 적용될 스타일
     align-items: center;
+    margin-bottom: 25vh;
   }
 `;
 
 const AwardsTitle = styled.div`
-  width: 80%;
+  width: 60%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: flex-end;
 
-  @media screen and (min-width: 1280px) {
-    width: 50vw;
-    background: #00658f;
-    border-radius: 2rem;
-    box-shadow: 16px 64px 0 0 #35b6f7;
-
+  h1 {
+    text-align: right;
+    font-size: 5rem;
+    letter-spacing: -7px;
+    color: #000;
   }
 
-  h1 {
-    @media screen and (min-width: 1280px) {
-      align-items: flex-end;
-      text-align: right;
-      font-size: 53pt;
-      letter-spacing: -7px;
-      color: #fff;
-      padding: 96px 0 96px 32px;
-      margin-right: 15px;
-    }
-
-    @media screen and (min-width: 1024px) and (max-width: 1279px) {
-      align-items: center;
+  @media screen and (max-width: 820px) {
+    // iPad Air (820 * 1180) 이하의 기기에서 적용될 스타일
+    width: 70vw;
+    align-items: center;
+    h1 {
       text-align: center;
-      font-size: 45pt;
+      font-size: 4rem;
       letter-spacing: -5px;
     }
+  }
 
-    @media screen and (max-width: 1023px) {
+  @media screen and (max-width: 414px) {
+    // iPhone XR (414 * 896) 이하의 기기에서 적용될 스타일
+    width: 80vw;
+    h1 {
       text-align: center;
-      font-size: 32pt;
+      font-size: 2.3rem;
       letter-spacing: -2px;
-      color: #000;
     }
   }
 `;
 
 const AwardsContents = styled.div`
   display: flex;
+  flex:1;
   font-weight: 100;
-  margin-top: -5rem;
-  @media screen and (min-width: 1280px) {
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-
-  @media screen and (max-width: 1279px) {
-    margin-top: 2vh;
-    flex-direction: column-reverse;
-    align-items: center;
-  }
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 
   p {
+    width: 90%;
+    text-align: left;
+    font-size: 1.5rem;
     letter-spacing: -1px;
-    @media screen and (min-width: 1280px) {
-      flex: 3;
-      text-align: left;
-      font-size: 20pt;
-      margin-right: 220px;
-    }
+  }
 
-    @media screen and (min-width: 1024px) and (max-width: 1279px) {
-      text-align: center;
-      font-size: 20pt;
-      margin: 2rem 0 2rem 0;
-    }
+  @media screen and (max-width: 820px) {
+    // iPad Air (820 * 1180) 이하의 기기에서 적용될 스타일
+    flex-direction: column-reverse;
+    align-items: center;
 
-    @media screen and (min-width: 768px) and (max-width: 1023px) {
+    p {
+      margin: 3vh 0vh 3vh 0vh;
       text-align: center;
-      font-size: 18pt;
-      margin: 2rem 0 2rem 0;
+      font-size: 2rem;
     }
+  }
 
-    @media screen and (max-width: 768px) {
-      margin: 2rem 0 2rem 0;
+  @media screen and (max-width: 414px) {
+    // iPhone XR (414 * 896) 이하의 기기에서 적용될 스타일
+    p {
       text-align: center;
-      font-size: 16pt;
+      font-size: 1.2rem;
     }
   }
 `;
 
 const AwardsImage = styled.img`
   border-radius: 2rem;
-  @media screen and (min-width: 1280px) {
-    flex: 1;
-    width: 500px;
-    height: 332px;
+  flex: 1;
+  width:28vw;
+
+  @media screen and (max-width: 820px) {
+    // iPad Air (820 * 1180) 이하의 기기에서 적용될 스타일
+    border-radius: 1.5rem;
+    margin-top: 2vh;
+    width: 60vw;
   }
 
-  @media screen and (min-width: 1024px) and (max-width: 1279px) {
+  @media screen and (max-width: 414px) {
+    // iPhone XR (414 * 896) 이하의 기기에서 적용될 스타일
     margin-top: 2vh;
-    width: 400px;
-    height: 266px;
-  }
-
-  @media screen and (max-width: 1023px) {
-    margin-top: 2vh;
-    width: 350px;
-    height: 232px;
+    width: 70vw;
   }
 `;
 
@@ -189,14 +171,16 @@ const AwardsContentsContext = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
 
-  @media screen and (min-width: 1280px) {
-    align-items: flex-start;
-    margin-right: 75px;
+  @media screen and (max-width: 820px) {
+    // iPad Air (820 * 1180) 이하의 기기에서 적용될 스타일
+    align-items: center;
+    margin-right: 0;
   }
 
-  @media screen and (max-width: 1023px) {
-    align-items: center;
+  @media screen and (max-width: 414px) {
+    // iPhone XR (414 * 896) 이하의 기기에서 적용될 스타일
   }
 `;
 
@@ -204,7 +188,6 @@ const AwardsButton = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 0.5rem;
 `;
 
 export default MainAwards;
