@@ -84,6 +84,7 @@ const AwardsTitle = styled.div`
   align-items: flex-end;
 
   h1 {
+    width: 80%;
     text-align: right;
     font-size: 5rem;
     letter-spacing: -7px;
