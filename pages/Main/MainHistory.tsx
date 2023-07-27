@@ -16,10 +16,7 @@ const MainHistory = () => {
         <HistoryImage src={"/Images/defcon_history.jpeg"} />
         <HistoryContentsBackground>
           <p>
-            DEF:CON은 성보고등학교 컴퓨터실에서 시작된 동아리로 소프트웨어를
-            좋아하는 학생들이 모여 재미있는 일을 하던 데에서 시작되었습니다.
-            학교 행사에도 적극적으로 참여해 우리가 좋아하는 것들을 다른 학생들과
-            나눴죠.
+            DEF:CON은 성보고등학교 컴퓨터실에서 시작된 동아리로 소프트웨어를 좋아하는 학생들이 모여 재미있는 일을 하던 데에서 시작되었습니다. 학교 행사에도 적극적으로 참여해 우리가 좋아하는 것들을 다른 학생들과 나눴죠.
           </p>
           <HistoryButton>
             <Link
@@ -60,41 +57,50 @@ const MainHistory = () => {
 };
 
 const MainHistoryWrapper = styled.div`
+  width: 65vw;
   height: 100vh;
+  padding-top: 10rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
   font-family: "Noto Sans KR";
 
-  @media screen and (min-width: 1024px) {
-    width: 70vw;
+  @media screen and (max-width: 820px) {
+    // iPad Air (820 * 1180) 이하의 기기에서 적용될 스타일
+    align-items: center;
   }
 `;
 
 const HistoryTitle = styled.div`
+  width: 60vw;
   display: flex;
   flex-direction: row;
+  align-items: flex-start;
   justify-content: center;
 
   h1 {
-    @media screen and (min-width: 1280px) {
-      align-items: flex-start;
-      flex: 2;
-      text-align: left;
-      font-size: 55pt;
-      letter-spacing: -7px;
-    }
+    flex: 1;
+    text-align: left;
+    font-size: 5rem;
+    letter-spacing: -7px;
+  }
 
-    @media screen and (min-width: 1024px) and (max-width: 1279px) {
-      align-items: center;
+  @media screen and (max-width: 820px) {
+    // iPad Air (820 * 1180) 이하의 기기에서 적용될 스타일
+    width: 80vw;
+    align-items: center;
+    h1 {
       text-align: center;
-      font-size: 45pt;
+      font-size: 4rem;
       letter-spacing: -5px;
     }
+  }
 
-    @media screen and (max-width: 1023px) {
-      text-align: center;
-      font-size: 32pt;
+  @media screen and (max-width: 414px) {
+    // iPhone XR (414 * 896) 이하의 기기에서 적용될 스타일
+    h1 {
+      font-size: 2.3rem;
       letter-spacing: -2px;
     }
   }
@@ -102,45 +108,38 @@ const HistoryTitle = styled.div`
 
 const HistoryContents = styled.div`
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   font-weight: 100;
-
-  @media screen and (min-width: 1280px) {
-    flex-direction: row;
-    align-items: center;
-  }
-
-  @media screen and (max-width: 1279px) {
-    flex-direction: column;
-    align-items: center;
-  }
+  
 
   p {
-    @media screen and (min-width: 1280px) {
-      flex: 1;
-      text-align: right;
-      font-size: 20pt;
+    flex: 1;
+    text-align: right;
+    font-size: 1.5rem;
+    letter-spacing: -1px;
+  }
+
+  @media screen and (max-width: 820px) {
+    // iPad Air (820 * 1180) 이하의 기기에서 적용될 스타일
+    flex-direction: column;
+    align-items: center;
+
+    p {
+      margin: 2vh 0vh 2vh 0vh;
+      text-align: center;
+      font-size: 2rem;
       letter-spacing: -1px;
-      margin: 35px 40px 40px 40px;
     }
+  }
 
-    @media screen and (min-width: 1024px) and (max-width: 1279px) {
-      margin: 2rem 0rem 2rem 0rem;
+  @media screen and (max-width: 414px) {
+    // iPhone XR (414 * 896) 이하의 기기에서 적용될 스타일
+    p {
+      margin: 2vh 0vh 2vh 0vh;
       text-align: center;
-      font-size: 20pt;
-      letter-spacing: -1px;
-    }
-
-    @media screen and (min-width: 768px) and (max-width: 1023px) {
-      font-size: 18pt;
-      margin: 2rem 0 2rem 0;
-      text-align: center;
-    }
-
-    @media screen and (max-width: 768px) {
-      text-align: center;
-      margin: 2rem 2rem 2rem 2rem;
-      font-size: 16pt;
+      font-size: 1.2rem;
       letter-spacing: -1px;
     }
   }
@@ -148,50 +147,46 @@ const HistoryContents = styled.div`
 
 const HistoryImage = styled.img`
   border-radius: 2rem;
-  @media screen and (min-width: 1280px) {
-    flex: 1;
-    width: 500px;
-  }
+  width: 28vw;
 
-  @media screen and (min-width: 1024px) and (max-width: 1279px) {
+  @media screen and (max-width: 820px) {
+    // iPad Air (820 * 1180) 이하의 기기에서 적용될 스타일
+    border-radius: 1.5rem;
     margin-top: 2vh;
-    width: 400px;
+    width: 60vw;
   }
 
-  @media screen and (max-width: 1023px) {
-    margin-top: 2vh;
-    width: 400px;
-  }
-
-  @media screen and (max-width: 768px) {
-    width: 350px;
+  @media screen and (max-width: 414px) {
+    // iPhone XR (414 * 896) 이하의 기기에서 적용될 스타일
+    width: 70vw;
   }
 `;
 
 const HistoryButton = styled.div`
   display: flex;
   flex-direction: row;
-  margin: 0.5rem 0rem 0rem 0rem;
+  justify-content: flex-end;
 
-  @media screen and (min-width: 1280px) {
-    padding: 0px 35px 50px 0px;
-    justify-content: flex-end;
-  }
-
-  @media screen and (max-width: 1279px) {
+  @media screen and (max-width: 820px) {
+    // iPad Air (820 * 1180) 이하의 기기에서 적용될 스타일
+    padding: 0rem;
     justify-content: center;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 414px) {
+    // iPhone XR (414 * 896) 이하의 기기에서 적용될 스타일
     margin: 1rem 1rem 0rem 1rem;
   }
 `;
 
 const HistoryContentsBackground = styled.div`
-  @media screen and (min-width: 1280px) {
-    margin-left: 50px;
-    border-radius: 2rem;
-    background-color: #c7e7ff;
+  width: 50%;
+  margin-left: 2rem;
+  
+  @media screen and (max-width: 820px) {
+    // iPad Air (820 * 1180) 이하의 기기에서 적용될 스타일
+    width: 90%;
+    margin-left: 0rem;
   }
 `;
 
