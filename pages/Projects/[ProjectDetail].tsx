@@ -88,6 +88,13 @@ const ProjectDetailWrapper = styled.div`
     align-items: center;
     margin-bottom: 20vh;
   }
+
+  /* 모바일 가로 & 테블릿 세로 (해상도 480px ~ 767px)*/
+  @media all and (max-width: 767px) {
+    & > div {
+      margin-bottom: 10vh;
+    }
+  }
 `;
 
 const ProjectDetailTitle = styled.div`
@@ -165,13 +172,14 @@ const ProjectDetailTitle = styled.div`
   @media all and (max-width: 479px) {
     width: 400px;
     align-items: center;
+    margin-top: 7em;
     & > h1 {
       text-align: center;
       font-size: 2.9em;
     }
     & > p {
       text-align: center;
-      margin: 1.5rem 0 1.5rem 0.5rem;
+      margin: 1.5rem 0 0 0.5rem;
       font-size: 1.17em;
       font-weight: 300;
     }
@@ -179,10 +187,80 @@ const ProjectDetailTitle = styled.div`
 `;
 
 const ProjectDetailContent = styled.div`
+  width: 100%;
+  margin-top: 1em;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+
+  a {
+    font-weight: 900;
+    text-decoration-line: underline;
+  }
+
+
+  @media all and (min-width: 1280px) {
+    & > h1 {
+      margin-top: 1em;
+      font-size: 2.9em;
+    }
+
+    & > p {
+      width: 80%;
+      font-size: 1.5em;
+      font-weight: 100;
+    }
+  }
+
+  /* 노트북 & 테블릿 가로 (해상도 1024px ~ 1279px)*/
+  /* 테블릿 가로 (해상도 768px ~ 1023px)*/
+  @media all and (min-width: 768px) and (max-width: 1279px) {
+    width: 80%;
+    & > h1 {
+      margin-top: 1em;
+      font-size: 2.9em;
+    }
+
+    & > p {
+      width: 80%;
+      font-size: 1.5em;
+      font-weight: 100;
+    }
+  }
+
+  /* 모바일 가로 & 테블릿 세로 (해상도 480px ~ 767px)*/
+  @media all and (min-width: 480px) and (max-width: 767px) {
+    width: 70%;
+    & > h1 {
+      margin-top: 1em;
+      font-size: 2.9em;
+    }
+
+    & > p {
+      width: 100%;
+      font-size: 1.5em;
+      font-weight: 100;
+      margin-bottom: 0.5em;
+    }
+  }
+
+  /* 모바일 세로 (해상도 ~ 479px)*/
+  @media all and (max-width: 479px) {
+    width: 70%;
+    & > h1 {
+      margin-top: 0.5em;
+      font-size: 2.9em;
+    }
+
+    & > p {
+      width: 100%;
+      font-size: 1.5em;
+      font-weight: 100;
+      margin-bottom: 0.5em;
+    }
+  }
 `;
 
 export default ProjectDetail;
