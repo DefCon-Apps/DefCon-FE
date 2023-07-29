@@ -39,7 +39,11 @@ const MainTitle = () => {
         </IntroWrapper>
       </TitleContentsStyle>
       <ScrollIconStyle>
-        <FontAwesomeIcon icon={faAngleDoubleDown} color="#4C6170" size={isDesktop ? "3x" : "2x"} />
+        <FontAwesomeIcon
+          icon={faAngleDoubleDown}
+          color="#4C6170"
+          size={isDesktop ? "3x" : "2x"}
+        />
       </ScrollIconStyle>
     </MainTitleStyle>
   );
@@ -49,6 +53,7 @@ const MainTitleStyle = styled.div`
   width: 1030px;
   font-family: "Noto Sans KR";
   padding-top: 10rem;
+  margin-bottom: 5em;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -83,18 +88,10 @@ const TitleContentsStyle = styled.div`
   justify-content: space-evenly;
   align-items: center;
 
-  /* 테블릿 가로 (해상도 768px ~ 1023px)*/
-  @media all and (min-width: 768px) and (max-width: 1023px) {
+  /*(해상도 ~ 1023px)*/
+  @media all and (max-width: 1023px) {
     flex-direction: column;
     justify-content: center;
-  }
-
-  /* 모바일 가로 & 테블릿 세로 (해상도 480px ~ 767px)*/
-  @media all and (min-width: 480px) and (max-width: 767px) {
-  }
-
-  /* 모바일 세로 (해상도 ~ 479px)*/
-  @media all and (max-width: 479px) {
   }
 `;
 
@@ -128,7 +125,8 @@ const IntroWrapper = styled.div`
 
   /* 테블릿 가로 (해상도 768px ~ 1023px)*/
   @media all and (min-width: 768px) and (max-width: 1023px) {
-    margin-top: 1em;
+    margin-top: 5em;
+    text-align: center;
 
     & > p {
       line-height: 1em;
@@ -137,23 +135,30 @@ const IntroWrapper = styled.div`
 
   /* 모바일 가로 & 테블릿 세로 (해상도 480px ~ 767px)*/
   @media all and (min-width: 480px) and (max-width: 767px) {
+    margin-top: 5em;
+    text-align: center;
+
+    & > p {
+      font-size: 1.5em;
+      line-height: 1em;
+    }
+
+    & > h1 {
+      font-size: 4em;
+    }
   }
 
   /* 모바일 세로 (해상도 ~ 479px)*/
   @media all and (max-width: 479px) {
-  }
-
-  @media screen and (max-width: 820px) {
-    // iPad Air (820 * 1180) 이하의 기기에서 적용될 스타일
-    margin-left: 0rem;
-    padding-top: 5rem;
     text-align: center;
-    p {
-      font-size: 1.5rem;
+
+    & > p {
+      font-size: 1.2em;
+      line-height: 1em;
     }
 
-    h1 {
-      font-size: 5rem;
+    & > h1 {
+      font-size: 3em;
     }
   }
 `;
@@ -182,6 +187,16 @@ const ScrollIconStyle = styled.div`
   /* 테블릿 가로 (해상도 768px ~ 1023px)*/
   @media all and (min-width: 768px) and (max-width: 1023px) {
     padding-top: 5em;
+  }
+
+  /* 모바일 가로 & 테블릿 세로 (해상도 480px ~ 767px)*/
+  @media all and (min-width: 480px) and (max-width: 767px) {
+    padding-top: 3em;
+  }
+
+  /* 모바일 세로 (해상도 ~ 479px)*/
+  @media all and (max-width: 479px) {
+    padding-top: 4em;
   }
 `;
 
