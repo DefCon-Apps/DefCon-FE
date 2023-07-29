@@ -20,23 +20,23 @@ const MainTitle = () => {
     <MainTitleStyle>
       <TitleContentsStyle>
         <Crab
-          width={isDesktop ? 420 : 240}
-          height={isDesktop ? 420 : 240}
+          width={isDesktop ? 360 : 240}
+          height={isDesktop ? 360 : 240}
           marginTop={2}
           anim={true}
         />
-        <IntroStyle>
+        <IntroWrapper>
           <p>&quot;이거 님이 만드신 거였군요!&quot;</p>
           <h1>TEAM DEF:CON</h1>
-          <IntroContents>
+          <p>
             당신의 일상 속 유용한 소프트웨어가
             <br />
             우리의 작품이었으면 좋겠습니다.
             <br />
             <br />
             2023년, 새로워진 대학생 프로그래밍팀 DEF:CON을 만나보세요.
-          </IntroContents>
-        </IntroStyle>
+          </p>
+        </IntroWrapper>
       </TitleContentsStyle>
       <ScrollIconStyle>
         <FontAwesomeIcon icon={faAngleDoubleDown} color="#4C6170" size="3x" />
@@ -46,36 +46,59 @@ const MainTitle = () => {
 };
 
 const MainTitleStyle = styled.div`
+  width: 1030px;
   font-family: "Noto Sans KR";
-
-  width:70vw;
-  height: 100%;
-
-  padding-top: 15rem;
+  padding-top: 10rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-
-  @media screen and (max-width: 820px) {
-    // iPad Air (820 * 1180) 이하의 기기에서 적용될 스타일
-    padding-top: 10rem;
-    height: 50%;
+  /* 노트북 & 테블릿 가로 (해상도 1024px ~ 1279px)*/
+  @media all and (min-width: 1024px) and (max-width: 1279px) {
+    width: 700px;
   }
 
-  @media screen and (max-width: 414px) {
-    // iPhone XR (414 * 896) 이하의 기기에서 적용될 스타일
-    padding-top: 10rem;
-    height: 90vh;
+  /* 테블릿 가로 (해상도 768px ~ 1023px)*/
+  @media all and (min-width: 768px) and (max-width: 1023px) {
+    width: 500px;
+  }
+
+  /* 모바일 가로 & 테블릿 세로 (해상도 480px ~ 767px)*/
+  @media all and (min-width: 480px) and (max-width: 767px) {
+    width: 400px;
+  }
+
+  /* 모바일 세로 (해상도 ~ 479px)*/
+  @media all and (max-width: 479px) {
+    width: 400px;
   }
 `;
 
 const TitleContentsStyle = styled.div`
-  /* width: 65%; */
+  width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
+
+  @media all and (min-width: 1024px) and (max-width: 1279px) {
+    width: 700px;
+  }
+
+  /* 테블릿 가로 (해상도 768px ~ 1023px)*/
+  @media all and (min-width: 768px) and (max-width: 1023px) {
+    width: 500px;
+  }
+
+  /* 모바일 가로 & 테블릿 세로 (해상도 480px ~ 767px)*/
+  @media all and (min-width: 480px) and (max-width: 767px) {
+    width: 400px;
+  }
+
+  /* 모바일 세로 (해상도 ~ 479px)*/
+  @media all and (max-width: 479px) {
+    width: 400px;
+  }
 
   @media screen and (max-width: 820px) {
     // iPad Air (820 * 1180) 이하의 기기에서 적용될 스타일
@@ -85,16 +108,19 @@ const TitleContentsStyle = styled.div`
   }
 `;
 
-const IntroStyle = styled.div`
-  margin-left: 10rem;
-  padding-top: 2rem;
+const IntroWrapper = styled.div`
+  width: 100%;
   text-align: right;
-  p{
-    font-size: 1.5rem;
+  margin-top: 5em;
+
+  & > p {
+    font-size: 1.5em;
     font-weight: 100;
+    line-height: 1.5em;
   }
-  h1 {
-    font-size: 6rem;
+
+  & > h1 {
+    font-size: 5em;
     font-weight: 900;
     letter-spacing: -0.1rem;
   }
@@ -104,53 +130,32 @@ const IntroStyle = styled.div`
     margin-left: 0rem;
     padding-top: 5rem;
     text-align: center;
-    p{
+    p {
       font-size: 1.5rem;
     }
 
-    h1{
+    h1 {
       font-size: 5rem;
     }
   }
-
 
   @media screen and (max-width: 414px) {
     // iPhone XR (414 * 896) 이하의 기기에서 적용될 스타일
     margin-left: 0rem;
     text-align: center;
-    p{
+    p {
       font-size: 1.2rem;
     }
 
-    h1{
+    h1 {
       font-size: 4rem;
     }
   }
 `;
 
-const IntroContents = styled.div`
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 100;
-
-  @media screen and (max-width: 820px) {
-    // iPad Air (820 * 1180) 이하의 기기에서 적용될 스타일
-    width: 80vw;
-    font-size: 2rem;
-    line-height: 2.5rem;
-  }
-
-  @media screen and (max-width: 414px) {
-    // iPhone XR (414 * 896) 이하의 기기에서 적용될 스타일
-    width: 75vw;
-    font-size: 1.2rem;
-    line-height: 1.5rem;
-  }
-  
-`;
 
 const ScrollIconStyle = styled.div`
-  padding-top: 15rem;
+  padding-top: 15em;
   @keyframes float {
     0% {
       transform: translatey(0px);
