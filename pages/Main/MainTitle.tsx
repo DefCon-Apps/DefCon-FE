@@ -53,6 +53,7 @@ const MainTitleStyle = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+
   /* 노트북 & 테블릿 가로 (해상도 1024px ~ 1279px)*/
   @media all and (min-width: 1024px) and (max-width: 1279px) {
     width: 700px;
@@ -60,6 +61,7 @@ const MainTitleStyle = styled.div`
 
   /* 테블릿 가로 (해상도 768px ~ 1023px)*/
   @media all and (min-width: 768px) and (max-width: 1023px) {
+    padding-top: 8rem;
     width: 500px;
   }
 
@@ -81,11 +83,10 @@ const TitleContentsStyle = styled.div`
   justify-content: space-evenly;
   align-items: center;
 
-  @media all and (min-width: 1024px) and (max-width: 1279px) {
-  }
-
   /* 테블릿 가로 (해상도 768px ~ 1023px)*/
   @media all and (min-width: 768px) and (max-width: 1023px) {
+    flex-direction: column;
+    justify-content: center;
   }
 
   /* 모바일 가로 & 테블릿 세로 (해상도 480px ~ 767px)*/
@@ -94,13 +95,6 @@ const TitleContentsStyle = styled.div`
 
   /* 모바일 세로 (해상도 ~ 479px)*/
   @media all and (max-width: 479px) {
-  }
-
-  @media screen and (max-width: 820px) {
-    // iPad Air (820 * 1180) 이하의 기기에서 적용될 스타일
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
   }
 `;
 
@@ -124,6 +118,7 @@ const IntroWrapper = styled.div`
   @media all and (min-width: 1024px) and (max-width: 1279px) {
     & > p {
       font-size: 1em;
+      line-height: 1.5em;
     }
 
     & > h1 {
@@ -133,6 +128,11 @@ const IntroWrapper = styled.div`
 
   /* 테블릿 가로 (해상도 768px ~ 1023px)*/
   @media all and (min-width: 768px) and (max-width: 1023px) {
+    margin-top: 1em;
+
+    & > p {
+      line-height: 1em;
+    }
   }
 
   /* 모바일 가로 & 테블릿 세로 (해상도 480px ~ 767px)*/
@@ -179,14 +179,9 @@ const ScrollIconStyle = styled.div`
     padding-top: 10em;
   }
 
-  @media screen and (max-width: 820px) {
-    // iPad Air (820 * 1180) 이하의 기기에서 적용될 스타일
-    padding-top: 5rem;
-  }
-
-  @media screen and (max-width: 414px) {
-    // iPhone XR (414 * 896) 이하의 기기에서 적용될 스타일
-    padding-top: 3rem;
+  /* 테블릿 가로 (해상도 768px ~ 1023px)*/
+  @media all and (min-width: 768px) and (max-width: 1023px) {
+    padding-top: 5em;
   }
 `;
 
