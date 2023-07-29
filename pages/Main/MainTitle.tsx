@@ -39,7 +39,7 @@ const MainTitle = () => {
         </IntroWrapper>
       </TitleContentsStyle>
       <ScrollIconStyle>
-        <FontAwesomeIcon icon={faAngleDoubleDown} color="#4C6170" size="3x" />
+        <FontAwesomeIcon icon={faAngleDoubleDown} color="#4C6170" size={isDesktop ? "3x" : "2x"} />
       </ScrollIconStyle>
     </MainTitleStyle>
   );
@@ -82,22 +82,18 @@ const TitleContentsStyle = styled.div`
   align-items: center;
 
   @media all and (min-width: 1024px) and (max-width: 1279px) {
-    width: 700px;
   }
 
   /* 테블릿 가로 (해상도 768px ~ 1023px)*/
   @media all and (min-width: 768px) and (max-width: 1023px) {
-    width: 500px;
   }
 
   /* 모바일 가로 & 테블릿 세로 (해상도 480px ~ 767px)*/
   @media all and (min-width: 480px) and (max-width: 767px) {
-    width: 400px;
   }
 
   /* 모바일 세로 (해상도 ~ 479px)*/
   @media all and (max-width: 479px) {
-    width: 400px;
   }
 
   @media screen and (max-width: 820px) {
@@ -125,6 +121,28 @@ const IntroWrapper = styled.div`
     letter-spacing: -0.1rem;
   }
 
+  @media all and (min-width: 1024px) and (max-width: 1279px) {
+    & > p {
+      font-size: 1em;
+    }
+
+    & > h1 {
+      font-size: 3em;
+    }
+  }
+
+  /* 테블릿 가로 (해상도 768px ~ 1023px)*/
+  @media all and (min-width: 768px) and (max-width: 1023px) {
+  }
+
+  /* 모바일 가로 & 테블릿 세로 (해상도 480px ~ 767px)*/
+  @media all and (min-width: 480px) and (max-width: 767px) {
+  }
+
+  /* 모바일 세로 (해상도 ~ 479px)*/
+  @media all and (max-width: 479px) {
+  }
+
   @media screen and (max-width: 820px) {
     // iPad Air (820 * 1180) 이하의 기기에서 적용될 스타일
     margin-left: 0rem;
@@ -138,21 +156,7 @@ const IntroWrapper = styled.div`
       font-size: 5rem;
     }
   }
-
-  @media screen and (max-width: 414px) {
-    // iPhone XR (414 * 896) 이하의 기기에서 적용될 스타일
-    margin-left: 0rem;
-    text-align: center;
-    p {
-      font-size: 1.2rem;
-    }
-
-    h1 {
-      font-size: 4rem;
-    }
-  }
 `;
-
 
 const ScrollIconStyle = styled.div`
   padding-top: 15em;
@@ -170,6 +174,10 @@ const ScrollIconStyle = styled.div`
 
   transform: translatey(0px);
   animation: float 2s ease-in-out infinite;
+
+  @media all and (min-width: 1024px) and (max-width: 1279px) {
+    padding-top: 10em;
+  }
 
   @media screen and (max-width: 820px) {
     // iPad Air (820 * 1180) 이하의 기기에서 적용될 스타일
