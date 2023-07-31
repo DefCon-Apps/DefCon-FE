@@ -15,11 +15,12 @@ const Projects = () => {
       if (!apiResult) return;
 
       let projectDataSet = new Map<string, API.ProjectListItem[]>([
-            ["android", new Array<API.ProjectListItem>],
-            ["etc", new Array<API.ProjectListItem>],
-            ["repair", new Array<API.ProjectListItem>],
-            ["web", new Array<API.ProjectListItem>]
-        ]);
+        ["android", new Array<API.ProjectListItem>],
+        ["etc", new Array<API.ProjectListItem>],
+        ["repair", new Array<API.ProjectListItem>],
+        ["web", new Array<API.ProjectListItem>]
+      ]);
+
       apiResult.data.map((projectData: API.ProjectListItem) => {
         projectDataSet.set(projectData.data.category, [...projectDataSet.get(projectData.data.category)!, projectData])
       });
