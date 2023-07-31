@@ -50,13 +50,14 @@ const MainTitle = () => {
 };
 
 const MainTitleStyle = styled.div`
+  height: 100vh;
   width: 1030px;
   font-family: "Noto Sans KR";
   padding-top: 10rem;
   margin-bottom: 5em;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 
   /* 노트북 & 테블릿 가로 (해상도 1024px ~ 1279px)*/
