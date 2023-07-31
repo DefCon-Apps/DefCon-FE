@@ -3,6 +3,7 @@ import Link from "next/link";
 import Dbutton from "../../src/Common/Dbutton";
 import * as API from "../../src/Common/API";
 import { useState, useEffect } from "react";
+import { useMediaQuery } from "react-responsive";
 
 type MainEventData = {
   title: string;
@@ -17,7 +18,16 @@ const tmpEventData: MainEventData = {
 };
 
 const MainAwards = () => {
+  const desktop = useMediaQuery({
+    query: "(min-width:1280px)",
+  });
   const [mainEvent, setMainEvent] = useState(tmpEventData);
+  const [isDesktop, setIsDesktop] = useState(true);
+
+  useEffect(() => {
+    if (!desktop) setIsDesktop(false);
+    else setIsDesktop(true);
+  }, [desktop]);
 
   useEffect(() => {
     API.getMainEventData().then((apiResult: any) => {
@@ -43,8 +53,8 @@ const MainAwards = () => {
               <Dbutton
                 text={"SOUL REST GitHub"}
                 textColor={"#FFFFFF"}
-                textSize={20}
-                width={15}
+                textSize={isDesktop ? 20 : 18}
+                width={isDesktop ? 15 : 11}
                 height={3}
                 btnColor={"#001E2E"}
                 direction={"right"}
@@ -59,112 +69,204 @@ const MainAwards = () => {
 };
 
 const MainAwardsWrapper = styled.div`
-  width: 65vw;
-  height: 68vh;
-  padding-top: 10rem;
-  margin-bottom: 30vh;
+  width: 1030px;
+  padding-top: 15rem;
+  margin-bottom: 5em;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
   font-family: "Noto Sans KR";
 
-  @media screen and (max-width: 820px) {
-    // iPad Air (820 * 1180) 이하의 기기에서 적용될 스타일
-    align-items: center;
-    margin-bottom: 30vh;
+  /* 노트북 & 테블릿 가로 (해상도 1024px ~ 1279px)*/
+  @media all and (min-width: 1024px) and (max-width: 1279px) {
+    width: 700px;
+  }
+
+  /* 테블릿 가로 (해상도 768px ~ 1023px)*/
+  @media all and (min-width: 768px) and (max-width: 1023px) {
+    padding-top: 8rem;
+    width: 500px;
+  }
+
+  /* 모바일 가로 & 테블릿 세로 (해상도 480px ~ 767px)*/
+  @media all and (min-width: 480px) and (max-width: 767px) {
+    width: 400px;
+  }
+
+  /* 모바일 세로 (해상도 ~ 479px)*/
+  @media all and (max-width: 479px) {
+    width: 400px;
   }
 `;
 
 const AwardsTitle = styled.div`
-  width: 40vw;
+  width: 60%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: flex-end;
 
-  h1 {
-    width: 100%;
+  & > h1 {
+    flex: 1;
     text-align: right;
-    font-size: 5rem;
+    font-size: 4.5em;
     letter-spacing: -7px;
-    color: #000;
   }
 
-  @media screen and (max-width: 820px) {
-    // iPad Air (820 * 1180) 이하의 기기에서 적용될 스타일
-    width: 70vw;
-    align-items: center;
-    h1 {
-      text-align: center;
-      font-size: 4rem;
+  /* 노트북 & 테블릿 가로 (해상도 1024px ~ 1279px)*/
+  @media all and (min-width: 1024px) and (max-width: 1279px) {
+    & > h1 {
+      flex: 1;
+      text-align: right;
+      font-size: 2.8em;
       letter-spacing: -5px;
     }
   }
 
-  @media screen and (max-width: 414px) {
-    // iPhone XR (414 * 896) 이하의 기기에서 적용될 스타일
-    h1 {
-      width: 100%;
+  /* 테블릿 가로 (해상도 768px ~ 1023px)*/
+  @media all and (min-width: 768px) and (max-width: 1023px) {
+    width: 100%;
+
+    & > h1 {
       text-align: center;
-      font-size: 2.3rem;
+      font-size: 3.5em;
+      letter-spacing: -5px;
+    }
+  }
+
+  /* 모바일 가로 & 세로 & 테블릿 세로 (해상도 480px ~ 767px)*/
+  @media all and (min-width: 480px) and (max-width: 767px) {
+    width: 100%;
+
+    & > h1 {
+      text-align: center;
+      font-size: 3em;
+      letter-spacing: -2px;
+    }
+  }
+
+  /* 모바일 세로 (해상도 ~ 479px)*/
+  @media all and (max-width: 479px) {
+    width: 100%;
+
+    & > h1 {
+      text-align: center;
+      font-size: 2.5em;
       letter-spacing: -2px;
     }
   }
 `;
 
 const AwardsContents = styled.div`
+  width: 100%;
   display: flex;
-  flex:1;
-  font-weight: 100;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 
   p {
     width: 90%;
+    flex: 1;
     text-align: left;
-    font-size: 1.5rem;
+    font-size: 1.5em;
+    line-height: 1.5em;
     letter-spacing: -1px;
+    font-weight: 100;
+    margin-bottom: 1em;
   }
 
-  @media screen and (max-width: 820px) {
-    // iPad Air (820 * 1180) 이하의 기기에서 적용될 스타일
-    flex-direction: column-reverse;
-    align-items: center;
-
+  /* 노트북 & 테블릿 가로 (해상도 1024px ~ 1279px)*/
+  @media all and (min-width: 1024px) and (max-width: 1279px) {
     p {
-      margin: 3vh 0vh 3vh 0vh;
-      text-align: center;
-      font-size: 2rem;
+      flex: 1;
+      text-align: left;
+      font-size: 1em;
+      line-height: 1.5em;
+      letter-spacing: -1px;
+      font-weight: 100;
+      margin-bottom: 1em;
     }
   }
 
-  @media screen and (max-width: 414px) {
-    // iPhone XR (414 * 896) 이하의 기기에서 적용될 스타일
+  /* 테블릿 가로 (해상도 768px ~ 1023px)*/
+  @media all and (min-width: 768px) and (max-width: 1023px) {
+    height: 80%;
+    flex-direction: column-reverse;
+
     p {
+      flex: 1;
       text-align: center;
-      font-size: 1.2rem;
+      font-size: 1.5em;
+      line-height: 1.5em;
+      letter-spacing: -1px;
+      font-weight: 100;
+      padding-top: 1em;
+    }
+  }
+
+  /* 모바일 가로 & 테블릿 세로 (해상도 480px ~ 767px)*/
+  @media all and (min-width: 480px) and (max-width: 767px) {
+    height: 80%;
+    flex-direction: column-reverse;
+
+    p {
+      flex: 1;
+      text-align: center;
+      font-size: 1.5em;
+      line-height: 1.5em;
+      letter-spacing: -1px;
+      font-weight: 100;
+      padding-top: 1em;
+    }
+  }
+
+  /* 모바일 세로 (해상도 ~ 479px)*/
+  @media all and (max-width: 479px) {
+    height: 80%;
+    flex-direction: column-reverse;
+
+    p {
+      flex: 1;
+      text-align: center;
+      font-size: 1.2em;
+      line-height: 1em;
+      letter-spacing: -1px;
+      font-weight: 100;
+      padding-top: 1em;
     }
   }
 `;
 
 const AwardsImage = styled.img`
   border-radius: 2rem;
-  flex: 1;
-  width:28vw;
+  width: 45%;
 
-  @media screen and (max-width: 820px) {
-    // iPad Air (820 * 1180) 이하의 기기에서 적용될 스타일
-    border-radius: 1.5rem;
-    margin-top: 2vh;
-    width: 60vw;
+  /* 노트북 & 테블릿 가로 (해상도 1024px ~ 1279px)*/
+  @media all and (min-width: 1024px) and (max-width: 1279px) {
+    border-radius: 1em;
+    width: 50%;
   }
 
-  @media screen and (max-width: 414px) {
-    // iPhone XR (414 * 896) 이하의 기기에서 적용될 스타일
-    margin-top: 2vh;
-    width: 70vw;
+  /* 테블릿 가로 (해상도 768px ~ 1023px)*/
+  @media all and (min-width: 768px) and (max-width: 1023px) {
+    border-radius: 1.5em;
+    margin-top: 1em;
+    width: 90%;
+  }
+
+  /* 모바일 가로 & 테블릿 세로 (해상도 480px ~ 767px)*/
+  @media all and (min-width: 480px) and (max-width: 767px) {
+    border-radius: 1.5em;
+    margin-top: 1em;
+    width: 90%;
+  }
+
+  /* 모바일 세로 (해상도 ~ 479px)*/
+  @media all and (max-width: 479px) {
+    border-radius: 1em;
+    margin: 1em 0em 0.5em 0em;
+    width: 80%;
   }
 `;
 
@@ -179,16 +281,23 @@ const AwardsContentsContext = styled.div`
     align-items: center;
     margin-right: 0;
   }
-
-  @media screen and (max-width: 414px) {
-    // iPhone XR (414 * 896) 이하의 기기에서 적용될 스타일
-  }
 `;
 
 const AwardsButton = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
+
+  @media screen and (max-width: 820px) {
+    // iPad Air (820 * 1180) 이하의 기기에서 적용될 스타일
+    padding: 0rem;
+    justify-content: center;
+  }
+
+  @media screen and (max-width: 414px) {
+    // iPhone XR (414 * 896) 이하의 기기에서 적용될 스타일
+    margin: 1rem 1rem 0rem 1rem;
+  }
 `;
 
 export default MainAwards;

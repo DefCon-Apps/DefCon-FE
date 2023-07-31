@@ -56,99 +56,211 @@ const MainWorks = () => {
 };
 
 const MainWorksWrapper = styled.div`
-  width: 65vw;
-  height: 80vh;
+  width: 1030px;
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  align-items: flex-start;
-  margin: 10vh 0vh 20vh 0vh;
+  align-items: center;
+  padding-top: 15rem;
+  margin-bottom: 20rem;
 
-  @media screen and (max-width: 820px) {
-    // iPad Air (820 * 1180) 이하의 기기에서 적용될 스타일
-    margin: 10vh 0vh 10vh 0vh;
+  /* 노트북 & 테블릿 가로 (해상도 1024px ~ 1279px)*/
+  @media all and (min-width: 1024px) and (max-width: 1279px) {
+    width: 700px;
+  }
+
+  /* 테블릿 가로 (해상도 768px ~ 1023px)*/
+  @media all and (min-width: 768px) and (max-width: 1023px) {
+    padding-top: 8rem;
+    width: 500px;
+  }
+
+  /* 모바일 가로 & 테블릿 세로 (해상도 480px ~ 767px)*/
+  @media all and (min-width: 480px) and (max-width: 767px) {
+    width: 400px;
+  }
+
+  /* 모바일 세로 (해상도 ~ 479px)*/
+  @media all and (max-width: 479px) {
+    width: 400px;
+    margin-bottom: 10rem;
   }
 `;
 
 const MainWorksContents = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: flex-start;
+
+  /* 테블릿 가로 (해상도 768px ~ 1023px)*/
+  @media all and (min-width: 768px) and (max-width: 1023px) {
+    align-items: center;
+  }
+
+  /* 모바일 가로 & 테블릿 세로 (해상도 480px ~ 767px)*/
+  @media all and (min-width: 480px) and (max-width: 767px) {
+    width: 400px;
+  }
+
+  /* 모바일 세로 (해상도 ~ 479px)*/
+  @media all and (max-width: 479px) {
+    width: 400px;
+  }
 `;
 
 const WorksTitle = styled.div`
+  width: 70%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 
-  h1 {
+  & > h1 {
+    flex: 1;
     text-align: left;
-    font-size: 5rem;
+    font-size: 4.5em;
     letter-spacing: -7px;
   }
 
-  p {
-    width: 100%;
+  & > p {
     font-weight: 100;
-    margin-top: 2vh;
-    font-size: 1.5rem;
+    font-size: 1.5em;
     text-align: left;
   }
 
-  @media screen and (max-width: 820px) {
-    // iPad Air (820 * 1180) 이하의 기기에서 적용될 스타일
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-
-    h1 {
-      text-align: center;
-      font-size: 4rem;
+  /* 노트북 & 테블릿 가로 (해상도 1024px ~ 1279px)*/
+  @media all and (min-width: 1024px) and (max-width: 1279px) {
+    & > h1 {
+      flex: 1;
+      text-align: left;
+      font-size: 2.8em;
       letter-spacing: -5px;
     }
 
-    p {
-      width: 100%;
-      margin: 3vh 0vh 3vh 0vh;
-      font-size: 2rem;
+    & > p {
+      font-weight: 100;
+      font-size: 1em;
+      text-align: left;
+    }
+  }
+
+  /* 테블릿 가로 (해상도 768px ~ 1023px)*/
+  @media all and (min-width: 768px) and (max-width: 1023px) {
+    width: 100%;
+    align-items: center;
+    & > h1 {
+      flex: 1;
+      text-align: center;
+      font-size: 3.5em;
+      letter-spacing: -5px;
+    }
+
+    & > p {
+      font-weight: 100;
+      font-size: 1em;
+      letter-spacing: -1px;
+      text-align: left;
+    }
+  }
+
+  /* 모바일 가로 & 테블릿 세로 (해상도 480px ~ 767px)*/
+  @media all and (min-width: 480px) and (max-width: 767px) {
+    width: 100%;
+    align-items: center;
+    & > h1 {
+      flex: 1;
+      text-align: center;
+      font-size: 3.5em;
+      letter-spacing: -5px;
+    }
+
+    & > p {
+      width: 90%;
+      font-weight: 100;
+      font-size: 1.5em;
+      letter-spacing: -1px;
       text-align: center;
     }
   }
 
-  @media screen and (max-width: 414px) {
-    // iPhone XR (414 * 896) 이하의 기기에서 적용될 스타일
-    h1 {
+  /* 모바일 세로 (해상도 ~ 479px)*/
+  @media all and (max-width: 479px) {
+    width: 100%;
+    align-items: center;
+    
+    & > h1 {
+      flex: 1;
       text-align: center;
-      font-size: 2.3rem;
-      letter-spacing: -2px;
+      font-size: 2.5em;
+      letter-spacing: -5px;
     }
 
-    p {
+    & > p {
+      width: 90%;
+      font-weight: 100;
+      font-size: 1.2em;
+      letter-spacing: -1px;
       text-align: center;
-      font-size: 1.2rem;
     }
   }
 `;
 
 const ScrollMenuWrapper = styled.div`
-  width: 80vw;
-  margin-left: -5vw;
+  width: 100%;
+  margin: 1em 0em 0em -3em;
   overflow-x: scroll;
-  margin-top: 5vh;
 
-  @media screen and (max-width: 820px) {
-    // iPad Air (820 * 1180) 이하의 기기에서 적용될 스타일
-    width: 80vw;
+  /* 노트북 & 테블릿 가로 (해상도 1024px ~ 1279px)*/
+  @media all and (min-width: 1024px) and (max-width: 1279px) {
+    img {
+      width: calc(100vw / 4);
+      height: calc(100vh / 5);
+    }
+
+    h1 {
+      font-size: 2em;
+    }
   }
 
-  @media screen and (max-width: 414px) {
-    // iPhone XR (414 * 896) 이하의 기기에서 적용될 스타일
-    width: 80vw;
+  /* 테블릿 가로 (해상도 768px ~ 1023px)*/
+  @media all and (min-width: 768px) and (max-width: 1023px) {
+    h1 {
+      font-size: 2em;
+    }
+  }
+
+  /* 모바일 가로 & 테블릿 세로 (해상도 480px ~ 767px)*/
+  @media all and (min-width: 480px) and (max-width: 767px) {
+    width: 100vw;
+    margin: 1em 0em 0em -3em;
+    img {
+      width: calc(100vw / 3);
+      height: calc(100vh / 7);
+    }
+
+    h1 {
+      font-size: 1.5em;
+    }
+  }
+
+  /* 모바일 세로 (해상도 ~ 479px)*/
+  @media all and (max-width: 479px) {
+    width: 100vw;
+    margin: 1em 0em 0em -3em;
+    img {
+      width: calc(100vw / 3);
+      height: calc(100vh / 8.5);
+    }
+
+    h1 {
+      font-size: 1.5em;
+    }
+
   }
 `;
 
 const StyledScrollMenu = styled(ScrollMenu)`
-  width: 100%;
+  width: 100%
 `;
 
 export default MainWorks;
