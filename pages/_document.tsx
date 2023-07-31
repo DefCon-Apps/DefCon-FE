@@ -7,7 +7,6 @@ import Document, {
 } from "next/document";
 // Import styled components ServerStyleSheet
 import { ServerStyleSheet } from "styled-components";
-import Link from "next/link";
 
 export default // @ts-ignore
 class MyDocument extends Document {

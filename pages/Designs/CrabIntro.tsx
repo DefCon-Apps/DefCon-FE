@@ -1,24 +1,31 @@
 import styled from "styled-components";
 import Crab from "../../src/Common/Crab";
+import { useMediaQuery } from "react-responsive";
+import { useEffect, useState } from "react";
 
 const CrabIntro = () => {
+  const desktop = useMediaQuery({
+    query: "(min-width:1280px)",
+  });
+  const [isDesktop, setIsDesktop] = useState(true);
+
+  useEffect(() => {
+    if (!desktop) setIsDesktop(false);
+    else setIsDesktop(true);
+  }, [desktop]);
+
   return (
     <CrabIntroWrapper>
       <CrabIntroContents>
         <CrabIntroDesc>
           <p>
-            DEF:CON의 마스코트인 DEF:CON CRAB은 메인 컬러와 마찬가지로
-            <br />
-            Windows 10의 블루스크린에서 착안하였습니다.
-            <br />
-            DEF:CON의 철자 C의 앞에 콜론 (:)을 삽입하여 블루스크린의 이모티콘인
-            <br />
-            &quot;:(&quot;을 연상할 수 있게 만들어냈죠.
+            DEF:CON의 마스코트인 DEF:CON CRAB은 Windows 10의 블루스크린에서
+            착안하였습니다.
             <br />
             <br />
-            코딩을 하다보면 웃음을 지을 때보단 울상일 때가 더 많은 우리의 <br />
-            표정과도 비슷한 DEF:CON CRAB은 DEF:CON의 초창기 로고부터 <br />
-            유지되어온 DEF:CON의 헤리티지입니다. <br />
+            코딩을 하다보면 웃음을 지을 때보단 울상일 때가 더 많은 우리의
+            표정과도 비슷한 DEF:CON CRAB은 DEF:CON의 초창기 로고부터 유지되어온
+            DEF:CON의 헤리티지입니다.
           </p>
         </CrabIntroDesc>
         <CrabIntroTitle>
@@ -35,137 +42,188 @@ const CrabIntro = () => {
           <Logo src="/Images/preLogo.svg" />
           <Logo src="/Images/mainLogo.svg" />
         </LogoHistoryWrapper>
-        <Crab width={200} height={200} marginTop={8} anim={true} />
+        <Crab
+          width={isDesktop ? 240 : 180}
+          height={isDesktop ? 240 : 180}
+          marginTop={0}
+          anim={true}
+        />
       </CrabIntroLogoWrapper>
     </CrabIntroWrapper>
   );
 };
 
 const CrabIntroWrapper = styled.div`
+  width: 1030px;
   height: 100vh;
+  padding-top: 10em;
+  margin-bottom: 10em;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: "Noto Sans KR";
 
-  @media screen and (min-width: 1280px) {
-    margin-bottom: 10vh;
+  /* 노트북 & 테블릿 가로 (해상도 1024px ~ 1279px)*/
+  @media all and (min-width: 1024px) and (max-width: 1279px) {
+    width: 700px;
+    padding-top: 1em;
+    margin-bottom: 3em;
   }
 
-  @media screen and (max-width: 768px) {
-    margin-bottom: 20vh;
+  /* 테블릿 가로 (해상도 768px ~ 1023px)*/
+  @media all and (min-width: 768px) and (max-width: 1023px) {
+    width: 500px;
+    padding-top: 25em;
+    margin-bottom: 30em;
+  }
+
+  /* 모바일 가로 & 테블릿 세로 (해상도 480px ~ 767px)*/
+  @media all and (min-width: 480px) and (max-width: 767px) {
+    width: 400px;
+    padding-top: 25em;
+    margin-bottom: 30em;
+  }
+
+  /* 모바일 세로 (해상도 ~ 479px)*/
+  @media all and (max-width: 479px) {
+    width: 400px;
+    padding-top: 20em;
+    margin-bottom: 25em;
   }
 `;
 
 const CrabIntroContents = styled.div`
+  width: 100%;
+  margin-bottom: 5em;
   display: flex;
-  @media screen and (min-width: 1280px) {
-    width: 70vw;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-  }
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
 
-  @media screen and (min-width: 769px) and (max-width: 1279px) {
+  /* 테블릿 가로 (해상도 768px ~ 1023px)*/
+  @media all and (max-width: 1023px) {
     flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
-  }
-
-  @media screen and (max-width: 768px) {
-    flex-direction: column-reverse;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
   }
 `;
 
 const CrabIntroTitle = styled.div`
-  h1 {
-    @media screen and (min-width: 1280px) {
-      width: 40vw;
-      flex-basis: 70%;
-      font-size: 45pt;
-      letter-spacing: -5px;
+  width: 60%;
+  height: 40%;
+
+  & > h1 {
+    text-align: right;
+    font-size: 4.5em;
+    letter-spacing: -7px;
+  }
+
+  /* 노트북 & 테블릿 가로 (해상도 1024px ~ 1279px)*/
+  @media all and (min-width: 1024px) and (max-width: 1279px) {
+    & > h1 {
       text-align: right;
+      font-size: 2.8em;
+      letter-spacing: -5px;
     }
+  }
 
-    @media screen and (min-width: 769px) and (max-width: 1279px) {
-      font-size: 40pt;
-      letter-spacing: -4px;
+  /* 테블릿 가로 (해상도 768px ~ 1023px)*/
+  @media all and (min-width: 768px) and (max-width: 1023px) {
+    width: 100%;
+
+    & > h1 {
       text-align: center;
+      font-size: 3em;
+      letter-spacing: -5px;
     }
+  }
 
-    @media screen and (max-width: 768px) {
-      font-size: 30pt;
-      letter-spacing: -2px;
+  /* 모바일 가로 & 세로 & 테블릿 세로 ( ~ 767px)*/
+  @media all and (max-width: 767px) {
+    width: 100%;
+
+    & > h1 {
       text-align: center;
+      font-size: 2.5em;
+      letter-spacing: -5px;
     }
   }
 `;
 
 const CrabIntroDesc = styled.div`
-  margin-top: 5vh;
-  font-size: 18pt;
-  font-weight: 100;
+  width: 65%;
 
-  p {
-    @media screen and (min-width: 1280px) {
-      text-align: left;
+  & > p {
+    font-size: 1.5em;
+    font-weight: 100;
+    text-align: left;
+  }
+
+  /* 노트북 & 테블릿 가로 (해상도 1024px ~ 1279px)*/
+  @media all and (min-width: 1024px) and (max-width: 1279px) {
+    width: 70%;
+
+    & > p {
+      font-size: 1em;
     }
+  }
 
-    @media screen and (min-width: 769px) and (max-width: 1279px) {
-      font-size: 15pt;
+  /* 테블릿 가로 (해상도 768px ~ 1023px)*/
+  @media all and (min-width: 768px) and (max-width: 1023px) {
+    width: 90%;
+
+    & > p {
+      font-size: 1.2em;
       text-align: center;
     }
+  }
 
-    @media screen and (max-width: 768px) {
-      width: 40vh;
-      font-size: 12pt;
+  /* 모바일 가로 & 세로 & 테블릿 세로 & 테블릿 가로 (해상도 768px ~ 1023px)*/
+  @media all and (max-width: 1023px) {
+    width: 90%;
+
+    & > p {
+      margin-top: 1.2em;
+      font-size: 1.2em;
       text-align: center;
     }
   }
 `;
 
 const CrabIntroLogoWrapper = styled.div`
+  width: 100%;
   display: flex;
-  @media screen and (min-width: 1280px) {
-    flex-direction: row;
-    margin-top: 8vh;
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
-  @media screen and (max-width: 768px) {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  /* 모바일 가로 & 세로 & 테블릿 세로 & 테블릿 가로 (해상도 ~ 1023px)*/
+  @media all and (max-width: 1023px) {
+    flex-direction: column-reverse;
   }
 `;
 
 const LogoHistoryWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  @media screen and (min-width: 1280px) {
-    margin-top: 5vh;
-    margin-right: 20vw;
-  }
-  @media screen and (max-width: 768px) {
-    margin-top: 5vh;
-    margin-bottom: -8vh;
+
+  /* 노트북 & 테블릿 가로 & 모바일 가로 & 모바일 세로 & 테블릿 세로 & 테블릿 가로  (해상도  ~ 1279px)*/
+  @media all and (max-width: 1023px) {
+    margin-top: 5em;
   }
 `;
 
 const Logo = styled.img`
+  width: 23em;
+  margin-bottom: 3em;
   filter: drop-shadow(1px 1px 3px grey);
-  @media screen and (min-width: 1280px) {
-    width: 20vw;
-    margin-bottom: 8vh;
-  }
-  @media screen and (max-width: 768px) {
-    width: 50vw;
-    margin-bottom: 8vh;
+
+  /* 노트북 & 테블릿 가로 & 모바일 가로 & 모바일 세로 & 테블릿 세로 & 테블릿 가로  (해상도  ~ 1279px)*/
+  @media all and (max-width: 1279px) {
+    width: 15em;
   }
 `;
 

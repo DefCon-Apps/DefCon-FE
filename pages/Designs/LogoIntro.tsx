@@ -149,8 +149,6 @@ const LogoIntroContents = styled.div`
     & > p {
       width: 50%;
       font-size: 1em;
-      font-weight: 100;
-      text-align: left;
     }
   }
 
