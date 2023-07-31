@@ -31,7 +31,6 @@ const MainAwards = () => {
 
   useEffect(() => {
     API.getMainEventData().then((apiResult: any) => {
-      console.log(apiResult);
       setMainEvent(apiResult);
     });
   }, []);
