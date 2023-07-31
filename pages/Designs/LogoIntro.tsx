@@ -28,103 +28,141 @@ const LogoIntro = () => {
 };
 
 const LogoIntroWrapper = styled.div`
+  width: 1030px;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Noto Sans KR";
+
+  /* 노트북 & 테블릿 가로 (해상도 1024px ~ 1279px)*/
+  @media all and (min-width: 1024px) and (max-width: 1279px) {
+    width: 700px;
+  }
+
+  /* 테블릿 가로 (해상도 768px ~ 1023px)*/
+  @media all and (min-width: 768px) and (max-width: 1023px) {
+    width: 500px;
+  }
+
+  /* 모바일 가로 & 테블릿 세로 (해상도 480px ~ 767px)*/
+  @media all and (min-width: 480px) and (max-width: 767px) {
+    width: 400px;
+  }
+
+  /* 모바일 세로 (해상도 ~ 479px)*/
+  @media all and (max-width: 479px) {
+    width: 400px;
+  }
 `;
 
 const LogoIntroContainer = styled.div`
-  @media screen and (min-width: 1024px) {
-    width: 70vw;
-  }
+  width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  /* 테블릿 가로 (해상도 768px ~ 1023px)*/
+  @media all and (max-width: 1023px) {
+    align-items: center;
+  }
 `;
 
 const LogoIntroTitle = styled.div`
-  h1 {
-    @media screen and (min-width: 1280px) {
-      font-size: 45pt;
-      letter-spacing: -5px;
+  width: 70%;
+
+  & > h1 {
+    flex: 1;
+    text-align: left;
+    font-size: 4.5em;
+    letter-spacing: -7px;
+  }
+
+  /* 노트북 & 테블릿 가로 (해상도 1024px ~ 1279px)*/
+  @media all and (min-width: 1024px) and (max-width: 1279px) {
+    & > h1 {
+      flex: 1;
       text-align: left;
+      font-size: 2.8em;
+      letter-spacing: -5px;
     }
+  }
 
-    @media screen and (min-width: 769px) and (max-width: 1279px) {
-      font-size: 35pt;
-      letter-spacing: -4px;
+  /* 테블릿 가로 (해상도 768px ~ 1023px)*/
+  @media all and (min-width: 768px) and (max-width: 1023px) {
+    width: 100%;
+
+    & > h1 {
+      flex: 1;
       text-align: center;
+      font-size: 3em;
+      letter-spacing: -5px;
     }
+  }
 
-    @media screen and (max-width: 768px) {
-      font-size: 27pt;
-      letter-spacing: -2px;
+  /* 모바일 가로 & 세로 & 테블릿 세로 ( ~ 767px)*/
+  @media all and (max-width: 767px) {
+    width: 100%;
+
+    & > h1 {
+      flex: 1;
       text-align: center;
+      font-size: 2.5em;
+      letter-spacing: -5px;
     }
   }
 `;
 
 const LogoIntroImg = styled.img`
-  margin-top: 5vh;
+  margin-top: 1em;
+  width: 45%;
 
-  @media screen and (min-width: 1280px) {
-    flex: 1;
-    width: 30vw;
+  /* 노트북 & 테블릿 가로 (해상도 1024px ~ 1279px)*/
+  @media all and (min-width: 1024px) and (max-width: 1279px) {
+    margin-top: 1em;
+    width: 45%;
   }
 
-  @media screen and (min-width: 769px) and (max-width: 1279px) {
-    width: 40vw;
-  }
-
-  @media screen and (max-width: 768px) {
-    width: 80vw;
+  /* 모바일 가로 & 세로 & 테블릿 세로 & 테블릿 가로 (해상도 ~ 1023px)*/
+  @media all and (max-width: 1023px) {
+    margin-top: 1em;
+    width: 70%;
   }
 `;
 
 const LogoIntroContents = styled.div`
   display: flex;
-  @media screen and (min-width: 1280px) {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1em;
+
+  & > p {
+    width: 50%;
     font-size: 1.5em;
     font-weight: 100;
-    text-align: right;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 15vh;
+    text-align: left;
   }
 
-  @media screen and (min-width: 769px) and (max-width: 1279px) {
-    text-align: center;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  @media screen and (max-width: 768px) {
-    font-size: 12pt;
-    font-weight: 100;
-    text-align: center;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  p {
-    @media screen and (min-width: 1280px) {
-      flex: 1;
-      margin-left: 50px;
-      text-align: right;
-    }
-
-    @media screen and (min-width: 769px) and (max-width: 1279px) {
-      margin-top: 5vh;
-      font-size: 15pt;
+  /* 노트북 & 테블릿 가로 (해상도 1024px ~ 1279px)*/
+  @media all and (min-width: 1024px) and (max-width: 1279px) {
+    & > p {
+      width: 50%;
+      font-size: 1em;
       font-weight: 100;
+      text-align: left;
     }
+  }
 
-    @media screen and (max-width: 768px) {
-      margin: 3rem 2rem 2rem 2rem;
+  /* 모바일 가로 & 세로 & 테블릿 세로 & 테블릿 가로 (해상도 768px ~ 1023px)*/
+  @media all and (max-width: 1023px) {
+    flex-direction: column;
+
+    & > p {
+      width: 90%;
+      margin-top: 1.2em;
+      font-size: 1.2em;
+      font-weight: 100;
       text-align: center;
     }
   }
