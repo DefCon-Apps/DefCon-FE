@@ -101,7 +101,7 @@ const MainAwardsWrapper = styled.div`
 `;
 
 const AwardsTitle = styled.div`
-  width: 60%;
+  width: 70%;
   display: flex;
   flex-direction: row;
   justify-content: center;
