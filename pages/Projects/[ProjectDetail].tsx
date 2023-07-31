@@ -36,6 +36,7 @@ const ProjectDetail = () => {
           <h1>{projectData.title}</h1>
           <p>{projectData.description}</p>
         </ProjectDetailTitle>
+
         <ProjectDetailContent>
           <ImageSlider images={projectData.image} />
           <br></br>
@@ -112,6 +113,7 @@ const ProjectDetailTitle = styled.div`
       text-align: left;
       font-size: 3.5em;
     }
+
     & > p {
       margin-top: 1rem;
       font-size: 1.5rem;
@@ -139,6 +141,7 @@ const ProjectDetailTitle = styled.div`
   @media all and (min-width: 768px) and (max-width: 1023px) {
     width: 500px;
     align-items: center;
+
     & > h1 {
       width: 100%;
       text-align: center;
@@ -200,18 +203,14 @@ const ProjectDetailContent = styled.div`
     text-decoration-line: underline;
   }
 
+  & > h1 {
+    margin-top: 1.5em;
+    font-size: 2em;
+  }
 
-  @media all and (min-width: 1280px) {
-    & > h1 {
-      margin-top: 1em;
-      font-size: 2.9em;
-    }
-
-    & > p {
-      width: 80%;
-      font-size: 1.5em;
-      font-weight: 100;
-    }
+  & > p {
+    font-size: 1.5em;
+    font-weight: 300;
   }
 
   /* 노트북 & 테블릿 가로 (해상도 1024px ~ 1279px)*/
@@ -220,13 +219,13 @@ const ProjectDetailContent = styled.div`
     width: 80%;
     & > h1 {
       margin-top: 1em;
-      font-size: 2.9em;
+      font-size: 2em;
     }
 
     & > p {
       width: 80%;
-      font-size: 1.5em;
-      font-weight: 100;
+      font-size: 1.313em;
+      font-weight: 300;
     }
   }
 
@@ -235,14 +234,13 @@ const ProjectDetailContent = styled.div`
     width: 70%;
     & > h1 {
       margin-top: 1em;
-      font-size: 2.9em;
+      font-size: 2em;
     }
 
     & > p {
-      width: 100%;
-      font-size: 1.5em;
-      font-weight: 100;
-      margin-bottom: 0.5em;
+      width: 80%;
+      font-size: 1.313em;
+      font-weight: 300;
     }
   }
 
@@ -251,14 +249,13 @@ const ProjectDetailContent = styled.div`
     width: 70%;
     & > h1 {
       margin-top: 0.5em;
-      font-size: 2.9em;
+      font-size: 2em;
     }
 
     & > p {
-      width: 100%;
-      font-size: 1.5em;
-      font-weight: 100;
-      margin-bottom: 0.5em;
+      width: 80%;
+      font-size: 1.313em;
+      font-weight: 300;
     }
   }
 `;
