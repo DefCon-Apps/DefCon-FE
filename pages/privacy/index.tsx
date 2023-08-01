@@ -1,1 +1,1 @@
-export {default} from "./privacy";
+export {default} from "./Privacy";
