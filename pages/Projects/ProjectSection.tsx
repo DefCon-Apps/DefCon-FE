@@ -20,7 +20,7 @@ const ProjectSection = (props: Props) => {
 
 const SectionWrapper = styled.div`
   width: 70vw;
-  padding: 128px 0 128px 0;
+  padding-top: 96px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -83,6 +83,7 @@ const SectionWrapper = styled.div`
 
   /* 모바일 가로 & 테블릿 세로 (해상도 480px ~ 767px)*/ 
   @media all and (min-width:480px) and (max-width:767px) {
+    padding: 64px 0 64px 0;
     & > div {
       width: 400px;
     }
@@ -102,6 +103,7 @@ const SectionWrapper = styled.div`
 
   /* 모바일 세로 (해상도 ~ 479px)*/ 
   @media all and (max-width:479px) {
+    padding: 64px 0 64px 0;
     & > div {
       width: 360px;
     }
