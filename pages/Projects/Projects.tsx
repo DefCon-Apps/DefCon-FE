@@ -60,6 +60,7 @@ const Projects = () => {
 
 const ProjectWrapper = styled.div`
   font-family: "Noto Sans KR";
+  margin-top: 128px;
   display: flex;
   flex-direction: column;
   align-items: center;
