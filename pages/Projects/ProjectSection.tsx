@@ -20,7 +20,7 @@ const ProjectSection = (props: Props) => {
 
 const SectionWrapper = styled.div`
   width: 70vw;
-  height: 100vh;
+  padding: 128px 0 128px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -103,7 +103,7 @@ const SectionWrapper = styled.div`
   /* 모바일 세로 (해상도 ~ 479px)*/ 
   @media all and (max-width:479px) {
     & > div {
-      width: 400px;
+      width: 360px;
     }
     
     h1 {
