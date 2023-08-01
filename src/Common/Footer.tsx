@@ -12,7 +12,7 @@ const Footer = () => {
           <FooterContexts>
             <p>
               <span>
-                <Link href="/Privacy">DEF:CON 개인정보보호정책</Link>
+                <Link href="/privacy">DEF:CON 개인정보보호정책</Link>
               </span>
               <br />
               (c)2023 DEF:CON ALL RIGHTS RESERVED

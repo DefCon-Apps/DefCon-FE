@@ -9,13 +9,13 @@ const Header = () => {
       </Link>
       <HeaderNavUl>
         <HeaderNavLi>
-          <Link href="/Designs">Designs </Link>
+          <Link href="/designs">Designs </Link>
         </HeaderNavLi>
         <HeaderNavLi>
-          <Link href="/Projects">Projects</Link>
+          <Link href="/projects">Projects</Link>
         </HeaderNavLi>
         <HeaderNavLi>
-          <Link href="/Members">Members</Link>
+          <Link href="/members">Members</Link>
         </HeaderNavLi>
       </HeaderNavUl>
     </HeaderDiv>

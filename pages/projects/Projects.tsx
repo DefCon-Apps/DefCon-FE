@@ -64,7 +64,7 @@ const ProjectWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-conetent: center;
+  justify-content: center;
 `;
 
 export default Projects;

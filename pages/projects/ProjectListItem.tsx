@@ -11,7 +11,7 @@ interface Props {
 const ProjectListItem = (props: Props) => {
   return (
     <ListItemWrapper>
-      <Link href={`Projects/${props.id}`}>
+      <Link href={`projects/${props.id}`}>
         <ListItemImage alt="Project Image" src={props.image} width={560} height={324} />
         <ListItemTitle>{props.title}</ListItemTitle>
       </Link>
