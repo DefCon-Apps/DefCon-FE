@@ -1,4 +1,4 @@
-import Main from "./main/main";
+import Main from "./main/Main";
 
 const Home = () => {
   return (
