@@ -15,6 +15,7 @@ const ProjectDetail = () => {
   useEffect(() => {
     if (projectId !== undefined) {
       API.getProjectData(projectId as string).then((apiResult: any) => {
+        apiResult.image.splice(0, 1);
         setProjectData(apiResult);
       });
     }
