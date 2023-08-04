@@ -12,22 +12,23 @@ const ProjectListItem = (props: Props) => {
   return (
     <ListItemWrapper>
       <Link href={`projects/${props.id}`}>
-        <ListItemImage alt="Project Image" src={props.image} width={560} height={324} />
-        <ListItemTitle>{props.title}</ListItemTitle>
+        <ListItemImage alt="Project Image" src={props.image} width={544} height={305} />
       </Link>
     </ListItemWrapper>
   );
 }
 
 const ListItemWrapper = styled.div`
-  text-align: center;
+  margin: 0 10px 0 10px;
   @media all and (min-width: 768px) {
     margin: 0 20px 0 20px;
   }
-  margin: 0 10px 0 10px;
 `;
 
 const ListItemImage = styled(Image)`
+  width: 544px;
+  height: 305px;
+  
   @media all and (min-width: 768px) {
     width: 560px;
     height: 324px;
@@ -44,12 +45,6 @@ const ListItemImage = styled(Image)`
     width: 280px;
     height: 162px;
   }
-  border-radius: 20px;
-  object-fit: cover;
-`;
-
-const ListItemTitle = styled.h2`
-  margin: 8px 0 16px 0;
 `;
 
 export default ProjectListItem
