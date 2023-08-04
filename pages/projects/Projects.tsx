@@ -25,10 +25,10 @@ const Projects = () => {
         projectDataSet.set(projectData.data.category, [...projectDataSet.get(projectData.data.category)!, projectData])
       });
 
-      setAndroidProjectList(projectDataSet.get("android")!);
-      setEtcProjectList(projectDataSet.get("etc")!);
-      setSelfRepairList(projectDataSet.get("repair")!);
-      setWebProjectList(projectDataSet.get("web")!);
+      setAndroidProjectList(projectDataSet.get("android")!.reverse());
+      setEtcProjectList(projectDataSet.get("etc")!.reverse());
+      setSelfRepairList(projectDataSet.get("repair")!.reverse());
+      setWebProjectList(projectDataSet.get("web")!.reverse());
     });
   }, []);
 
