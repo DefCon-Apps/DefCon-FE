@@ -13,7 +13,6 @@ const ProjectListItem = (props: Props) => {
     <ListItemWrapper>
       <Link href={`projects/${props.id}`}>
         <ListItemImage alt="Project Image" src={props.image} width={560} height={324} />
-        <ListItemTitle>{props.title}</ListItemTitle>
       </Link>
     </ListItemWrapper>
   );
