@@ -18,11 +18,9 @@ const Privacy = () => {
 const PrivacyNoticeWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100vh;
   margin-top: 150px;
-  margin-bottom: 50rem;
+  margin-bottom: 10rem;
   font-family: "Noto Sans KR";
-  margin-bottom: 145rem;
 `;
 
 const PrivacyNoticeTitle = styled.div`
