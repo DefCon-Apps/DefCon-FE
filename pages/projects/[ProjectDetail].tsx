@@ -50,12 +50,6 @@ const ProjectDetail = () => {
           </ReactMarkdown>
           <br></br>
 
-          <h1>Tech Stack</h1>
-          {projectData.tech.map((item, i) => {
-            return <p key={i}>{item}</p>;
-          })}
-          <br></br>
-
           <h1>Role</h1>
           {projectData.user.map((item, i) => {
             return (
@@ -68,6 +62,12 @@ const ProjectDetail = () => {
 
           <h1>Date</h1>
           <p>{projectData.date}</p>
+          <br></br>
+
+          <h1>Project Tag</h1>
+          {projectData.tech.map((item, i) => {
+            return <p key={i}>{item}</p>;
+          })}
           <br></br>
         </ProjectDetailContent>
       </div>
