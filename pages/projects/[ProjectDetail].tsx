@@ -6,6 +6,7 @@ import RemarkGFM from "remark-gfm";
 import styled from "styled-components";
 import * as API from "../../src/Common/API";
 import ImageSlider from "../../src/Common/ImageSlider";
+import Loader from "../../src/Common/Loader";
 
 const ProjectDetail = () => {
   const router = useRouter();
@@ -25,7 +26,7 @@ const ProjectDetail = () => {
     return (
       <ProjectDetailWrapper>
         <ProjectDetailTitle>
-          <h1>Page Not Found</h1>
+          <Loader />
         </ProjectDetailTitle>
       </ProjectDetailWrapper>
     );
