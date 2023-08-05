@@ -3,6 +3,7 @@ import styled from "styled-components";
 import * as API from "../../src/Common/API";
 import ProjectList from "./ProjectList";
 import ProjectSection from "./ProjectSection";
+import Loader from "../../src/Common/Loader";
 
 const Projects = () => {
   const [androidProjectList, setAndroidProjectList] = useState<Array<API.ProjectListItem>>([]);
@@ -37,22 +38,22 @@ const Projects = () => {
       <ProjectSection 
         name="Android Applications"
         description="DEF:CON이 만든 안드로이드 애플리케이션 입니다.">
-          <ProjectList list={androidProjectList} />
+          {androidProjectList.length === 0 ? <Loader /> : <ProjectList list={androidProjectList} />}
       </ProjectSection>
       <ProjectSection 
         name="Web Page & Web Application"
         description="DEF:CON이 만든 웹 페이지 & 웹 애플리케이션 입니다.">
-          <ProjectList list={webProjectList} />
+          {webProjectList.length === 0 ? <Loader /> : <ProjectList list={webProjectList} />}
       </ProjectSection>
       <ProjectSection 
         name="LR's SELF-REPAIR"
         description="용민아 이것도 고쳐줘">
-          <ProjectList list={selfRepairList} />
+          {selfRepairList.length === 0 ? <Loader /> : <ProjectList list={selfRepairList} />}
       </ProjectSection>
       <ProjectSection 
         name="Etc"
         description="그 외에 진행한 프로젝트 입니다">
-          <ProjectList list={etcProjectList} />
+          {etcProjectList.length === 0 ? <Loader /> : <ProjectList list={etcProjectList} />}
       </ProjectSection>
     </ProjectWrapper>
   );
