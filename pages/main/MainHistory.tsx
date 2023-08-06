@@ -35,7 +35,7 @@ const MainHistory = () => {
           </p>
           <HistoryButton>
             <Link
-              href="https://play.google.com/store/apps/details?id=com.defcon.sungbo&hl=ko&gl=US"
+              href="https://play.google.com/store/apps/details?id=com.sungbospot.lunch&hl=ko&gl=US"
               target="_blank"
               rel="noreferrer"
             >
