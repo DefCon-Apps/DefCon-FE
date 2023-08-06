@@ -87,9 +87,9 @@ const CrabIntroWrapper = styled.div`
 
   /* 모바일 세로 (해상도 ~ 479px)*/
   @media all and (max-width: 479px) {
-    width: 400px;
+    width: 100%;
     padding-top: 20em;
-    margin-bottom: 25em;
+    margin: 0 10px 25em 10px;
   }
 `;
 
