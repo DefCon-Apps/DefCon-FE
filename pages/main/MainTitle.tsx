@@ -78,7 +78,9 @@ const MainTitleStyle = styled.div`
 
   /* 모바일 세로 (해상도 ~ 479px)*/
   @media all and (max-width: 479px) {
-    width: 400px;
+    width: 100%;
+
+    padding: 0 10px 0 10px;
   }
 `;
 
