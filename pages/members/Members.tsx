@@ -103,7 +103,7 @@ const MembersContainer = styled.div`
   /* 모바일 세로 (해상도 ~ 479px)*/
   @media all and (max-width: 479px) {
     width: 100%;
-    margin: 0 10px 0 10px;
+    margin: 150px 10px 0 10px;
   }
 `;
 
