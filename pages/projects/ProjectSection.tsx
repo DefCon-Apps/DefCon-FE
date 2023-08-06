@@ -106,7 +106,7 @@ const SectionWrapper = styled.div`
     padding-top: 64px;
     & > div {
       width: 100%;
-      margin: 0 10px 0 10px;
+      padding: 0 10px 0 10px;
     }
     
     h1 {
@@ -116,7 +116,7 @@ const SectionWrapper = styled.div`
     }
   
     p {
-      margin: 1.5rem 0 1.5rem 0.5rem;
+      padding: 1.5rem 0 1.5rem 0.5rem;
       font-size: 10pt;
       font-weight: 300;
     }
