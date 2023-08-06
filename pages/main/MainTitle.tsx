@@ -53,7 +53,6 @@ const MainTitleStyle = styled.div`
   height: 100vh;
   width: 1030px;
   font-family: "Noto Sans KR";
-  padding-top: 10rem;
   margin-bottom: 5em;
   display: flex;
   flex-direction: column;
@@ -80,7 +79,7 @@ const MainTitleStyle = styled.div`
   @media all and (max-width: 479px) {
     width: 100%;
 
-    padding: 0 10px 0 10px;
+    padding: 10rem 10px 0 10px;
   }
 `;
 
