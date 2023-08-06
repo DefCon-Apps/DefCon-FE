@@ -175,9 +175,9 @@ const ProjectDetailTitle = styled.div`
 
   /* 모바일 세로 (해상도 ~ 479px)*/
   @media all and (max-width: 479px) {
-    width: 400px;
+    width: 100%;
     align-items: center;
-    margin-top: 7em;
+    margin: 7em 10px 0 10px;
     & > h1 {
       text-align: center;
       font-size: 2.9em;
