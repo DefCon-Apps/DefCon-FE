@@ -19,7 +19,7 @@ const ProjectSection = (props: Props) => {
 }
 
 const SectionWrapper = styled.div`
-  width: 70vw;
+  width: 100%;
   padding-top: 96px;
   display: flex;
   justify-content: center;
@@ -105,7 +105,8 @@ const SectionWrapper = styled.div`
   @media all and (max-width:479px) {
     padding-top: 64px;
     & > div {
-      width: 360px;
+      width: 100%;
+      margin: 0 10px 0 10px;
     }
     
     h1 {
