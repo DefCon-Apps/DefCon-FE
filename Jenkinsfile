@@ -57,7 +57,7 @@ pipeline {
                 sh "curl --location --request POST 'https://api.telegram.org/bot${TELEGRAM_BOT_ID}/sendMessage' --form text='${TEXT_SUCCESS_BUILD}' --form chat_id='${TELEGRAM_CHAT_ID}'"
             }
             withCredentials([string(credentialsId: 'discord-defcon', variable: 'DISCORD_WEBHOOK')]) {
-                discordSend description: "Build가 성공하였습니다.",
+                discordSend description: "${TEXT_BREAK}\n${GIT_INFO}\n${JOB_NAME}\n\nBuild가 성공하였습니다.",
                             link: env.BUILD_URL,
                             result: currentBuild.currentResult,
                             title: env.JOB_NAME,
@@ -69,7 +69,7 @@ pipeline {
                 sh "curl --location --request POST 'https://api.telegram.org/bot${TELEGRAM_BOT_ID}/sendMessage' --form text='${TEXT_FAILURE_BUILD}' --form chat_id='${TELEGRAM_CHAT_ID}'"
             }
             withCredentials([string(credentialsId: 'discord-defcon', variable: 'DISCORD_WEBHOOK')]) {
-                discordSend description: "Build가 실패하였습니다.",
+                discordSend description: "${TEXT_BREAK}\n${GIT_INFO}\n${JOB_NAME}\n\nBuild가 실패하였습니다.",
                             link: env.BUILD_URL,
                             result: currentBuild.currentResult,
                             title: env.JOB_NAME,
