@@ -18,13 +18,15 @@ pipeline {
     }
 
     stages {
-        stage("Set Variable") {
+        stage("Setup Build Environment") {
             steps {
                 script {
                     DOCKERHUB_CREDENTIAL = "dockerhub-yymin1022"
                     DOCKER_IMAGE_NAME = "defcon-fe"
                     DOCKER_IMAGE_STORAGE = "yymin1022"
                     DOCKER_IMAGE_TAG = "release-1"
+
+                    sh "curl --location --request POST 'https://api.telegram.org/bot${TELEGRAM_BOT_ID}/sendMessage' --form text='${TEXT_PRE_BUILD}' --form chat_id='${TELEGRAM_CHAT_ID}'"
                 }
             }
         }
@@ -49,4 +51,30 @@ pipeline {
         }
     }
 
+    post {
+        success {
+            script{
+                sh "curl --location --request POST 'https://api.telegram.org/bot${TELEGRAM_BOT_ID}/sendMessage' --form text='${TEXT_SUCCESS_BUILD}' --form chat_id='${TELEGRAM_CHAT_ID}'"
+            }
+            withCredentials([string(credentialsId: 'discord-defcon', variable: 'DISCORD_WEBHOOK')]) {
+                discordSend description: "Build가 성공하였습니다.",
+                            link: env.BUILD_URL,
+                            result: currentBuild.currentResult,
+                            title: env.JOB_NAME,
+                            webhookURL: "$DISCORD_WEBHOOK"
+            }
+        }
+        failure {
+            script{
+                sh "curl --location --request POST 'https://api.telegram.org/bot${TELEGRAM_BOT_ID}/sendMessage' --form text='${TEXT_FAILURE_BUILD}' --form chat_id='${TELEGRAM_CHAT_ID}'"
+            }
+            withCredentials([string(credentialsId: 'discord-defcon', variable: 'DISCORD_WEBHOOK')]) {
+                discordSend description: "Build가 실패하였습니다.",
+                            link: env.BUILD_URL,
+                            result: currentBuild.currentResult,
+                            title: env.JOB_NAME,
+                            webhookURL: "$DISCORD_WEBHOOK"
+            }
+        }
+    }
 }
