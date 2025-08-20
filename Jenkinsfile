@@ -1,3 +1,7 @@
+parameters {
+    string(name: 'ENV_CREDENTIAL_ID', defaultValue: '', description: 'Credential ID for the .env file')
+}
+
 pipeline {
     agent any
     environment {
@@ -13,6 +17,21 @@ pipeline {
     }
 
     stages {
+        stage('Prepare Environment') {
+            steps {
+                script {
+                    if (params.ENV_CREDENTIAL_ID) {
+                        withCredentials([file(credentialsId: params.ENV_CREDENTIAL_ID, variable: 'ENV_FILE')]) {
+                            sh 'cp $ENV_FILE ./.env.local'
+                            echo 'ENV File copied.'
+                        }
+                    } else {
+                        echo 'No .env credential ID provided. Skipping injection.'
+                    }
+                }
+            }
+        }
+
         stage("Build Docker Image") {
             steps {
                 script {
@@ -35,6 +54,9 @@ pipeline {
     }
 
     post {
+        always {
+            sh 'rm -f .env.local'
+        }
         success {
             withCredentials([string(credentialsId: "discord-default", variable: "DISCORD_WEBHOOK_URL")]) {
                 discordSend description: "**Build ${BUILD_NUMBER}**가 성공하였습니다.\n\n${GIT_INFO}",
